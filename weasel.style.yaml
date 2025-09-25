@@ -1,8 +1,9 @@
 style:
-  color_scheme: gruvbox
+  horizontal: true
+  color_scheme: minimalGray
   # https://github.com/rime/weasel/wiki/%E5%AD%97%E9%AB%94%E8%A8%AD%E5%AE%9A#%E4%BE%8B%E5%AD%90%E8%A7%A3%E6%9E%90
   font_face: "Segoe UI Emoji:80, 霞鹜文楷, 思源黑体, Microsoft YaHei"
-  font_point: 17
+  font_point: 15
   inline_preedit: false
   # display_tray_icon: true
   layout:
@@ -10,7 +11,7 @@ style:
     round_corner: 8 # 高亮区域圆角
     corner_radius: 8 # 候选框圆角
   fullscreen: false # 全屏排列：true；false
-  horizontal: false # 横向排列：true；false
+  horizontal: true # 横向排列：true；false
   vertical_text: false # 竖排：true；false
   vertical_text_left_to_right: false # 竖排下从左到右：true；false
   vertical_text_with_wrap: false # 竖排下，自动换行：true；false
@@ -19,9 +20,20 @@ style:
 preset_color_schemes:
 # 小狼毫配色在线设计：
 # [RIME 西米](https://fxliang.github.io/RimeSeeMe/)
+# RIME渲染颜色时，均按照BGR顺序，而不是传统的RGB，要注意
   gruvbox:
-    name: 扶风 / Gruvbox
-    author: ASC_8384 <ASC_8384@foxmail.com>
+    back_color: 0xFFFFFF
+    border_color: 0x000000
+    text_color: 0xDDBB31
+    hilited_text_color: 0x050102
+    hilited_back_color: 0xDDDDDD
+    hilited_label_color: 0x194EFF
+    hilited_candidate_text_color: 0x194EFF
+    hilited_candidate_back_color: 0x52E1E1E1
+    candidate_text_color: 0x0A0A0A
+    comment_text_color: 0xFFFFFF
+    
+  myRimeDefault:
     back_color: 0x282828
     border_color: 0x21201D
     text_color: 0x8499A8
@@ -31,10 +43,147 @@ preset_color_schemes:
     hilited_candidate_back_color: 0x454950
     candidate_text_color: 0xB2DBEB
     comment_text_color: 0x748392
+    
+  ximiBlue:
+    back_color: 0xFFFFFF
+    border_color: 0x000000
+    text_color: 0xFFF019
+    hilited_text_color: 0x050102
+    hilited_back_color: 0xDDDDDD
+    hilited_candidate_text_color: 0x000000
+    hilited_candidate_back_color: 0xDB961F
+    candidate_text_color: 0x0A0A0A
+    comment_text_color: 0xFFFFFF
+    
+  midnightBlue:
+    back_color: 0x2A1F1B         # 原 0x1B1F2A 深蓝底 → BGR 顺序
+    border_color: 0x17110D       # 原 0x0D1117 更深边框
+    text_color: 0xFFC8A8         # 原 0xA8C8FF 冰蓝文字 → BGR
+    hilited_text_color: 0x2A1F1B # 原 0x1B1F2A 高亮文字深色
+    hilited_back_color: 0xFFC8A8 # 原 0xA8C8FF 高亮背景冰蓝
+    hilited_candidate_text_color: 0xFFFFFF # 高亮候选白色
+    hilited_candidate_back_color: 0x7F5A37 # 原 0x375A7F 高亮候选深蓝
+    candidate_text_color: 0xFFD9C0 # 原 0xC0D9FF 普通候选浅蓝
+    comment_text_color: 0xAA9988  # 原 0x8899AA 注释灰蓝
+    
+  sciFiBlue:
+    back_color: 0x1C0F0A          # 原 0x0A0F1C (深蓝底) -> 写成 BGR
+    border_color: 0x201810        # 原 0x101820
+    text_color: 0xFFC800          # 原 0x00C8FF (电光蓝)
+    hilited_text_color: 0x1C0F0A  # 原 0x0A0F1C
+    hilited_back_color: 0xFFC800  # 原 0x00C8FF
+    hilited_candidate_text_color: 0x1C0F0A # 原 0x0A0F1C
+    hilited_candidate_back_color: 0xFF9614 # 原 0x1496FF
+    candidate_text_color: 0xFFD966 # 原 0x66D9FF
+    comment_text_color: 0xFFCC33   # 原 0x33CCFF
+  
+    
+  mintCream:
+    back_color: 0xF7FFF7          # 奶白底
+    border_color: 0xB4D6A0        # 薄荷绿边框
+    text_color: 0x4F4F2F          # 深青文字
+    hilited_text_color: 0xFFFFFF  # 高亮文字白色
+    hilited_back_color: 0xA9CF80  # 高亮背景薄荷绿
+    hilited_candidate_text_color: 0x4F4F2F # 高亮候选深青
+    hilited_candidate_back_color: 0xD6F2C9 # 高亮候选浅绿
+    candidate_text_color: 0x5A3C3C # 普通候选深青
+    comment_text_color: 0x238E6B  # 注释橄榄绿
+    
+  darkMint:
+    back_color: 0x22382C          # 深绿色底，比 mintCream 暗很多
+    border_color: 0x1A4D39        # 边框深绿
+    text_color: 0xA8E0C0          # 主文字浅绿
+    hilited_text_color: 0x22382C  # 高亮文字深底色
+    hilited_back_color: 0xA8E0C0  # 高亮背景浅薄荷绿
+    hilited_candidate_text_color: 0x22382C # 高亮候选深色文字
+    hilited_candidate_back_color: 0x5FAF8C # 高亮候选暗绿背景
+    candidate_text_color: 0x7FD9A6 # 普通候选浅绿
+    comment_text_color: 0x6B8E5A  # 注释绿色灰
+    
+  forestGreen:
+    back_color: 0x242D1E          # 深绿底
+    border_color: 0x141A0F        # 更深绿边框
+    text_color: 0xB5E7B5          # 浅绿文字
+    hilited_text_color: 0x242D1E  # 高亮文字深绿
+    hilited_back_color: 0xB5E7B5  # 高亮背景浅绿
+    hilited_candidate_text_color: 0xFFFFFF # 高亮候选白
+    hilited_candidate_back_color: 0x4A5F3E # 高亮候选深绿
+    candidate_text_color: 0xC5EFC5 # 普通候选浅绿
+    comment_text_color: 0x7EA887  # 注释灰绿
+    
+  minimalGray:
+    back_color: 0xF0F0F0          # 极浅灰背景
+    border_color: 0xC0C0C0        # 中灰边框
+    text_color: 0x2A2A2A          # 深灰文字
+    hilited_text_color: 0xF0F0F0  # 高亮文字用背景色衬托
+    hilited_back_color: 0x2A2A2A  # 高亮背景深灰
+    hilited_candidate_text_color: 0xFFFFFF # 高亮候选白色文字
+    hilited_candidate_back_color: 0x7F7F7F # 高亮候选中灰背景
+    candidate_text_color: 0x4A4A4A # 普通候选文字中灰
+    comment_text_color: 0x8C8C8C   # 注释灰色
 
+  minimalDark:
+    back_color: 0x1C1C1C          # 深灰背景
+    border_color: 0x2E2E2E        # 边框稍浅深灰
+    text_color: 0xD0D0D0          # 主文字浅灰
+    hilited_text_color: 0x1C1C1C  # 高亮文字用背景色衬托
+    hilited_back_color: 0xD0D0D0  # 高亮背景浅灰
+    hilited_candidate_text_color: 0x1C1C1C # 高亮候选深灰文字
+    hilited_candidate_back_color: 0x4A4A4A # 高亮候选中灰背景
+    candidate_text_color: 0xB0B0B0 # 普通候选文字浅灰
+    comment_text_color: 0x7A7A7A   # 注释灰色
+
+  minimalBlueClean:
+    back_color: 0xFFFAF0          # 原 F0FAFF -> BGR
+    border_color: 0xFFD4B0        # 原 B0D4FF -> BGR
+    text_color: 0x663300          # 原 003366 -> BGR
+    hilited_text_color: 0xFFFAF0  # 原 F0FAFF -> BGR
+    hilited_back_color: 0x663300  # 原 003366 -> BGR
+    hilited_candidate_text_color: 0xFFFAF0 # 原 F0FAFF -> BGR
+    hilited_candidate_back_color: 0xFF9933 # 原 3399FF -> BGR
+    candidate_text_color: 0x800040  # 原 004080 -> BGR
+    comment_text_color: 0xCAA86B    # 原 6B8CAA -> BGR
+
+
+  minimalForestLight:
+    back_color: 0xF0F7F2          # 浅灰墨绿背景
+    border_color: 0xC8D8CD        # 边框浅墨绿色
+    text_color: 0x2F4A3B          # 主文字深墨绿
+    hilited_text_color: 0xF0F7F2  # 高亮文字用背景色衬托
+    hilited_back_color: 0x2F4A3B  # 高亮背景深墨绿
+    hilited_candidate_text_color: 0xF0F7F2 # 高亮候选文字浅色
+    hilited_candidate_back_color: 0x5B8C6B # 高亮候选中墨绿背景（更显眼）
+    candidate_text_color: 0x3F5A4B  # 普通候选文字
+    comment_text_color: 0x6B7D6D    # 注释灰墨绿
+
+
+  minimalBlueLightGray:
+    back_color: 0xFAF4ED          # 浅灰蓝背景 → 0xEDF4FA RGB 转 BGR
+    border_color: 0xCCC0B0        # 边框浅灰蓝 → 0xB0C0CC
+    text_color: 0x505E2C          # 主文字深灰蓝 → 0x2C3E50
+    hilited_text_color: 0xFAF4ED  # 高亮文字用背景色衬托 → 0xEDF4FA
+    hilited_back_color: 0x503E2C  # 高亮背景深灰蓝 → 0x2C3E50
+    hilited_candidate_text_color: 0xFAF4ED # 高亮候选文字浅色 → 0xEDF4FA
+    hilited_candidate_back_color: 0xCC9966 # 高亮候选中蓝背景（偏灰）→ 0x6699CC
+    candidate_text_color: 0x6A5A4A  # 普通候选文字灰蓝 → 0x4A5A6A
+    comment_text_color: 0x9A8C7F    # 注释灰蓝 → 0x7F8C9A
+
+
+  lightOrangeSoft:
+    back_color: 0xF0F7FF          # 浅奶橘背景，视觉轻盈
+    border_color: 0xB8DAFF        # 边框浅橘色
+    text_color: 0x2B3E5A          # 主文字深橘棕，保持可读性
+    hilited_text_color: 0xF0F7FF  # 高亮文字用背景色衬托
+    hilited_back_color: 0x2B3E5A  # 高亮背景深橘
+    hilited_candidate_text_color: 0x3E2A1F # 高亮候选文字浅色
+    hilited_candidate_back_color: 0x99CCFF # 高亮候选框浅橘，视觉柔和
+    candidate_text_color: 0x3F557F  # 普通候选文字，偏橘棕
+    comment_text_color: 0x6B8CB2    # 注释橘棕灰
+
+    
 app_options:
   Code.exe:
-    ascii_mode: true # 默认使用英文输入
+    ascii_mode: true # 默认英文输入
   gvim.exe:
     ascii_mode: true
   cmder.exe:
@@ -48,4 +197,12 @@ app_options:
   powershell.exe:
     ascii_mode: true
   WindowsTerminal.exe:
+    ascii_mode: true
+  explorer.exe:
+    ascii_mode: true
+  Listary.exe:
+    ascii_mode: true
+  Q-Dir.exe:
+    ascii_mode: true
+  sublime_text.exe:
     ascii_mode: true
