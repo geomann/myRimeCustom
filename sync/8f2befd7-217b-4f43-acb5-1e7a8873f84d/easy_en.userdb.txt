@@ -1,0 +1,62 @@
+# Rime user dictionary
+#@/db_name	easy_en
+#@/db_type	userdb
+#@/rime_version	1.11.2
+#@/tick	65
+#@/user_id	8f2befd7-217b-4f43-acb5-1e7a8873f84d
+about 	about	c=1 d=1 t=16
+apache 	apache	c=1 d=1 t=34
+at 	at	c=1 d=1 t=15
+aug 	aug	c=1 d=1 t=3
+auto 	auto	c=2 d=1.9802 t=63
+be 	be	c=1 d=1 t=38
+bigbang 	bigbang	c=1 d=1 t=62
+boxing 	boxing	c=1 d=1 t=25
+chair 	chair	c=1 d=1 t=48
+codex 	codex	c=1 d=1 t=64
+cover 	cover	c=10 d=9.72144 t=22
+drill 	drill	c=1 d=1 t=39
+ex 	ex	c=1 d=1 t=4
+fit 	fit	c=1 d=1 t=24
+free 	free	c=1 d=1 t=58
+gamer 	gamer	c=2 d=1.99501 t=30
+gba 	GBA	c=1 d=1 t=5
+gemini 	gemini	c=2 d=1.8781 t=54
+git 	git	c=1 d=1 t=8
+heart 	heart	c=1 d=1 t=51
+hover 	hover	c=1 d=1 t=49
+items 	items	c=1 d=1 t=35
+java 	java	c=1 d=1 t=50
+kuching 	kuching	c=1 d=1 t=56
+monitor 	monitor	c=1 d=1 t=2
+nao 	nao	c=1 d=1 t=41
+near 	near	c=1 d=1 t=43
+neo 	neo	c=1 d=1 t=32
+object 	object	c=1 d=1 t=61
+orf 	orf	c=1 d=1 t=9
+past 	past	c=1 d=1 t=42
+pearl 	pearl	c=1 d=1 t=57
+power 	power	c=1 d=1 t=40
+price 	price	c=1 d=1 t=37
+pro 	pro	c=1 d=1 t=55
+prompt 	prompt	c=1 d=1 t=40
+push 	push	c=1 d=1 t=55
+read 	read	c=1 d=1 t=14
+review 	review	c=1 d=1 t=10
+seems 	seems	c=1 d=1 t=17
+seminal 	seminal	c=1 d=1 t=26
+session 	session	c=1 d=1 t=56
+single 	single	c=1 d=1 t=31
+source 	source	c=1 d=1 t=23
+star 	star	c=1 d=1 t=7
+temp 	temp	c=3 d=2.98506 t=46
+tencent 	tencent	c=1 d=1 t=57
+traffic 	traffic	c=1 d=1 t=1
+tt 	tt	c=1 d=1 t=33
+txt 	txt	c=1 d=1 t=19
+usd 	USD	c=1 d=1 t=65
+web 	web	c=1 d=1 t=64
+wi 	wi	c=3 d=2.80562 t=52
+woman 	woman	c=1 d=1 t=47
+zbb 	zbb	c=1 d=1 t=6
+zero 	zero	c=1 d=1 t=53

@@ -1,0 +1,18 @@
+# Rime runtime state; every device rebuilds or owns these files.
+/build/
+/build*/
+/*.userdb/
+/installation.yaml
+/user.yaml
+/stroke_filter.debug.log
+/.workbuddy/
+/__pycache__/
+**/__pycache__/
+*.pyc
+/word_manager_backups/
+/nohup.out
+
+# Keep only Rime's portable user-dictionary snapshots from each device.
+/sync/**
+!/sync/*/
+!/sync/*/*.userdb.txt

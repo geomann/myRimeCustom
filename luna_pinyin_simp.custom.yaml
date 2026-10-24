@@ -1,0 +1,4 @@
+patch:
+  "engine/filters/+":
+    - lua_filter@bad_words_filter
+    - lua_filter@preferred_words_filter

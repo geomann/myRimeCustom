@@ -1,0 +1,14 @@
+# Rime default.custom.yaml
+patch:
+  "menu/page_size": 6
+
+  # 备用方案列表
+  schema_list:
+    - { schema: flypy_bt }
+    - { schema: double_pinyin_flypy }
+    - { schema: luna_pinyin_simp }
+
+  # 方案选择快捷键
+  "switcher/hotkeys":
+    - "Control+grave"
+    - "Control+F3"
