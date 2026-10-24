@@ -8584,7 +8584,7 @@ xin ren 	信任	c=1 d=2.72691e-96 t=76727
 xin ren 	新人	c=1 d=2.74058e-96 t=76727
 xin shan 	新山	c=1 d=3.39032e-99 t=76727
 xin shen 	心神	c=1 d=1.84119e-93 t=76727
-xin sheng cheng 	新生成	c=1 d=1 t=76724
+xin sheng cheng 	新生成	c=1 d=0.985112 t=76727
 xin shou 	新手	c=2 d=8.89735e-97 t=76727
 xin shou cun 	新手村	c=1 d=1.86509e-127 t=76727
 xin si 	心思	c=4 d=5.93957e-78 t=76727
