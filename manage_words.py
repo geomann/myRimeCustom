@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
+import ctypes
 import json
 import os
 import re
@@ -25,9 +27,13 @@ ROOT = Path(__file__).resolve().parent
 BLOCKED_FILE = ROOT / "lua" / "bad_words.lua"
 PREFERRED_FILE = ROOT / "lua" / "preferred_words.lua"
 DICTIONARY_FILE = ROOT / "luna_pinyin.extended.dict.yaml"
+CUSTOM_WORDS_FILE = ROOT / "dicts" / "custom_user.dict.yaml"
+CUSTOM_TABLE = "dicts/custom_user"
 FLYPY_CONFIG = ROOT / "double_pinyin_flypy.custom.yaml"
 SCHEMAS = ("flypy_bt", "double_pinyin_flypy", "luna_pinyin_simp")
 WORD_LIMIT = 80
+DEFAULT_WEIGHT = 999999
+CJK_RANGE = ("\u3400", "\u9fff")
 
 
 def quoted(value: str) -> str:
@@ -168,6 +174,26 @@ def lookup_pronunciations(words: set[str]) -> dict[str, set[str]]:
     return found
 
 
+_SYLLABLES: set[str] | None = None
+
+
+def known_syllables() -> set[str]:
+    """Union of every syllable used by the active dictionaries; cached for one run."""
+    global _SYLLABLES
+    if _SYLLABLES is None:
+        collected: set[str] = set()
+        for path in imported_dictionaries():
+            with path.open("r", encoding="utf-8-sig") as dictionary:
+                for line in dictionary:
+                    if not line or line.startswith("#"):
+                        continue
+                    fields = line.rstrip("\r\n").split("\t", 2)
+                    if len(fields) >= 2:
+                        collected.update(fields[1].strip().lower().split())
+        _SYLLABLES = collected
+    return _SYLLABLES
+
+
 def flypy_transforms() -> tuple[list[tuple[re.Pattern[str], str]], dict[int, int]]:
     """Read xform/xlit from the installed Flypy schema, avoiding a second key map."""
     transforms = []
@@ -208,6 +234,137 @@ def flypy_code(pronunciation: str) -> str:
             raise ValueError(f"无法可靠换算双拼编码：{syllable} → {code}")
         output.append(code)
     return "".join(output)
+
+
+def is_all_cjk(text: str) -> bool:
+    return bool(text) and all(CJK_RANGE[0] <= char <= CJK_RANGE[1] for char in text)
+
+
+def normalize_reading(value: str) -> str:
+    """Accept full pinyin with space separated syllables, e.g. 'san ge dian'."""
+    value = " ".join(value.strip().lower().split())
+    if not re.fullmatch(r"[a-z]+(?: [a-z]+)*", value):
+        raise ValueError("读音只能是小写英文字母，音节之间用空格分隔，例如：san ge dian")
+    return value
+
+
+def describe_codes(pronunciation: str) -> tuple[str, str]:
+    """Return (flypy code, pinyin code) for one full pinyin reading."""
+    return flypy_code(pronunciation), pronunciation.replace(" ", "")
+
+
+def confirm(message: str, default: bool = False) -> bool:
+    suffix = "[Y/n]" if default else "[y/N]"
+    answer = input(f"{message} {suffix} ").strip().lower()
+    if not answer:
+        return default
+    return answer in ("y", "yes", "是")
+
+
+def parse_selection(value: str, count: int) -> list[int]:
+    """Parse '1', '1-3', '1,3' style selections into sorted 1-based indexes."""
+    picked: list[int] = []
+    for part in value.replace("，", ",").split(","):
+        part = part.strip()
+        if not part:
+            continue
+        low, separator, high = part.partition("-")
+        if separator and low.strip().isdigit() and high.strip().isdigit():
+            picked += list(range(int(low), int(high) + 1))
+        elif part.isdigit():
+            picked.append(int(part))
+    return sorted({number for number in picked if 1 <= number <= count})
+
+
+def load_custom_words() -> list[tuple[str, str, int]]:
+    """Read the self-maintained word table as [(text, full pinyin code, weight)]."""
+    if not CUSTOM_WORDS_FILE.is_file():
+        return []
+    entries: list[tuple[str, str, int]] = []
+    for line in CUSTOM_WORDS_FILE.read_text(encoding="utf-8-sig").splitlines():
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        if line.startswith("---") or line.startswith("..."):
+            continue
+        fields = line.split("\t")
+        if len(fields) < 2:
+            continue  # header keys such as "name: custom_user"
+        text = fields[0].strip()
+        code = fields[1].strip()
+        weight = 0
+        if len(fields) >= 3 and fields[2].strip().isdigit():
+            weight = int(fields[2].strip())
+        if text and re.fullmatch(r"[a-z]+(?: [a-z]+)*", code):
+            entries.append((text, code, weight))
+    return entries
+
+
+def render_custom_words(entries: list[tuple[str, str, int]]) -> str:
+    lines = [
+        "# Rime dictionary: custom_user",
+        "# 由 manage_words.py 生成；也可以手工编辑后重新部署。",
+        "# 格式：文字<TAB>全拼码（音节用空格分隔）<TAB>权重，权重越大候选越靠前。",
+        "---",
+        "name: custom_user",
+        f'version: "{datetime.now().strftime("%Y.%m.%d")}"',
+        "sort: by_weight",
+        "...",
+    ]
+    lines += [f"{text}\t{code}\t{weight}" for text, code, weight in entries]
+    return "\n".join(lines) + "\n"
+
+
+def ensure_custom_table(source: str) -> tuple[str, bool]:
+    """Idempotently register the custom table in import_tables; keeps comments intact."""
+    if re.search(r"^\s*-\s*" + re.escape(CUSTOM_TABLE) + r"\b", source, re.M):
+        return source, False
+    lines = source.splitlines(keepends=True)
+    ending = "\r\n" if "\r\n" in source[:4096] else "\n"
+    for index, line in enumerate(lines):
+        if line.startswith("import_tables:"):
+            lines.insert(index + 1, f"  - {CUSTOM_TABLE} # manage_words.py 自建词条{ending}")
+            return "".join(lines), True
+    raise ValueError(f"在 {DICTIONARY_FILE.name} 中找不到 import_tables 段，未修改文件")
+
+
+def prompt_weight() -> int | None:
+    while True:
+        print(f"权重：数值越大候选越靠前（回车 = {DEFAULT_WEIGHT}）")
+        raw = input("权重：").strip()
+        if not raw:
+            return DEFAULT_WEIGHT
+        if raw.isdigit() and int(raw) > 0:
+            return int(raw)
+        print("  请输入正整数，或直接回车使用默认值。")
+
+
+def collect_readings(word: str) -> list[str]:
+    """Ask for one or more full pinyin readings for a word."""
+    known = sorted(lookup_pronunciations({word})[word])
+    if known:
+        print(f"词库中已存在「{word}」的读音：{'、'.join(known)}")
+        if confirm("直接使用这些读音？", default=True):
+            return known
+    print("请输入全拼读音，音节之间用空格分隔（例如：三个点 → san ge dian）")
+    readings: list[str] = []
+    while True:
+        raw = input(f"第 {len(readings) + 1} 个读音{'' if readings else '（回车取消）'}：").strip()
+        if not raw:
+            if readings:
+                break
+            return []
+        try:
+            reading = normalize_reading(raw)
+            flypy, pinyin = describe_codes(reading)
+        except ValueError as error:
+            print(f"  {error}")
+            continue
+        print(f"  {reading}  →  小鹤双拼 {flypy}   朙月拼音 {pinyin}")
+        if reading not in readings:
+            readings.append(reading)
+        if not confirm("还要再加一个读音吗？", default=False):
+            break
+    return readings
 
 
 def choose_pronunciation(word: str, reference: str) -> str | None:
@@ -265,9 +422,14 @@ def save_changes(changes: dict[Path, str]) -> Path:
     backup_dir = ROOT / "word_manager_backups" / (datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:6])
     backup_dir.mkdir(parents=True)
     staged = {}
+    created: list[Path] = []
     try:
         for path, content in changes.items():
-            shutil.copy2(path, backup_dir / path.name)
+            if path.exists():
+                shutil.copy2(path, backup_dir / path.name)
+            else:
+                created.append(path)
+            path.parent.mkdir(parents=True, exist_ok=True)
             temp = path.with_name(path.name + ".tmp-" + uuid.uuid4().hex)
             temp.write_text(content, encoding="utf-8", newline="\n")
             staged[path] = temp
@@ -278,6 +440,8 @@ def save_changes(changes: dict[Path, str]) -> Path:
             saved = backup_dir / path.name
             if saved.exists():
                 shutil.copy2(saved, path)
+            elif path in created:
+                path.unlink(missing_ok=True)
         raise
     finally:
         for temp in staged.values():
@@ -285,38 +449,299 @@ def save_changes(changes: dict[Path, str]) -> Path:
     return backup_dir
 
 
-def deploy() -> None:
-    candidates = []
+class RimeTraits(ctypes.Structure):
+    _fields_ = [
+        ("data_size", ctypes.c_int),
+        ("shared_data_dir", ctypes.c_char_p),
+        ("user_data_dir", ctypes.c_char_p),
+        ("distribution_name", ctypes.c_char_p),
+        ("distribution_code_name", ctypes.c_char_p),
+        ("distribution_version", ctypes.c_char_p),
+        ("app_name", ctypes.c_char_p),
+        ("modules", ctypes.POINTER(ctypes.c_char_p)),
+        ("min_log_level", ctypes.c_int),
+        ("log_dir", ctypes.c_char_p),
+        ("prebuilt_data_dir", ctypes.c_char_p),
+        ("staging_dir", ctypes.c_char_p),
+    ]
+
+
+class RimeApiHead(ctypes.Structure):
+    """Prefix of rime_api_t up to `deploy`; later members are never touched."""
+
+    _fields_ = [
+        ("data_size", ctypes.c_int),
+        ("setup", ctypes.c_void_p),
+        ("set_notification_handler", ctypes.c_void_p),
+        ("initialize", ctypes.c_void_p),
+        ("finalize", ctypes.c_void_p),
+        ("start_maintenance", ctypes.c_void_p),
+        ("is_maintenance_mode", ctypes.c_void_p),
+        ("join_maintenance_thread", ctypes.c_void_p),
+        ("deployer_initialize", ctypes.c_void_p),
+        ("prebuild", ctypes.c_void_p),
+        ("deploy", ctypes.c_void_p),
+    ]
+
+
+def weasel_directory() -> Path | None:
+    found = []
     for key in ("ProgramFiles", "ProgramFiles(x86)"):
         folder = os.environ.get(key)
         if folder:
-            candidates += list((Path(folder) / "Rime").glob("weasel-*/WeaselDeployer.exe"))
-    if not candidates:
+            found += [path for path in (Path(folder) / "Rime").glob("weasel-*") if path.is_dir()]
+    return sorted(found, reverse=True)[0] if found else None
+
+
+def deploy_via_api() -> bool:
+    """Rebuild dictionaries by driving librime directly.
+
+    `WeaselDeployer.exe /deploy` stops right after loading weasel.custom.yaml on this
+    machine and never recompiles dictionaries, so build/*.table.bin stays stale.
+    The C API runs installation_update -> workspace_update synchronously.
+    """
+    home = weasel_directory()
+    if home is None:
+        return False
+    library_path = home / "rime.dll"
+    if not library_path.is_file():
+        return False
+    try:
+        library = ctypes.CDLL(str(library_path))
+        resolve = library.rime_get_api
+        resolve.restype = ctypes.c_void_p
+        head = RimeApiHead.from_address(resolve())
+        if not head.deployer_initialize or not head.deploy:
+            return False
+        traits = RimeTraits()
+        traits.data_size = ctypes.sizeof(RimeTraits) - ctypes.sizeof(ctypes.c_int)
+        traits.shared_data_dir = str(home / "data").encode()
+        traits.user_data_dir = str(ROOT).encode()
+        traits.distribution_name = "小狼毫".encode()
+        traits.distribution_code_name = b"Weasel"
+        traits.distribution_version = home.name.partition("-")[2].encode() or b"0"
+        traits.app_name = b"rime.deployer"
+        traits.min_log_level = 3
+        log_dir = Path(os.environ.get("TEMP", str(ROOT))) / "rime.weasel"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        traits.log_dir = str(log_dir).encode()
+        traits.prebuilt_data_dir = None
+        # Must be absolute: SetupDeployer stores it verbatim (setup.cc:62-69), so a
+        # relative value would be resolved against the process cwd.
+        traits.staging_dir = str(ROOT / "build").encode()
+
+        initialize = ctypes.CFUNCTYPE(None, ctypes.POINTER(RimeTraits))(head.deployer_initialize)
+        deploy_workspace = ctypes.CFUNCTYPE(ctypes.c_bool)(head.deploy)
+        finalize = ctypes.CFUNCTYPE(None)(head.finalize)
+        initialize(ctypes.byref(traits))
+        try:
+            return bool(deploy_workspace())
+        finally:
+            finalize()
+    except (OSError, AttributeError, TypeError, ValueError):
+        return False
+
+
+@contextlib.contextmanager
+def quiet_stderr():
+    """librime logs to fd 2 directly; mute it so the interactive menu stays readable."""
+    if os.environ.get("RIME_DEPLOY_VERBOSE"):
+        yield
+        return
+    try:
+        sys.stderr.flush()
+        saved = os.dup(2)
+    except (OSError, ValueError):
+        yield
+        return
+    try:
+        sink = os.open(os.devnull, os.O_WRONLY)
+        os.dup2(sink, 2)
+        os.close(sink)
+        yield
+    finally:
+        os.dup2(saved, 2)
+        os.close(saved)
+
+
+def deploy() -> None:
+    print("正在重新部署（词典重建可能需要一两分钟）…")
+    with quiet_stderr():
+        deployed = deploy_via_api()
+    if deployed:
+        print("已重新部署，新内容已生效。")
+        return
+    home = weasel_directory()
+    executable = home / "WeaselDeployer.exe" if home else None
+    if executable is None or not executable.is_file():
         print("未找到 WeaselDeployer.exe；请在小狼毫托盘菜单中手动选择“重新部署”。")
         return
-    executable = sorted(candidates, reverse=True)[0]
     try:
-        subprocess.run([str(executable), "/deploy"], cwd=ROOT, check=True, timeout=120)
+        subprocess.run([str(executable), "/deploy"], cwd=str(home), check=True, timeout=180)
         print("小狼毫已重新部署。")
     except (OSError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
         print(f"自动部署未完成：{exc}\n请在小狼毫托盘菜单中手动选择“重新部署”。")
 
 
+def summarize_readings(readings: list[str]) -> str:
+    parts = []
+    for reading in readings:
+        try:
+            flypy, pinyin = describe_codes(reading)
+        except ValueError:
+            flypy, pinyin = "无法换算", reading.replace(" ", "")
+        parts.append(f"{reading}（小鹤 {flypy} / 拼音 {pinyin}）")
+    return "；".join(parts)
+
+
+def build_add_changes(word: str, readings: list[str], weight: int) -> tuple[dict[Path, str], list[tuple[str, str, int]]]:
+    invalid = []
+    for reading in readings:
+        try:
+            describe_codes(reading)
+        except ValueError:
+            invalid.append(reading)
+    if invalid:
+        raise ValueError("这些读音无法换算成小鹤双拼，请检查拼写（例如 diann 应为 dian）：" + "、".join(invalid))
+    unknown = sorted({syllable for reading in readings for syllable in reading.split()}
+                     - known_syllables())
+    if unknown:
+        print(f"提示：这些音节不在当前任何词表中，可能拼错了：{'、'.join(unknown)}")
+    entries = load_custom_words()
+    existing = {(text, code) for text, code, _ in entries}
+    added = [(word, reading, weight) for reading in readings if (word, reading) not in existing]
+    if not added:
+        return {}, []
+    changes: dict[Path, str] = {CUSTOM_WORDS_FILE: render_custom_words([*entries, *added])}
+    source = DICTIONARY_FILE.read_text(encoding="utf-8-sig")
+    patched, registered = ensure_custom_table(source)
+    if registered:
+        changes[DICTIONARY_FILE] = patched
+    return changes, added
+
+
+def action_add_word() -> dict[Path, str]:
+    word = clean_word(input("要添加的词（词库里本来没有的）："))
+    existing = {text for text, _, _ in load_custom_words()}
+    if word in existing:
+        print(f"「{word}」已在自建词表中。")
+        if not confirm("继续（会追加新的读音）？", default=False):
+            return {}
+    readings = collect_readings(word)
+    if not readings:
+        print("没有输入读音，已取消。")
+        return {}
+    if is_all_cjk(word) and any(len(reading.split()) != len(word) for reading in readings):
+        print(f"提示：「{word}」是 {len(word)} 个字，读音音节数与此不一致，请事后确认是否有误。")
+    weight = prompt_weight()
+    if weight is None:
+        print("已取消。")
+        return {}
+    changes, added = build_add_changes(word, readings, weight)
+    if not added:
+        print(f"「{word}」的这些读音都已存在，无需修改。")
+        return {}
+    print("将写入自建词表：")
+    for text, code, value in added:
+        print(f"  {text}\t{code}\t{value}")
+    print(f"编码：{summarize_readings([code for _, code, _ in added])}")
+    if DICTIONARY_FILE not in changes:
+        print(f"{DICTIONARY_FILE.name} 已挂载 {CUSTOM_TABLE}，无需修改。")
+    if not confirm("确认写入并重新部署？", default=False):
+        print("已取消。")
+        return {}
+    return changes
+
+
+def action_remove_word() -> dict[Path, str]:
+    entries = load_custom_words()
+    if not entries:
+        print(f"自建词表为空（{CUSTOM_WORDS_FILE} 不存在或没有词条）。")
+        return {}
+    print("自建词条：")
+    for number, (text, code, weight) in enumerate(entries, 1):
+        print(f"  {number}. {text}  （{code}，权重 {weight}）")
+    raw = input("要删除的编号，支持 1 / 1-3 / 1,3（回车取消）：").strip()
+    picked = parse_selection(raw, len(entries))
+    if not picked:
+        print("已取消。")
+        return {}
+    removing = [entries[number - 1] for number in picked]
+    print("将删除：")
+    for text, code, weight in removing:
+        print(f"  {text}\t{code}\t{weight}")
+    if not confirm("确认删除？", default=False):
+        print("已取消。")
+        return {}
+    remaining = [entry for number, entry in enumerate(entries, 1) if number not in picked]
+    return {CUSTOM_WORDS_FILE: render_custom_words(remaining)}
+
+
+def print_custom_words() -> None:
+    entries = load_custom_words()
+    print(f"自建词条（{CUSTOM_WORDS_FILE.name}）：{len(entries)} 条")
+    for number, (text, code, weight) in enumerate(entries, 1):
+        print(f"  {number}. {text}  （{code}，权重 {weight}）")
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="管理 Rime 的误词屏蔽和常用词置顶规则")
+    parser = argparse.ArgumentParser(description="管理 Rime 的误词屏蔽、常用词置顶与自建词条")
     parser.add_argument("--no-deploy", action="store_true", help="保存规则但不自动部署")
     parser.add_argument("--lookup", metavar="词", help="只查询词库读音，不修改文件")
+    parser.add_argument("--add", metavar="词", help="把词库里没有的词加入自建词表")
+    parser.add_argument("--reading", action="append", default=[], metavar="全拼",
+                        help="配合 --add 使用：全拼读音，可重复多次表示多音")
+    parser.add_argument("--weight", type=int, default=DEFAULT_WEIGHT,
+                        help=f"配合 --add 使用：词条权重（默认 {DEFAULT_WEIGHT}）")
+    parser.add_argument("--list-custom", action="store_true", help="列出自建词条")
+    parser.add_argument("--redeploy", action="store_true", help="只重新部署，不修改任何文件")
+    parser.add_argument("--yes", action="store_true", help="配合 --add：跳过确认")
     args = parser.parse_args()
+
+    if args.redeploy:
+        deploy()
+        return 0
+
     if args.lookup:
         word = clean_word(args.lookup)
         found = lookup_pronunciations({word})[word]
         print(f"{word}: {', '.join(sorted(found)) or '未找到带注音的词条'}")
         return 0
 
+    if args.list_custom:
+        print_custom_words()
+        return 0
+
+    if args.add:
+        word = clean_word(args.add)
+        readings = [normalize_reading(value) for value in args.reading]
+        if not readings:
+            print("错误：--add 需要至少一个 --reading（全拼读音，例如 \"san ge dian\"）", file=sys.stderr)
+            return 2
+        if args.weight <= 0:
+            print("错误：--weight 必须是正整数", file=sys.stderr)
+            return 2
+        changes, added = build_add_changes(word, readings, args.weight)
+        if not added:
+            print(f"「{word}」的这些读音都已存在，无需修改。")
+            return 0
+        for text, code, value in added:
+            print(f"待写入：{text}\t{code}\t{value}")
+        if not args.yes and not confirm("确认写入并重新部署？", default=False):
+            print("已取消。")
+            return 0
+        backup = save_changes(changes)
+        print(f"已保存；原文件备份于：{backup}")
+        print(f"编码：{summarize_readings([code for _, code, _ in added])}")
+        if not args.no_deploy:
+            deploy()
+        return 0
+
     blocked = load_blocked()
     preferred = load_preferred()
-    print("Rime 候选词管理（只修改 Lua 规则，不修改 .userdb）")
-    print("1. 屏蔽误词  2. 将常用词置顶  3. 取消屏蔽  4. 查看规则  5. 取消置顶  0. 退出")
+    print("Rime 候选词管理（屏蔽与置顶只改 Lua 规则，自建词条写入独立词表）")
+    print("1. 屏蔽误词  2. 将常用词置顶  3. 取消屏蔽  4. 查看规则")
+    print("5. 取消置顶  6. 添加词库没有的词  7. 删除自建词条  0. 退出")
     action = input("请选择：").strip()
     changes: dict[Path, str] = {}
 
@@ -392,6 +817,7 @@ def main() -> int:
             print(f"{schema}：")
             for code, words in preferred.get(schema, {}).items():
                 print(f"  {code} → {'、'.join(words)}")
+        print_custom_words()
         return 0
     elif action == "5":
         word = clean_word(input("要取消置顶的词："))
@@ -407,6 +833,14 @@ def main() -> int:
             print("已取消。")
             return 0
         changes[PREFERRED_FILE] = render_preferred(updated)
+    elif action == "6":
+        changes = action_add_word()
+        if not changes:
+            return 0
+    elif action == "7":
+        changes = action_remove_word()
+        if not changes:
+            return 0
     elif action in ("0", ""):
         return 0
     else:

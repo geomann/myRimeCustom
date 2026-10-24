@@ -44,7 +44,7 @@
 
 ### lua
 
-存放 `lua` 脚本。可在用户文件夹根目录双击 `管理候选词.bat`，或运行 `python manage_words.py` 管理误词与常用词；详细用法见 [候选词脚本使用说明](./lua/README.md)。
+存放 `lua` 脚本。可在用户文件夹根目录双击 `管理候选词.bat`，或运行 `python manage_words.py` 屏蔽误词、把常用词置顶、以及把词库里没有的词加入自建词表 `dicts/custom_user.dict.yaml`；详细用法见 [候选词脚本使用说明](./lua/README.md)。
 
 ### 用户文档夹 - UserData
 

@@ -1,0 +1,9 @@
+# Rime dictionary: custom_user
+# 由 manage_words.py 生成；也可以手工编辑后重新部署。
+# 格式：文字<TAB>全拼码（音节用空格分隔）<TAB>权重，权重越大候选越靠前。
+---
+name: custom_user
+version: "2026.10.25"
+sort: by_weight
+...
+三个点	san ge dian	999999

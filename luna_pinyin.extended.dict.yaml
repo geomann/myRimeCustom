@@ -22,6 +22,7 @@ use_preset_vocabulary: false
 # 单字码表由下方外部码表导入，权重从上到下
 # vocabulary: dicts/clover/clover.base
 import_tables: # 不需要的加'#'即可
+  - dicts/custom_user # manage_words.py 自建词条
   # clover
   - dicts/ice/8105 # 雾凇拼音，字表
   - dicts/ice/41448 # 大字表
