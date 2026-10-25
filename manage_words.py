@@ -467,7 +467,7 @@ class RimeTraits(ctypes.Structure):
 
 
 class RimeApiHead(ctypes.Structure):
-    """Prefix of rime_api_t up to `deploy`; later members are never touched."""
+    """Prefix of rime_api_t up to `deploy_config_file`; later members are never touched."""
 
     _fields_ = [
         ("data_size", ctypes.c_int),
@@ -481,7 +481,14 @@ class RimeApiHead(ctypes.Structure):
         ("deployer_initialize", ctypes.c_void_p),
         ("prebuild", ctypes.c_void_p),
         ("deploy", ctypes.c_void_p),
+        ("deploy_schema", ctypes.c_void_p),
+        ("deploy_config_file", ctypes.c_void_p),
     ]
+
+
+# 前端（小狼毫外观）配置不走 workspace_update，要单独编译成 build/weasel.yaml。
+UI_CONFIG_FILE = "weasel.yaml"
+UI_CONFIG_VERSION_KEY = "config_version"
 
 
 def weasel_directory() -> Path | None:
@@ -535,7 +542,17 @@ def deploy_via_api() -> bool:
         finalize = ctypes.CFUNCTYPE(None)(head.finalize)
         initialize(ctypes.byref(traits))
         try:
-            return bool(deploy_workspace())
+            workspace_ok = bool(deploy_workspace())
+            # 外观配置（weasel.style.yaml 等）不在 workspace_update 里，
+            # 由 config_file_update 单独编译成 build/weasel.yaml；漏掉这步换配色不会生效。
+            if head.deploy_config_file:
+                deploy_config = ctypes.CFUNCTYPE(ctypes.c_bool, ctypes.c_char_p, ctypes.c_char_p)(
+                    head.deploy_config_file)
+                config_ok = bool(deploy_config(UI_CONFIG_FILE.encode(),
+                                               UI_CONFIG_VERSION_KEY.encode()))
+            else:
+                config_ok = True
+            return workspace_ok and config_ok
         finally:
             finalize()
     except (OSError, AttributeError, TypeError, ValueError):

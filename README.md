@@ -107,6 +107,21 @@ python manage_words.py --redeploy
 依次执行：导出本机用户词典 → 提交并变基到远端 `master` → 合并其它设备快照 → 重新部署 → 推送。
 不会强制推送；遇到冲突会停下并保留本地提交。详见 [SYNC.md](./SYNC.md)。
 
+### 切换配色 — `切换配色.bat` / `switch_theme.py`
+
+把 `weasel.style.yaml` 里的 18 套配色列成编号，选一个就切过去，并自动重新部署。
+列表右侧带一小块真实配色预览（背景 + 候选字 + 首选高亮），并标出该配色是亮色还是暗色。
+
+| 操作 | 命令 |
+| --- | --- |
+| 交互选择 | `切换配色.bat` 或 `python switch_theme.py` |
+| 按编号切 | `python switch_theme.py 5` |
+| 按名字切 | `python switch_theme.py --set stele` |
+| 只看列表 | `python switch_theme.py --list` |
+
+切换只改 `weasel.style.yaml` 里 `style/color_scheme` 这一行，注释和格式保持原样，
+改完自动部署。终端显示不了彩色块时加 `--no-color`。
+
 ---
 
 ## 部署要点
@@ -121,6 +136,10 @@ python manage_words.py --redeploy
 2. **改 `dicts/` 下的词表，托盘「重新部署」不一定重编词典**。
    Rime 判断是否重编看的是源文件 checksum（`dict_compiler.cc` 的 `rebuild_table = ... dict_file_checksum`），
    而修改检测只扫用户文件夹**顶层** yaml 的 mtime，子目录里的变化它看不到。
+3. **外观配置要单独编译**。`weasel.custom.yaml`、`weasel.style.yaml` 不参与 `workspace_update`，
+   它们由 `config_file_update` 编译成 `build/weasel.yaml`。只调 `deploy()` 的话，
+   改配色／字体／布局都不会生效——脚本因此额外调了
+   `deploy_config_file("weasel.yaml", "config_version")`。
 
 改完词表想确认是否真生效，别去 `build/*.table.bin` 里搜中文——Table 格式是长度前缀 + 变长编码，
 词条文本不是连续明文，搜不到不代表没编进去。
@@ -157,6 +176,7 @@ python manage_words.py --redeploy
 ├── sync/                            # 各设备导出的用户词典快照
 ├── build/                           # 部署时生成的编译缓存，不要手改，不进 Git
 ├── 管理候选词.bat → manage_words.py
+├── 切换配色.bat   → switch_theme.py
 ├── 同步Rime.bat   → sync_rime.py
 └── SYNC.md                          # 多设备同步详细说明
 ```
@@ -176,6 +196,9 @@ python manage_words.py --redeploy
 
 ### 2026-10-25
 
+- 新增 `切换配色.bat` / `switch_theme.py`：按编号切换 18 套配色并自动部署，列表带颜色预览
+- 修复部署遗漏：`deploy()` 之前没有调用 `config_file_update`，导致改 `weasel.style.yaml`
+  （配色、字体、布局）后 `build/weasel.yaml` 不更新、改动不生效
 - 新增「添加词库没有的词」功能：自建词表 `dicts/custom_user.dict.yaml` +
   菜单第 6/7 项 + 命令行 `--add / --list-custom / --redeploy`
 - `manage_words.py` 的部署改为 librime C API 驱动，修复 `WeaselDeployer` 静默失败的问题
