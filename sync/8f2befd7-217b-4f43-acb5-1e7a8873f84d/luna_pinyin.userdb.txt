@@ -65,7 +65,7 @@ an zhuang 	安装	c=57 d=0.0450492 t=79416
 an zhuo 	安卓	c=77 d=1.40679 t=79416
 an zhuo ban 	安卓版	c=3 d=8.55513e-18 t=79416
 an zhuo duan 	安卓端	c=1 d=2.5358e-06 t=79416
-an zhuo shang 	安卓上	c=1 d=1 t=76843
+an zhuo shang 	安卓上	c=1 d=2.58703e-06 t=79416
 ao 	奥	c=5 d=5.49652e-165 t=79416
 ao 	熬	c=2 d=3.6247e-155 t=79416
 ao bi 	澳币	c=2 d=1.92922e-76 t=79416
@@ -170,7 +170,7 @@ ban sui zhe 	伴随着	c=1 d=4.97282e-135 t=79416
 ban tang 	半躺	c=1 d=3.14117e-54 t=79416
 ban tian 	半天	c=1 d=6.39693e-39 t=79416
 ban tu er fei 	半途而废	c=3 d=7.4419e-132 t=79416
-ban xiao shi 	半小时	c=1 d=1 t=79280
+ban xiao shi 	半小时	c=1 d=0.506617 t=79416
 ban yan 	扮演	c=1 d=1.15298e-57 t=79416
 ban yun 	搬运	c=1 d=3.64928e-112 t=79416
 ban zheng 	办证	c=2 d=2.20614e-37 t=79416
@@ -286,7 +286,7 @@ ben di hua 	本地化	c=1 d=9.22496e-140 t=79416
 ben duo 	本多	c=1 d=5.6937e-110 t=79416
 ben fen 	本分	c=2 d=1.68426e-45 t=79416
 ben gai 	本该	c=2 d=9.88325e-124 t=79416
-ben hang 	本行	c=2 d=1.71892 t=78076
+ben hang 	本行	c=2 d=0.00211584 t=79416
 ben jin 	本金	c=8 d=7.32799e-20 t=79416
 ben ke 	本科	c=2 d=2.42873e-76 t=79416
 ben ke sheng 	本科生	c=1 d=6.28675e-158 t=79416
@@ -439,7 +439,7 @@ biao tou 	表头	c=1 d=3.23143e-05 t=79416
 biao xian 	表现	c=7 d=8.14285e-21 t=79416
 biao xiang 	表象	c=1 d=4.90928e-72 t=79416
 biao yan 	表演	c=5 d=2.76461e-51 t=79416
-biao zhi 	标志	c=2 d=1.94176 t=78486
+biao zhi 	标志	c=2 d=0.0185663 t=79416
 biao zhu 	标注	c=4 d=3.08336e-12 t=79416
 biao zhun 	标准	c=17 d=2.22308e-10 t=79416
 bie 	别	c=21 d=0.0869227 t=79416
@@ -457,7 +457,7 @@ bing bu 	并不	c=6 d=1.45638e-70 t=79416
 bing bu gao 	并不高	c=1 d=6.26306e-143 t=79416
 bing bu hao 	并不好	c=1 d=5.33465e-79 t=79416
 bing bu kuai le 	并不快乐	c=1 d=6.35812e-85 t=79416
-bing bu neng 	并不能	c=1 d=1 t=78221
+bing bu neng 	并不能	c=1 d=0.0025415 t=79416
 bing bu shi 	并不是	c=9 d=3.57405e-47 t=79416
 bing bu you 	并不由	c=1 d=1.48419e-116 t=79416
 bing bu zhong yao 	并不重要	c=1 d=2.39018e-163 t=79416
@@ -535,7 +535,7 @@ bu de le 	不得了	c=1 d=1.4213e-136 t=79416
 bu deng lu 	不登录	c=1 d=3.72554e-120 t=79416
 bu di 	不低	c=2 d=2.37743e-12 t=79416
 bu ding 	补丁	c=7 d=2.10949e-105 t=79416
-bu ding qi 	不定期	c=1 d=1 t=77449
+bu ding qi 	不定期	c=1 d=5.35444e-05 t=79416
 bu dong 	不动	c=2 d=9.03856e-47 t=79416
 bu dong 	不懂	c=6 d=1.29579e-19 t=79416
 bu dong de 	不懂得	c=1 d=1.03785e-84 t=79416
@@ -703,7 +703,7 @@ bu yi yang 	不一样	c=12 d=9.18326e-28 t=79416
 bu ying gai 	不应该	c=3 d=5.30285e-38 t=79416
 bu ying xiang 	不影响	c=3 d=7.22773e-05 t=79416
 bu yong 	不用	c=22 d=0.942502 t=79416
-bu yong guan 	不用管	c=1 d=1 t=78151
+bu yong guan 	不用管	c=1 d=0.00179097 t=79416
 bu you 	不由	c=0 d=1.47679e-117 t=79416
 bu you zi zhu 	不由自主	c=1 d=9.73029e-91 t=79416
 bu yuan 	不愿	c=5 d=3.92039e-14 t=79416
@@ -806,7 +806,7 @@ can shui 	掺水	c=1 d=1.3404e-123 t=79416
 can yin 	餐饮	c=1 d=1.04995e-44 t=79416
 can yu 	参与	c=6 d=0.224249 t=79416
 can yu zhe 	参与者	c=2 d=1.11118e-115 t=79416
-can za 	掺杂	c=1 d=1 t=78730
+can za 	掺杂	c=1 d=0.0323869 t=79416
 cang 	仓	c=2 d=3.31255e-161 t=79416
 cang 	苍	c=5 d=1.1685e-96 t=79416
 cang chu 	仓储	c=1 d=5.67688e-134 t=79416
@@ -836,7 +836,7 @@ cao zuo xing 	操作性	c=1 d=6.91205e-09 t=79416
 ce 	侧	c=24 d=0.000368894 t=79416
 ce 	册	c=1 d=1.30815e-160 t=79416
 ce 	测	c=3 d=0.000682328 t=79416
-ce bian lan 	侧边栏	c=1 d=1 t=76798
+ce bian lan 	侧边栏	c=1 d=2.06579e-06 t=79416
 ce hua 	策划	c=1 d=3.09621e-149 t=79416
 ce ju 	测距	c=1 d=4.2295e-142 t=79416
 ce lan 	侧栏	c=1 d=0.000380129 t=79416
@@ -906,7 +906,7 @@ chan shang 	缠上	c=1 d=2.73778e-84 t=79416
 chan sheng 	产生	c=16 d=0.000468354 t=79416
 chan shi 	阐释	c=2 d=1.14644e-86 t=79416
 chan shu 	阐述	c=1 d=9.21898e-103 t=79416
-chan wu 	产物	c=1 d=1 t=78926
+chan wu 	产物	c=1 d=0.0862936 t=79416
 chan ye 	产业	c=2 d=4.08111e-99 t=79416
 chan zi 	铲子	c=4 d=4.5922e-110 t=79416
 chang 	场	c=3 d=1.32744e-98 t=79416
@@ -952,7 +952,7 @@ chao 	潮	c=2 d=3.94595e-61 t=79416
 chao 	超	c=6 d=1.98838e-86 t=79416
 chao bu chao 	吵不吵	c=1 d=2.49935e-159 t=79416
 chao da 	超大	c=1 d=5.87528e-97 t=79416
-chao e 	超额	c=1 d=1 t=77304
+chao e 	超额	c=1 d=2.59329e-05 t=79416
 chao fan 	超凡	c=1 d=1.02906e-131 t=79416
 chao guo 	超过	c=3 d=0.000102566 t=79416
 chao hu 	超乎	c=1 d=1.49032e-135 t=79416
@@ -969,7 +969,7 @@ chao xia 	朝下	c=2 d=9.71887e-59 t=79416
 chao xiang 	朝向	c=8 d=3.49379e-53 t=79416
 chao xie 	抄写	c=1 d=2.3446e-113 t=79416
 chao yan 	超验	c=1 d=2.19848e-150 t=79416
-chao you 	朝右	c=1 d=1 t=78483
+chao you 	朝右	c=1 d=0.00941925 t=79416
 chao yue 	超越	c=7 d=2.94659e-37 t=79416
 chao zhe 	吵着	c=1 d=1.45866e-59 t=79416
 chao zhe 	朝着	c=3 d=4.30348e-52 t=79416
@@ -1049,7 +1049,7 @@ cheng wei 	称为	c=6 d=1.48121e-63 t=79416
 cheng wei le 	成为了	c=1 d=5.1288e-116 t=79416
 cheng xian 	呈现	c=1 d=8.38723e-167 t=79416
 cheng xiao 	成效	c=1 d=3.59373e-108 t=79416
-cheng xin 	诚信	c=1 d=1 t=77123
+cheng xin 	诚信	c=1 d=1.04909e-05 t=79416
 cheng xu 	程序	c=16 d=0.00527483 t=79416
 cheng xu yuan 	程序员	c=2 d=3.26359e-92 t=79416
 cheng ya 	承压	c=1 d=8.74701e-73 t=79416
@@ -1140,7 +1140,7 @@ chou 	抽	c=0 d=2.32436e-159 t=79416
 chou cha 	抽插	c=1 d=3.02221e-41 t=79416
 chou chu 	踌躇	c=2 d=3.65604e-84 t=79416
 chou chu man zhi 	踌躇满志	c=1 d=2.97348e-85 t=79416
-chou dao 	抽到	c=1 d=1 t=77477
+chou dao 	抽到	c=1 d=6.15907e-05 t=79416
 chou hen 	仇恨	c=1 d=8.2716e-92 t=79416
 chou ka 	抽卡	c=2 d=1.39263e-14 t=79416
 chou lao 	酬劳	c=1 d=1.94238e-46 t=79416
@@ -1486,7 +1486,7 @@ da zhan 	大战	c=3 d=4.09499e-56 t=79416
 da zhan 	打战	c=1 d=3.68169e-69 t=79416
 da zhan jiang shi 	大战僵尸	c=1 d=4.28539e-120 t=79416
 da zhi 	大致	c=6 d=1.09001e-14 t=79416
-da zhong xiao 	大中小	c=1 d=1 t=76831
+da zhong xiao 	大中小	c=1 d=2.43637e-06 t=79416
 da zi 	大字	c=1 d=2.87454e-128 t=79416
 da zi 	打字	c=15 d=0.434321 t=79416
 da zi ti 	大字体	c=1 d=2.44952e-128 t=79416
@@ -1553,8 +1553,8 @@ dan wei 	单位	c=8 d=9.83947e-16 t=79416
 dan wu 	耽误	c=3 d=1.04326e-57 t=79416
 dan xiang 	单向	c=2 d=1.62371e-59 t=79416
 dan xin 	担心	c=9 d=9.1992e-19 t=79416
-dan xuan 	单选	c=1 d=1 t=76978
-dan yi 	单一	c=1 d=1 t=77547
+dan xuan 	单选	c=1 d=5.08101e-06 t=79416
+dan yi 	单一	c=1 d=8.74013e-05 t=79416
 dan you 	担忧	c=3 d=0.292293 t=79416
 dan yuan 	单元	c=1 d=3.28163e-98 t=79416
 dan zhang 	单张	c=2 d=7.66839e-17 t=79416
@@ -1599,7 +1599,7 @@ dao bu 	倒不	c=0 d=1.50043e-98 t=79416
 dao bu tong 	道不同	c=1 d=1.81575e-47 t=79416
 dao bu tong bu xiang wei mou 	道不同不相为谋	c=1 d=1.22937e-47 t=79416
 dao chu 	导出	c=21 d=0.45636 t=79416
-dao ci 	到此	c=1 d=1 t=78750
+dao ci 	到此	c=1 d=0.0357931 t=79416
 dao ci wei zhi 	到此为止	c=1 d=4.611e-158 t=79416
 dao de 	道德	c=16 d=2.58488e-73 t=79416
 dao de jing 	道德经	c=1 d=2.69473e-74 t=79416
@@ -1754,7 +1754,7 @@ di yi dang 	第一档	c=2 d=7.48624e-25 t=79416
 di yi ding lv 	第一定律	c=1 d=1.02749e-113 t=79416
 di yi fen 	第一份	c=1 d=1.22549e-98 t=79416
 di yi ge 	第一个	c=6 d=0.00302755 t=79416
-di yi hang 	第一行	c=1 d=1 t=77950
+di yi hang 	第一行	c=1 d=0.000655574 t=79416
 di yi hua 	第一话	c=1 d=5.7189e-15 t=79416
 di yi hun luan 	第一混乱	c=1 d=9.91439e-135 t=79416
 di yi nian 	第一年	c=1 d=3.85193e-42 t=79416
@@ -1802,7 +1802,7 @@ dian xing 	典型	c=1 d=2.43034e-65 t=79416
 dian xuan 	点选	c=1 d=2.20033e-13 t=79416
 dian xue 	点穴	c=1 d=6.48084e-104 t=79416
 dian ying 	电影	c=10 d=0.0417941 t=79416
-dian yuan 	电源	c=1 d=1 t=78243
+dian yuan 	电源	c=1 d=0.00283702 t=79416
 dian yuan xian 	电源线	c=1 d=7.95378e-131 t=79416
 dian zan 	点赞	c=1 d=9.64691e-78 t=79416
 dian zhui 	点缀	c=1 d=9.67156e-108 t=79416
@@ -1860,7 +1860,7 @@ ding yue 	订阅	c=7 d=2.33718e-17 t=79416
 ding zhi 	定制	c=1 d=4.07418e-143 t=79416
 diu 	丢	c=5 d=1.30761e-49 t=79416
 diu diao 	丢掉	c=2 d=4.30362e-23 t=79416
-diu gei 	丢给	c=1 d=1 t=77555
+diu gei 	丢给	c=1 d=9.09683e-05 t=79416
 diu qi 	丢弃	c=1 d=5.43818e-158 t=79416
 dong 	东	c=3 d=3.01451e-11 t=79416
 dong 	冬	c=1 d=3.06006e-11 t=79416
@@ -1976,7 +1976,7 @@ duan qun 	短裙	c=2 d=2.14776e-52 t=79416
 duan shi 	短视	c=1 d=4.06932e-129 t=79416
 duan shi jian 	段时间	c=1 d=3.41254e-117 t=79416
 duan shi pin 	短视频	c=27 d=5.84063e-50 t=79416
-duan shou 	段首	c=1 d=1 t=78012
+duan shou 	段首	c=1 d=0.000893825 t=79416
 duan xian 	短线	c=1 d=7.09237e-106 t=79416
 duan xin 	短信	c=5 d=0.000381446 t=79416
 duan xiu 	短袖	c=1 d=2.05325e-52 t=79416
@@ -2053,12 +2053,12 @@ duo shao ren 	多少人	c=0 d=5.71871e-45 t=79416
 duo shao zhang 	多少张	c=1 d=3.82217e-39 t=79416
 duo shuo 	多说	c=1 d=6.3432e-28 t=79416
 duo tai 	多台	c=1 d=0.774916 t=79416
-duo tiao 	多条	c=0 d=0.1 t=77475
+duo tiao 	多条	c=0 d=6.09778e-06 t=79416
 duo wei 	多维	c=1 d=7.86845e-63 t=79416
 duo xiang 	多想	c=2 d=3.30436e-91 t=79416
-duo xuan 	多选	c=3 d=1.0471 t=77654
+duo xuan 	多选	c=3 d=0.000156262 t=79416
 duo yi dian 	多一点	c=1 d=8.90493e-107 t=79416
-duo yi xie 	多一些	c=1 d=1 t=78779
+duo yi xie 	多一些	c=1 d=0.0413782 t=79416
 duo you 	多有	c=4 d=6.13084e-95 t=79416
 duo you zhi dao 	多有指导	c=1 d=6.49209e-95 t=79416
 duo yue 	多月	c=2 d=0.0977834 t=79416
@@ -2158,7 +2158,7 @@ fa xie bu man 	发泄不满	c=1 d=9.67948e-147 t=79416
 fa xing 	发型	c=4 d=7.04283e-53 t=79416
 fa xing 	发行	c=1 d=2.77641e-43 t=79416
 fa yan ren 	发言人	c=1 d=2.24349e-65 t=79416
-fa you jian 	发邮件	c=5 d=2.05346 t=77674
+fa you jian 	发邮件	c=5 d=0.000338674 t=79416
 fa yu 	法语	c=1 d=2.50614e-44 t=79416
 fa ze 	法则	c=2 d=9.54767e-74 t=79416
 fa zhan 	发展	c=18 d=0.995012 t=79416
@@ -2176,7 +2176,7 @@ fan ben 	范本	c=1 d=1.82374e-128 t=79416
 fan bian 	翻遍	c=1 d=2.33457e-92 t=79416
 fan bo 	反驳	c=2 d=7.36643e-112 t=79416
 fan chang 	反常	c=1 d=7.99851e-50 t=79416
-fan chang 	翻唱	c=1 d=1 t=76879
+fan chang 	翻唱	c=1 d=3.09724e-06 t=79416
 fan chou 	犯愁	c=1 d=2.33751e-48 t=79416
 fan chu 	反刍	c=1 d=4.07487e-145 t=79416
 fan chu 	翻出	c=1 d=1.9262e-124 t=79416
@@ -2280,7 +2280,7 @@ fang wu 	房屋	c=5 d=0.951229 t=79416
 fang xia 	放下	c=7 d=3.32616e-58 t=79416
 fang xian 	防线	c=1 d=1.19996e-115 t=79416
 fang xiang 	方向	c=29 d=0.222017 t=79416
-fang xiang jian 	方向键	c=1 d=1 t=78002
+fang xiang jian 	方向键	c=1 d=0.000850233 t=79416
 fang xin 	放心	c=3 d=1.94197e-65 t=79416
 fang xue 	放学	c=1 d=4.46892e-84 t=79416
 fang yu 	防御	c=10 d=3.46917e-22 t=79416
@@ -2301,7 +2301,7 @@ fei chang 	非常	c=14 d=6.39367e-33 t=79416
 fei che 	飞车	c=2 d=3.80209e-124 t=79416
 fei de 	飞的	c=1 d=7.22773e-05 t=79416
 fei dui chen 	非对称	c=1 d=1.83494e-53 t=79416
-fei hei ji bai 	非黑即白	c=1 d=1 t=78786
+fei hei ji bai 	非黑即白	c=1 d=0.0428521 t=79416
 fei hua 	废话	c=1 d=5.52637e-112 t=79416
 fei ji 	飞机	c=3 d=1.37802e-37 t=79416
 fei le 	废了	c=1 d=1.13346e-62 t=79416
@@ -2329,7 +2329,7 @@ fen bu 	分布	c=3 d=1.2328e-21 t=79416
 fen cha 	分叉	c=1 d=6.14865e-132 t=79416
 fen cha kou 	分岔口	c=1 d=6.50225e-84 t=79416
 fen dou 	奋斗	c=2 d=6.63032e-96 t=79416
-fen fa 	分发	c=2 d=1.90032 t=79147
+fen fa 	分发	c=2 d=0.495109 t=79416
 fen fan 	纷繁	c=1 d=9.07613e-37 t=79416
 fen fen rao rao 	纷纷扰扰	c=1 d=6.99533e-91 t=79416
 fen gong 	分工	c=1 d=1.88421e-100 t=79416
@@ -2399,7 +2399,7 @@ fu 	父	c=1 d=1.21817e-57 t=79416
 fu 	福	c=1 d=2.89553e-96 t=79416
 fu 	腐	c=1 d=2.71313e-154 t=79416
 fu 	负	c=3 d=1.23019e-42 t=79416
-fu ben 	副本	c=4 d=1.89364 t=77908
+fu ben 	副本	c=4 d=0.00100628 t=79416
 fu chu 	付出	c=1 d=8.45739e-118 t=79416
 fu cong 	服从	c=3 d=6.30477e-74 t=79416
 fu dan 	负担	c=5 d=4.87498e-19 t=79416
@@ -2453,7 +2453,7 @@ fu yong 	复用	c=1 d=3.27294e-155 t=79416
 fu yu 	赋予	c=1 d=3.09115e-71 t=79416
 fu za 	复杂	c=21 d=0.13332 t=79416
 fu za du 	复杂度	c=1 d=9.20584e-145 t=79416
-fu za xing 	复杂性	c=1 d=1 t=78844
+fu za xing 	复杂性	c=1 d=0.0572688 t=79416
 fu zai 	浮在	c=1 d=1.78084e-142 t=79416
 fu zao 	浮躁	c=2 d=3.84709e-86 t=79416
 fu ze 	负责	c=11 d=3.33495e-23 t=79416
@@ -2688,7 +2688,7 @@ geng bu xiang 	更不想	c=1 d=1.39391e-113 t=79416
 geng bu xing 	更不行	c=1 d=5.32614e-119 t=79416
 geng da 	更大	c=2 d=4.27997e-17 t=79416
 geng di 	更低	c=3 d=3.50481e-19 t=79416
-geng dong 	更懂	c=1 d=1 t=78196
+geng dong 	更懂	c=1 d=0.00224287 t=79416
 geng duo 	更多	c=33 d=0.0180625 t=79416
 geng gai 	更改	c=3 d=0.0174224 t=79416
 geng gai 	梗概	c=1 d=7.81887e-165 t=79416
@@ -2700,7 +2700,7 @@ geng jia 	更加	c=17 d=2.13378e-34 t=79416
 geng ju 	更具	c=1 d=7.74496e-24 t=79416
 geng kuai 	更快	c=1 d=8.4718e-138 t=79416
 geng man 	更慢	c=1 d=4.11062e-42 t=79416
-geng quan 	更全	c=1 d=1 t=77571
+geng quan 	更全	c=1 d=9.85447e-05 t=79416
 geng rong yi 	更容易	c=1 d=2.30231e-46 t=79416
 geng shi 	更是	c=1 d=2.65037e-114 t=79416
 geng xiang 	更像	c=1 d=2.01315e-114 t=79416
@@ -2716,7 +2716,7 @@ geng zheng 	更正	c=1 d=1.48666e-18 t=79416
 geng zhong yao 	更重要	c=5 d=2.31535e-83 t=79416
 gong 	供	c=1 d=5.62017e-16 t=79416
 gong 	共	c=5 d=2.2794e-47 t=79416
-gong 	宫	c=1 d=1 t=78542
+gong 	宫	c=1 d=0.0126512 t=79416
 gong 	工	c=2 d=1.24401e-98 t=79416
 gong chang 	工厂	c=1 d=5.02024e-129 t=79416
 gong cheng 	工程	c=4 d=3.5466e-41 t=79416
@@ -2898,12 +2898,12 @@ guan zhao 	关照	c=3 d=7.19127e-95 t=79416
 guan zhe 	观者	c=1 d=9.01464e-104 t=79416
 guan zhong 	观众	c=1 d=3.39343e-51 t=79416
 guan zhu 	关注	c=19 d=4.89609e-11 t=79416
-guan zhu du 	关注度	c=1 d=1 t=76876
+guan zhu du 	关注度	c=1 d=3.05113e-06 t=79416
 guan zi 	管子	c=3 d=9.73659e-126 t=79416
 guan zi 	罐子	c=1 d=2.93829e-92 t=79416
 guang 	光	c=11 d=4.86156e-45 t=79416
 guang 	广	c=1 d=1.248e-165 t=79416
-guang biao 	光标	c=2 d=1.99501 t=78377
+guang biao 	光标	c=2 d=0.0110608 t=79416
 guang cai duo mu 	光彩夺目	c=1 d=2.54429e-104 t=79416
 guang dong 	广东	c=1 d=3.505e-108 t=79416
 guang fu 	光伏	c=1 d=4.99807e-77 t=79416
@@ -3251,7 +3251,7 @@ hen rong yi 	很容易	c=5 d=8.27241e-05 t=79416
 hen shao 	很少	c=10 d=0.0274626 t=79416
 hen shao yong 	很少用	c=1 d=1.6566e-56 t=79416
 hen wan 	很晚	c=1 d=6.93045e-99 t=79416
-hen xiang 	很像	c=1 d=1 t=78768
+hen xiang 	很像	c=1 d=0.0391639 t=79416
 hen xiang 	很香	c=2 d=0.0389686 t=79416
 hen xiao 	很小	c=4 d=9.84912e-28 t=79416
 hen you 	很有	c=3 d=1.19279e-74 t=79416
@@ -3475,7 +3475,7 @@ hui qu 	回去	c=1 d=1.51711e-80 t=79416
 hui shi 	回事	c=9 d=0.491644 t=79416
 hui shou 	回收	c=2 d=9.24974e-54 t=79416
 hui shou zhan 	回收站	c=3 d=9.90166e-06 t=79416
-hui shuo 	会说	c=1 d=1 t=78771
+hui shuo 	会说	c=1 d=0.0397558 t=79416
 hui su 	回溯	c=1 d=4.98638e-167 t=79416
 hui tou 	回头	c=2 d=2.21588e-37 t=79416
 hui wang 	回望	c=4 d=1.52525e-84 t=79416
@@ -3552,7 +3552,7 @@ ji bai 	几百	c=1 d=1.87609e-108 t=79416
 ji bai 	击败	c=9 d=5.66617e-34 t=79416
 ji bai ge 	几百个	c=1 d=8.69154e-57 t=79416
 ji bai kuai 	几百块	c=2 d=2.7557e-94 t=79416
-ji bai tiao 	几百条	c=1 d=1 t=77249
+ji bai tiao 	几百条	c=1 d=1.96979e-05 t=79416
 ji bai wan 	几百万	c=0 d=8.28173e-78 t=79416
 ji bei 	几倍	c=1 d=2.04142e-131 t=79416
 ji ben 	基本	c=36 d=0.00252528 t=79416
@@ -3752,7 +3752,7 @@ jia ru 	加入	c=6 d=1.29424e-05 t=79416
 jia ru shi 	假如是	c=1 d=4.34853e-145 t=79416
 jia shang 	加上	c=25 d=0.660353 t=79416
 jia she 	假设	c=8 d=4.53999e-05 t=79416
-jia shuan 	加栓	c=1 d=1 t=77415
+jia shuan 	加栓	c=1 d=4.51735e-05 t=79416
 jia su 	加速	c=3 d=1.79849e-111 t=79416
 jia ting 	家庭	c=15 d=3.64034e-18 t=79416
 jia wen 	加温	c=1 d=1.55918e-137 t=79416
@@ -3871,7 +3871,7 @@ jiang jiu 	讲究	c=1 d=8.28234e-166 t=79416
 jiang lai 	将来	c=2 d=3.07939e-85 t=79416
 jiang li 	奖励	c=5 d=3.18029e-74 t=79416
 jiang lin 	降临	c=2 d=2.44543e-79 t=79416
-jiang mei qi 	江美琪	c=1 d=1 t=76864
+jiang mei qi 	江美琪	c=1 d=2.87344e-06 t=79416
 jiang nan 	江南	c=6 d=3.26978e-129 t=79416
 jiang nan xi 	江南西	c=1 d=1.02086e-37 t=79416
 jiang qing chu 	讲清楚	c=2 d=1.82746e-05 t=79416
@@ -3932,7 +3932,7 @@ jiao xin 	交心	c=1 d=8.42067e-155 t=79416
 jiao xue 	教学	c=4 d=4.16101e-29 t=79416
 jiao xue fei 	交学费	c=1 d=7.88345e-56 t=79416
 jiao xun 	教训	c=2 d=6.08909e-47 t=79416
-jiao yan 	椒盐	c=1 d=1 t=77120
+jiao yan 	椒盐	c=1 d=1.03347e-05 t=79416
 jiao yi 	交易	c=44 d=4.6702e-14 t=79416
 jiao yi ri 	交易日	c=1 d=3.53108e-107 t=79416
 jiao yu 	教育	c=6 d=1.85697e-17 t=79416
@@ -4126,7 +4126,7 @@ jing tai 	静态	c=2 d=6.9522e-135 t=79416
 jing ti 	警惕	c=1 d=1.68077e-50 t=79416
 jing ting 	静听	c=4 d=2.4163e-100 t=79416
 jing tou 	镜头	c=42 d=6.0287e-18 t=79416
-jing wai 	境外	c=1 d=1 t=77700
+jing wai 	境外	c=1 d=0.000187825 t=79416
 jing wei 	京味	c=1 d=1.06615e-77 t=79416
 jing wei 	敬畏	c=1 d=3.11303e-85 t=79416
 jing xi 	精细	c=1 d=8.57735e-166 t=79416
@@ -4156,7 +4156,7 @@ jiu 	救	c=1 d=1.39828e-91 t=79416
 jiu 	旧	c=12 d=0.00180897 t=79416
 jiu an 	就按	c=1 d=9.6725e-21 t=79416
 jiu bu neng 	就不能	c=1 d=4.04572e-90 t=79416
-jiu bu shi 	就不是	c=1 d=1 t=78785
+jiu bu shi 	就不是	c=1 d=0.0426384 t=79416
 jiu bu zai shi 	就不再是	c=1 d=7.94431e-117 t=79416
 jiu chan 	纠缠	c=1 d=1.769e-93 t=79416
 jiu ci 	就此	c=1 d=5.44519e-85 t=79416
@@ -4256,7 +4256,7 @@ jun 	俊	c=1 d=7.10952e-105 t=79416
 jun 	军	c=1 d=1.06167e-145 t=79416
 jun 	君	c=2 d=8.46946e-74 t=79416
 jun 	均	c=4 d=2.8527e-09 t=79416
-jun ding 	均定	c=2 d=1.95123 t=78177
+jun ding 	均定	c=2 d=0.00397973 t=79416
 jun shi 	军事	c=1 d=1.33e-149 t=79416
 jun zhu 	君主	c=5 d=5.93755e-74 t=79416
 jun zi 	君子	c=1 d=5.39945e-74 t=79416
@@ -4320,11 +4320,11 @@ kai xin 	开心	c=11 d=7.68627e-40 t=79416
 kai xue 	开学	c=1 d=2.26488e-59 t=79416
 kai yuan 	开源	c=15 d=0.00250366 t=79416
 kai zhan 	开展	c=3 d=2.3186e-06 t=79416
-kai zhe 	开着	c=1 d=1 t=77357
+kai zhe 	开着	c=1 d=3.38017e-05 t=79416
 kan 	刊	c=1 d=6.75703e-95 t=79416
 kan 	看	c=139 d=0.0140658 t=79416
 kan 	砍	c=3 d=5.01731e-77 t=79416
-kan bu 	看不	c=1 d=1 t=78596
+kan bu 	看不	c=1 d=0.0165727 t=79416
 kan bu chu 	看不出	c=3 d=3.0531e-43 t=79416
 kan bu dao 	看不到	c=7 d=0.577115 t=79416
 kan bu jian 	看不见	c=1 d=1.56208e-12 t=79416
@@ -4347,7 +4347,7 @@ kan kan 	看看	c=42 d=0.0714733 t=79416
 kan lai 	看来	c=9 d=2.44518e-19 t=79416
 kan lai kan qu 	看来看去	c=1 d=1.50914e-165 t=79416
 kan le 	看了	c=1 d=4.83897e-20 t=79416
-kan le xia 	看了下	c=1 d=1 t=77539
+kan le xia 	看了下	c=1 d=8.39743e-05 t=79416
 kan ni 	看你	c=5 d=1.99677e-18 t=79416
 kan po bu shuo po 	看破不说破	c=1 d=4.46241e-155 t=79416
 kan qi 	看齐	c=1 d=4.91812e-05 t=79416
@@ -4450,7 +4450,7 @@ ke xuan 	可选	c=1 d=2.08975e-24 t=79416
 ke xue 	科学	c=1 d=1.66462e-54 t=79416
 ke yan 	科研	c=0 d=3.56839e-114 t=79416
 ke yan jiu 	科研就	c=1 d=3.58628e-113 t=79416
-ke yi 	刻意	c=1 d=1 t=78832
+ke yi 	刻意	c=1 d=0.0539337 t=79416
 ke yi 	可以	c=627 d=4.68191 t=79416
 ke yi shuo 	可以说	c=1 d=2.49595e-143 t=79416
 ke yi wen wo 	可以问我	c=1 d=5.44276e-21 t=79416
@@ -4605,7 +4605,7 @@ lai shuo 	来说	c=24 d=3.51142e-12 t=79416
 lai wang 	来往	c=2 d=1.89933e-47 t=79416
 lai xie 	来写	c=1 d=2.70383e-143 t=79416
 lai yi bian 	来一遍	c=1 d=4.14319e-76 t=79416
-lai yi ge 	来一个	c=1 d=1 t=77093
+lai yi ge 	来一个	c=1 d=9.02962e-06 t=79416
 lai yuan 	来源	c=6 d=1.19e-06 t=79416
 lai zhe 	来着	c=2 d=8.13374e-12 t=79416
 lai zi 	来自	c=1 d=1.87763e-147 t=79416
@@ -4708,7 +4708,7 @@ leng ku 	冷酷	c=1 d=3.57253e-156 t=79416
 leng leng 	愣愣	c=1 d=5.3656e-147 t=79416
 leng men 	冷门	c=1 d=5.28966e-97 t=79416
 leng mo 	冷漠	c=5 d=4.06184e-78 t=79416
-leng que 	冷却	c=1 d=1 t=76742
+leng que 	冷却	c=1 d=1.56129e-06 t=79416
 li 	丽	c=1 d=2.15713e-15 t=79416
 li 	例	c=1 d=4.71709e-14 t=79416
 li 	利	c=4 d=2.54488e-48 t=79416
@@ -4888,7 +4888,7 @@ ling gan 	灵感	c=2 d=3.16573e-28 t=79416
 ling hun 	灵魂	c=5 d=1.86584e-73 t=79416
 ling huo 	灵活	c=8 d=2.98137e-28 t=79416
 ling ling sui sui 	零零碎碎	c=1 d=1.05691e-151 t=79416
-ling qu 	领取	c=1 d=1 t=76884
+ling qu 	领取	c=1 d=3.17564e-06 t=79416
 ling ren 	令人	c=1 d=1.68278e-64 t=79416
 ling ren jing pei 	令人敬佩	c=1 d=6.60143e-115 t=79416
 ling san 	零散	c=1 d=1.81145e-166 t=79416
@@ -5154,7 +5154,7 @@ mei 	每	c=5 d=1.13253e-23 t=79416
 mei 	没	c=132 d=0.550162 t=79416
 mei 	美	c=7 d=5.49542e-46 t=79416
 mei ban fa 	没办法	c=2 d=5.15396e-56 t=79416
-mei bi yao 	没必要	c=1 d=1 t=77557
+mei bi yao 	没必要	c=1 d=9.18825e-05 t=79416
 mei bian 	没变	c=1 d=1.33543e-50 t=79416
 mei ci 	每次	c=31 d=0.159856 t=79416
 mei cuo 	没错	c=1 d=1.32107e-158 t=79416
@@ -5312,7 +5312,7 @@ min zu 	民族	c=2 d=1.70326e-146 t=79416
 ming 	名	c=6 d=1.56639e-15 t=79416
 ming 	明	c=5 d=1.55371e-37 t=79416
 ming bai 	明白	c=19 d=0.143704 t=79416
-ming bao 	明报	c=1 d=1 t=77640
+ming bao 	明报	c=1 d=0.000139144 t=79416
 ming chao 	明朝	c=2 d=2.16367e-80 t=79416
 ming cheng 	名称	c=8 d=0.0140941 t=79416
 ming chui qing shi 	名垂青史	c=1 d=1.34601e-84 t=79416
@@ -5431,7 +5431,7 @@ mu ti 	母题	c=1 d=4.89046e-115 t=79416
 mu tou 	木头	c=1 d=2.24509e-44 t=79416
 mu xuan 	目眩	c=1 d=6.68958e-124 t=79416
 mu yang 	模样	c=1 d=1.49351e-72 t=79416
-mu yu 	母语	c=1 d=1 t=78743
+mu yu 	母语	c=1 d=0.034562 t=79416
 na 	呐	c=1 d=1.67804e-119 t=79416
 na 	哪	c=7 d=0.776883 t=79416
 na 	拿	c=29 d=1.31922e-24 t=79416
@@ -5594,7 +5594,7 @@ ni 	你	c=878 d=3.49933 t=79416
 ni 	倪	c=17 d=1.82293e-64 t=79416
 ni 	拟	c=1 d=2.08797e-14 t=79416
 ni 	逆	c=7 d=1.19336e-109 t=79416
-ni ba 	你把	c=1 d=1 t=77601
+ni ba 	你把	c=1 d=0.000114493 t=79416
 ni bu xiao de 	你不晓得	c=1 d=5.47266e-56 t=79416
 ni dan 	泥蛋	c=1 d=1.08558e-113 t=79416
 ni feng 	逆风	c=3 d=1.44209e-101 t=79416
@@ -5853,7 +5853,7 @@ pin 	品	c=8 d=4.62589e-49 t=79416
 pin 	拼	c=3 d=1.69035e-58 t=79416
 pin 	贫	c=2 d=4.47419e-146 t=79416
 pin 	频	c=1 d=2.57073e-108 t=79416
-pin ci 	频次	c=1 d=1 t=77090
+pin ci 	频次	c=1 d=8.89519e-06 t=79416
 pin dao 	频道	c=1 d=3.05811e-121 t=79416
 pin duo duo 	拼多多	c=2 d=8.25359e-37 t=79416
 pin fan 	频繁	c=8 d=1.79127e-05 t=79416
@@ -6105,7 +6105,7 @@ qing bai 	清白	c=1 d=9.98373e-70 t=79416
 qing bao 	轻薄	c=1 d=1.02825e-63 t=79416
 qing cang 	清仓	c=1 d=6.10258e-73 t=79416
 qing chao 	清朝	c=1 d=3.03252e-81 t=79416
-qing chen 	清晨	c=1 d=1 t=79273
+qing chen 	清晨	c=1 d=0.489192 t=79416
 qing chu 	清楚	c=11 d=0.000389752 t=79416
 qing chun 	清纯	c=1 d=2.33028e-41 t=79416
 qing chun 	青春	c=1 d=2.31866e-41 t=79416
@@ -6131,7 +6131,7 @@ qing piao piao 	轻飘飘	c=1 d=7.77351e-126 t=79416
 qing qiao 	轻巧	c=1 d=3.04587e-162 t=79416
 qing qing 	轻轻	c=1 d=4.06336e-53 t=79416
 qing qing song song 	轻轻松松	c=1 d=1.89495e-108 t=79416
-qing qiu 	请求	c=2 d=1.2865 t=77291
+qing qiu 	请求	c=2 d=3.1263e-05 t=79416
 qing shang 	情商	c=1 d=5.44021e-133 t=79416
 qing shi 	请示	c=2 d=7.68874e-63 t=79416
 qing shi 	轻视	c=1 d=5.46265e-152 t=79416
@@ -6233,8 +6233,8 @@ quan ji shou 	拳击手	c=1 d=2.03248e-50 t=79416
 quan ju 	全局	c=3 d=1.1393e-93 t=79416
 quan li 	权利	c=1 d=2.09125e-150 t=79416
 quan li 	权力	c=20 d=2.30947e-73 t=79416
-quan liang 	全量	c=3 d=2.55427 t=77563
-quan mao 	全貌	c=1 d=1 t=78977
+quan liang 	全量	c=3 d=0.00024184 t=79416
+quan mao 	全貌	c=1 d=0.111359 t=79416
 quan mian 	全面	c=1 d=8.31253e-150 t=79416
 quan qing 	全情	c=1 d=9.46202e-115 t=79416
 quan qing 	权倾	c=1 d=9.41483e-115 t=79416
@@ -6245,7 +6245,7 @@ quan shen 	全身	c=3 d=4.88822e-62 t=79416
 quan shi 	全市	c=3 d=6.47595e-07 t=79416
 quan shi jie 	全世界	c=1 d=5.65892e-38 t=79416
 quan suo 	蜷缩	c=2 d=8.3275e-83 t=79416
-quan tian 	全天	c=1 d=1 t=79268
+quan tian 	全天	c=1 d=0.477114 t=79416
 quan wei 	权威	c=3 d=1.84608e-36 t=79416
 quan wei tuo 	全委托	c=1 d=8.59691e-134 t=79416
 quan wen 	全文	c=2 d=5.08188e-08 t=79416
@@ -6473,12 +6473,12 @@ san bai yi 	三百亿	c=1 d=1.75958e-89 t=79416
 san bu shang lan 	三步上篮	c=1 d=2.53615e-37 t=79416
 san ci fang 	三次方	c=1 d=6.3486e-38 t=79416
 san da 	三大	c=1 d=3.64296e-121 t=79416
-san duan 	三端	c=1 d=1 t=78038
+san duan 	三端	c=1 d=0.00101791 t=79416
 san fen 	三分	c=1 d=9.57463e-19 t=79416
 san fen zhi yi 	三分之一	c=2 d=4.7655e-134 t=79416
 san ge 	三个	c=10 d=2.72959e-05 t=79416
-san ge dian 	三个丶	c=1 d=1 t=76930
-san ge dian 	三个点	c=1 d=1 t=77649
+san ge dian 	三个丶	c=1 d=3.99687e-06 t=79416
+san ge dian 	三个点	c=1 d=0.000145549 t=79416
 san guo sha 	三国杀	c=2 d=1.10083e-93 t=79416
 san guo zhi 	三国志	c=5 d=1.97644e-74 t=79416
 san hang 	三航	c=7 d=1.54575e-06 t=79416
@@ -6490,7 +6490,7 @@ san ji 	三级	c=1 d=0.000907334 t=79416
 san ji guan 	三极管	c=1 d=6.53553e-144 t=79416
 san jian shi 	三件事	c=1 d=3.03387e-145 t=79416
 san jiao 	三角	c=3 d=4.61126e-118 t=79416
-san jiao xing 	三角形	c=1 d=1 t=78487
+san jiao xing 	三角形	c=1 d=0.00960953 t=79416
 san ju tou 	三巨头	c=1 d=2.08919e-109 t=79416
 san luo 	散落	c=1 d=2.47825e-30 t=79416
 san nian 	三年	c=3 d=1.70467e-69 t=79416
@@ -6539,7 +6539,7 @@ sha qiu 	沙丘	c=1 d=3.69008e-37 t=79416
 sha sha 	傻傻	c=2 d=4.51256e-40 t=79416
 sha shi hou 	啥时候	c=2 d=5.96446e-39 t=79416
 sha shou 	杀手	c=5 d=1.62434e-119 t=79416
-sha xiang 	沙箱	c=1 d=1 t=78047
+sha xiang 	沙箱	c=1 d=0.00106477 t=79416
 sha ye bu dong 	啥也不懂	c=1 d=7.11142e-20 t=79416
 sha zi 	傻子	c=7 d=2.10308e-40 t=79416
 shai xuan 	筛选	c=26 d=0.0629371 t=79416
@@ -6552,7 +6552,7 @@ shan 	扇	c=1 d=1.01354e-158 t=79416
 shan 	闪	c=1 d=3.29169e-134 t=79416
 shan chang 	擅长	c=8 d=1.85206e-74 t=79416
 shan chu 	删除	c=32 d=0.400517 t=79416
-shan ci 	删词	c=1 d=1 t=77086
+shan ci 	删词	c=1 d=8.71905e-06 t=79416
 shan dian 	闪电	c=7 d=1.33934e-50 t=79416
 shan diao 	删掉	c=17 d=0.252885 t=79416
 shan dong 	山东	c=1 d=5.53672e-134 t=79416
@@ -6623,8 +6623,8 @@ shang yi 	上一	c=0 d=1.22878e-13 t=79416
 shang yi bu 	上一步	c=1 d=8.51254e-165 t=79416
 shang yi ci 	上一次	c=3 d=2.64397e-106 t=79416
 shang yi dai 	上一代	c=3 d=2.54523e-79 t=79416
-shang yi hang 	上一行	c=2 d=1.7788 t=78067
-shang yi qu 	上一曲	c=2 d=1.97531 t=78476
+shang yi hang 	上一行	c=2 d=0.0020932 t=79416
+shang yi qu 	上一曲	c=2 d=0.017966 t=79416
 shang yi zhang 	上一章	c=2 d=1.13197e-11 t=79416
 shang yin 	上瘾	c=7 d=1.2505e-71 t=79416
 shang zhang 	上涨	c=4 d=3.63067e-21 t=79416
@@ -6682,7 +6682,7 @@ shen 	神	c=7 d=1.30099e-101 t=79416
 shen 	身	c=2 d=1.36385e-73 t=79416
 shen bian 	身边	c=5 d=1.37682e-85 t=79416
 shen bu you ji 	身不由己	c=1 d=1.3915e-122 t=79416
-shen ceng 	深层	c=1 d=1 t=78644
+shen ceng 	深层	c=1 d=0.021068 t=79416
 shen cha 	审查	c=3 d=0.245367 t=79416
 shen chen 	深沉	c=2 d=1.60565e-114 t=79416
 shen chu 	深处	c=1 d=1.17133e-125 t=79416
@@ -6883,7 +6883,7 @@ shi jian 	世间	c=1 d=1.18442e-50 t=79416
 shi jian 	事件	c=11 d=8.63597e-35 t=79416
 shi jian 	实践	c=27 d=5.07188e-73 t=79416
 shi jian 	时间	c=190 d=0.657671 t=79416
-shi jian chu 	时间出	c=1 d=1 t=77525
+shi jian chu 	时间出	c=1 d=7.82971e-05 t=79416
 shi jian chuo 	时间戳	c=6 d=0.827042 t=79416
 shi jian dian 	时间点	c=1 d=2.14201e-138 t=79416
 shi jian zhou 	时间轴	c=1 d=8.81604e-136 t=79416
@@ -7029,7 +7029,7 @@ shou quan 	授权	c=1 d=7.55245e-22 t=79416
 shou ru 	收入	c=20 d=6.28957e-45 t=79416
 shou shang 	受伤	c=1 d=1.19008e-106 t=79416
 shou shang 	手上	c=3 d=4.85315e-25 t=79416
-shou shen 	瘦身	c=1 d=1 t=78112
+shou shen 	瘦身	c=1 d=0.00147367 t=79416
 shou shi 	手势	c=1 d=2.2519e-109 t=79416
 shou shu liang duan 	首鼠两端	c=1 d=8.67712e-155 t=79416
 shou suo 	收缩	c=1 d=1.63393e-41 t=79416
@@ -7084,7 +7084,7 @@ shu liang 	数量	c=13 d=0.647265 t=79416
 shu mei pai 	树莓派	c=19 d=5.7698e-130 t=79416
 shu mian 	书面	c=1 d=2.45936e-87 t=79416
 shu miao 	树苗	c=1 d=1.39145e-151 t=79416
-shu ming 	署名	c=1 d=1 t=79120
+shu ming 	署名	c=1 d=0.227638 t=79416
 shu pai 	竖排	c=1 d=6.625e-10 t=79416
 shu ping 	竖屏	c=1 d=7.3375e-94 t=79416
 shu qi 	竖起	c=1 d=3.48018e-142 t=79416
@@ -7104,7 +7104,7 @@ shu shui 	熟睡	c=1 d=1.90554e-56 t=79416
 shu xi 	梳洗	c=1 d=5.47062e-81 t=79416
 shu xi 	熟悉	c=5 d=3.14448e-37 t=79416
 shu xia 	树下	c=2 d=1.89849e-134 t=79416
-shu xian 	竖线	c=1 d=1 t=78478
+shu xian 	竖线	c=1 d=0.00918669 t=79416
 shu xiang 	竖向	c=1 d=2.77302e-58 t=79416
 shu xing 	属性	c=7 d=6.71488e-34 t=79416
 shu xue 	数学	c=8 d=1.25552e-30 t=79416
@@ -7181,7 +7181,7 @@ shui zhe 	睡着	c=3 d=7.18755e-57 t=79416
 shui zhi 	水质	c=1 d=2.16448e-55 t=79416
 shun 	瞬	c=1 d=9.71075e-38 t=79416
 shun bian 	顺便	c=1 d=4.18612e-109 t=79416
-shun dao 	顺道	c=1 d=1 t=77849
+shun dao 	顺道	c=1 d=0.000395642 t=79416
 shun jian 	瞬间	c=1 d=5.30967e-112 t=79416
 shun li 	顺利	c=7 d=4.42672e-20 t=79416
 shun shi 	瞬时	c=1 d=7.21282e-157 t=79416
@@ -7202,7 +7202,7 @@ shuo dian 	说点	c=1 d=2.12191e-86 t=79416
 shuo fa 	说法	c=4 d=0.0728029 t=79416
 shuo fu 	说服	c=1 d=2.27918e-133 t=79416
 shuo guo 	硕果	c=1 d=5.86572e-166 t=79416
-shuo hua 	说话	c=1 d=1 t=78899
+shuo hua 	说话	c=1 d=0.0753961 t=79416
 shuo huang 	说谎	c=1 d=1.14579e-101 t=79416
 shuo hui lai 	说回来	c=1 d=1.7435e-128 t=79416
 shuo le suan 	说了算	c=1 d=3.37388e-130 t=79416
@@ -7305,7 +7305,7 @@ sui di 	随地	c=1 d=2.81954e-136 t=79416
 sui feng 	随风	c=1 d=4.48416e-124 t=79416
 sui ji 	随即	c=1 d=1.96712e-136 t=79416
 sui ji 	随机	c=10 d=0.000126806 t=79416
-sui ji xing 	随机性	c=1 d=1 t=77484
+sui ji xing 	随机性	c=1 d=6.37845e-05 t=79416
 sui pian 	碎片	c=5 d=9.49389e-37 t=79416
 sui pian hua 	碎片化	c=4 d=8.63881e-103 t=79416
 sui ran 	虽然	c=22 d=4.31935e-07 t=79416
@@ -7502,7 +7502,7 @@ ti 	体	c=2 d=2.63769e-87 t=79416
 ti 	提	c=9 d=5.53952e-78 t=79416
 ti 	替	c=1 d=4.7311e-137 t=79416
 ti 	踢	c=4 d=4.45968e-54 t=79416
-ti 	题	c=1 d=1 t=79356
+ti 	题	c=1 d=0.740818 t=79416
 ti ba 	提拔	c=2 d=6.35858e-96 t=79416
 ti bu qi 	提不起	c=1 d=1.13416e-128 t=79416
 ti cai 	体裁	c=1 d=1.51902e-36 t=79416
@@ -7594,7 +7594,7 @@ tiao cao 	跳槽	c=1 d=4.09207e-77 t=79416
 tiao ceng 	条层	c=1 d=1.20745e-100 t=79416
 tiao chu 	跳出	c=2 d=4.54154e-09 t=79416
 tiao chu lai 	挑出来	c=1 d=2.2675e-102 t=79416
-tiao dao 	跳到	c=1 d=1 t=78404
+tiao dao 	跳到	c=1 d=0.00634556 t=79416
 tiao di 	调低	c=1 d=1.26594e-39 t=79416
 tiao dou 	挑逗	c=1 d=2.42613e-74 t=79416
 tiao gao 	调高	c=1 d=7.08732e-127 t=79416
@@ -7618,7 +7618,7 @@ tiao wen 	条文	c=1 d=7.53967e-149 t=79416
 tiao wen 	条纹	c=1 d=2.14886e-58 t=79416
 tiao xi 	调戏	c=1 d=9.15147e-46 t=79416
 tiao xuan 	挑选	c=2 d=9.59941e-20 t=79416
-tiao yi xia 	调一下	c=1 d=1 t=77850
+tiao yi xia 	调一下	c=1 d=0.000397625 t=79416
 tiao zhan 	挑战	c=8 d=1.78541e-34 t=79416
 tiao zhe 	跳着	c=2 d=1.26926e-11 t=79416
 tiao zheng 	调整	c=86 d=1.55856 t=79416
@@ -7648,7 +7648,7 @@ ting li 	挺立	c=1 d=3.50119e-154 t=79416
 ting liu 	停留	c=6 d=1.70143e-76 t=79416
 ting qi lai 	听起来	c=4 d=0.0928727 t=79416
 ting qiang 	挺强	c=1 d=8.23062e-63 t=79416
-ting qu 	听取	c=1 d=1 t=79001
+ting qu 	听取	c=1 d=0.125556 t=79416
 ting shuo 	听说	c=8 d=1.04398e-28 t=79416
 ting shuo guo 	听说过	c=1 d=1.56103e-151 t=79416
 ting ting 	听听	c=1 d=2.59947e-33 t=79416
@@ -7847,7 +7847,7 @@ tun bu 	臀部	c=5 d=1.27217e-53 t=79416
 tun ji 	囤积	c=1 d=7.55815e-119 t=79416
 tun tu liang 	吞吐量	c=1 d=4.14293e-134 t=79416
 tun yan 	吞咽	c=1 d=4.10922e-38 t=79416
-tuo 	坨	c=0 d=0.1 t=77825
+tuo 	坨	c=0 d=3.50903e-05 t=79416
 tuo 	托	c=2 d=2.58783e-39 t=79416
 tuo 	拖	c=5 d=7.75394e-67 t=79416
 tuo 	脱	c=4 d=4.29909e-40 t=79416
@@ -7882,7 +7882,7 @@ wai bin 	外宾	c=1 d=2.20483e-37 t=79416
 wai bu 	外部	c=2 d=1.72076e-150 t=79416
 wai ceng 	外层	c=1 d=5.48012e-72 t=79416
 wai chu 	外出	c=1 d=0.00571306 t=79416
-wai dang 	外当	c=1 d=1 t=77028
+wai dang 	外当	c=1 d=6.52415e-06 t=79416
 wai gua 	外挂	c=1 d=1.58294e-21 t=79416
 wai guan 	外观	c=3 d=8.42203e-10 t=79416
 wai guo 	外国	c=2 d=3.0249e-102 t=79416
@@ -8000,7 +8000,7 @@ wang yang ming 	王阳明	c=2 d=9.31699e-51 t=79416
 wang ye 	网页	c=15 d=0.154033 t=79416
 wang ye ban 	网页版	c=7 d=0.160042 t=79416
 wang ye duan 	网页端	c=2 d=0.000391706 t=79416
-wang ye shang 	网页上	c=2 d=1.47473 t=78073
+wang ye shang 	网页上	c=2 d=0.00178824 t=79416
 wang yi 	网易	c=5 d=7.44761e-34 t=79416
 wang you 	网游	c=1 d=7.14249e-130 t=79416
 wang zhan 	网站	c=14 d=0.0184074 t=79416
@@ -8161,7 +8161,7 @@ wu cong xuan ze 	无从选择	c=1 d=3.22278e-91 t=79416
 wu dao 	舞蹈	c=1 d=2.87726e-51 t=79416
 wu dao 	误导	c=3 d=1.1612e-23 t=79416
 wu di 	无敌	c=3 d=1.93039e-32 t=79416
-wu duan 	武断	c=2 d=1.93707 t=78712
+wu duan 	武断	c=2 d=0.0573362 t=79416
 wu fa 	无法	c=39 d=0.000718345 t=79416
 wu fa hui tou 	无法回头	c=1 d=2.12965e-70 t=79416
 wu fa tao bi 	无法逃避	c=1 d=3.2067e-91 t=79416
@@ -8200,7 +8200,7 @@ wu qing 	无情	c=2 d=8.32466e-79 t=79416
 wu qiong wu jin 	无穷无尽	c=1 d=6.10446e-106 t=79416
 wu qu 	无趣	c=1 d=3.39888e-158 t=79416
 wu quan 	无权	c=1 d=1.15464e-162 t=79416
-wu ran 	污染	c=1 d=1 t=78729
+wu ran 	污染	c=1 d=0.0322254 t=79416
 wu ren 	无人	c=2 d=1.82371e-83 t=79416
 wu ren shen kong 	无人深空	c=1 d=1.55246e-145 t=79416
 wu ren zi di 	误人子弟	c=1 d=2.33179e-78 t=79416
@@ -8221,18 +8221,18 @@ wu tian 	五天	c=1 d=2.95312e-63 t=79416
 wu tiao jian 	无条件	c=2 d=1.69628e-11 t=79416
 wu tong shu 	梧桐树	c=1 d=4.90828e-99 t=79416
 wu tou 	无头	c=2 d=3.9292e-11 t=79416
-wu wei 	无畏	c=1 d=1 t=78118
+wu wei 	无畏	c=1 d=0.00151855 t=79416
 wu xian 	无线	c=1 d=4.22042e-58 t=79416
 wu xian 	无限	c=8 d=0.000109455 t=79416
 wu xian shu biao 	无线鼠标	c=1 d=1.50309e-59 t=79416
 wu xu 	无需	c=1 d=7.5916e-24 t=79416
-wu ye 	物业	c=2 d=1.94649 t=79208
+wu ye 	物业	c=2 d=0.687996 t=79416
 wu yi 	无益	c=1 d=2.00522e-97 t=79416
 wu yi yi 	无意义	c=5 d=6.69821e-51 t=79416
 wu yong 	无用	c=3 d=2.73377e-08 t=79416
 wu you wu lv 	无忧无虑	c=2 d=4.76581e-76 t=79416
 wu yu 	物语	c=2 d=5.60612e-104 t=79416
-wu yuan wu gu 	无缘无故	c=1 d=1 t=77311
+wu yuan wu gu 	无缘无故	c=1 d=2.68566e-05 t=79416
 wu yue tian 	五月天	c=15 d=4.18444e-97 t=79416
 wu zhang yuan 	五丈原	c=1 d=1.11811e-78 t=79416
 wu zhao sheng you zhao 	无招胜有招	c=1 d=8.63293e-95 t=79416
@@ -8273,7 +8273,7 @@ xi nan yuan 	西南院	c=1 d=1.8013e-100 t=79416
 xi nao 	洗脑	c=1 d=2.60797e-42 t=79416
 xi nu ai le 	喜怒哀乐	c=1 d=1.37157e-70 t=79416
 xi pan 	吸盘	c=1 d=2.01131e-162 t=79416
-xi ping 	熄屏	c=2 d=1.92774 t=78228
+xi ping 	熄屏	c=2 d=0.00507387 t=79416
 xi que 	稀缺	c=2 d=2.85221e-07 t=79416
 xi que xing 	稀缺性	c=1 d=1.11484e-73 t=79416
 xi shang 	系上	c=1 d=1.95478e-62 t=79416
@@ -8284,7 +8284,7 @@ xi shu 	稀疏	c=3 d=8.22698e-64 t=79416
 xi shu 	系数	c=3 d=2.8994e-26 t=79416
 xi tong 	系统	c=46 d=0.179533 t=79416
 xi tu 	稀土	c=2 d=5.02059e-151 t=79416
-xi wan chi 	洗碗池	c=1 d=1 t=78119
+xi wan chi 	洗碗池	c=1 d=0.00152616 t=79416
 xi wang 	希望	c=80 d=0.782569 t=79416
 xi xi 	细细	c=1 d=1.31712e-64 t=79416
 xi xi shu shu 	稀稀疏疏	c=1 d=1.11181e-41 t=79416
@@ -8356,9 +8356,9 @@ xia yi ci 	下一次	c=2 d=1.64604e-69 t=79416
 xia yi dai 	下一代	c=1 d=2.89061e-76 t=79416
 xia yi duan 	下一段	c=1 d=5.30787e-108 t=79416
 xia yi ge 	下一个	c=4 d=1.65461e-34 t=79416
-xia yi hang 	下一行	c=1 d=1 t=78019
+xia yi hang 	下一行	c=1 d=0.000925663 t=79416
 xia yi pian 	下一篇	c=1 d=1.98825e-144 t=79416
-xia yi qu 	下一曲	c=1 d=1 t=78472
+xia yi qu 	下一曲	c=1 d=0.00891518 t=79416
 xia yi shi 	下意识	c=2 d=5.28342e-124 t=79416
 xia yi wei 	下一位	c=1 d=2.5047e-96 t=79416
 xia yi zhan 	下一站	c=1 d=1.36492e-101 t=79416
@@ -8571,7 +8571,7 @@ xiao niu 	小牛	c=1 d=7.1274e-17 t=79416
 xiao qi 	小气	c=1 d=2.79128e-47 t=79416
 xiao qi lai 	笑起来	c=1 d=1.58069e-63 t=79416
 xiao qian 	消遣	c=1 d=1.75814e-50 t=79416
-xiao qu 	小区	c=2 d=1.81873 t=79246
+xiao qu 	小区	c=2 d=0.777352 t=79416
 xiao ren 	小人	c=1 d=8.76432e-155 t=79416
 xiao san 	消散	c=1 d=4.79754e-154 t=79416
 xiao shi 	小事	c=3 d=1.51273e-46 t=79416
@@ -8606,7 +8606,7 @@ xiao zui 	小嘴	c=1 d=1.96598e-41 t=79416
 xie 	些	c=36 d=1.79799e-49 t=79416
 xie 	写	c=117 d=0.382927 t=79416
 xie 	蟹	c=1 d=1.11222e-16 t=79416
-xie cheng 	写成	c=1 d=1 t=77077
+xie cheng 	写成	c=1 d=8.33539e-06 t=79416
 xie cheng 	携程	c=1 d=4.69615e-138 t=79416
 xie chu 	写出	c=2 d=0.00318278 t=79416
 xie dao 	写道	c=1 d=3.12095e-125 t=79416
@@ -8628,7 +8628,7 @@ xie wan 	写完	c=1 d=3.96413e-115 t=79416
 xie xia 	写下	c=1 d=8.17876e-165 t=79416
 xie xie 	谢谢	c=4 d=7.88076e-52 t=79416
 xie xu 	些许	c=0 d=4.06392e-85 t=79416
-xie yi bian 	写一遍	c=1 d=1 t=77608
+xie yi bian 	写一遍	c=1 d=0.000118571 t=79416
 xie yi ge 	写一个	c=1 d=4.83356e-95 t=79416
 xie zai 	卸载	c=11 d=1.69519e-17 t=79416
 xie zhe 	写着	c=1 d=1.23776e-127 t=79416
@@ -8658,7 +8658,7 @@ xin jia po 	新加坡	c=1 d=3.22377e-124 t=79416
 xin jian 	新建	c=27 d=0.366804 t=79416
 xin jin 	新近	c=1 d=1.48516e-153 t=79416
 xin jing 	心境	c=3 d=1.26808e-43 t=79416
-xin jiu 	新旧	c=1 d=1 t=77535
+xin jiu 	新旧	c=1 d=8.23115e-05 t=79416
 xin ka 	新卡	c=1 d=2.38457e-106 t=79416
 xin ku 	辛苦	c=2 d=1.6623e-67 t=79416
 xin lai 	新来	c=1 d=1.6095e-99 t=79416
@@ -8682,8 +8682,8 @@ xin qing 	心情	c=3 d=2.85406e-44 t=79416
 xin ren 	信任	c=1 d=2.72691e-96 t=79416
 xin ren 	新人	c=1 d=2.74058e-96 t=79416
 xin shan 	新山	c=1 d=3.39032e-99 t=79416
-xin shang 	欣赏	c=1 d=1 t=78890
-xin she bei 	新设备	c=1 d=1 t=77033
+xin shang 	欣赏	c=1 d=0.0720785 t=79416
+xin she bei 	新设备	c=1 d=6.68931e-06 t=79416
 xin shen 	心神	c=1 d=1.84119e-93 t=79416
 xin sheng cheng 	新生成	c=1 d=0.985112 t=79416
 xin shou 	新手	c=2 d=8.89735e-97 t=79416
@@ -8841,7 +8841,7 @@ xuan yuan jian 	轩辕剑	c=2 d=4.88664e-127 t=79416
 xuan zai 	悬在	c=1 d=2.60187e-132 t=79416
 xuan ze 	选择	c=93 d=0.397126 t=79416
 xuan ze xing 	选择性	c=1 d=2.16508e-117 t=79416
-xuan zhong 	选中	c=1 d=1 t=78075
+xuan zhong 	选中	c=1 d=0.00122477 t=79416
 xue 	学	c=22 d=2.77603e-12 t=79416
 xue 	血	c=3 d=2.27732e-94 t=79416
 xue 	雪	c=11 d=4.71607e-89 t=79416
@@ -9106,16 +9106,16 @@ yi chui 	一吹	c=1 d=4.74981e-154 t=79416
 yi ci 	一次	c=40 d=0.0113226 t=79416
 yi ci lei tui 	以此类推	c=1 d=3.85468e-21 t=79416
 yi ci xing 	一次性	c=5 d=0.918512 t=79416
-yi da 	一大	c=0 d=0.1 t=77825
+yi da 	一大	c=0 d=3.50903e-05 t=79416
 yi da 	益达	c=1 d=1.17189e-160 t=79416
 yi da dui 	一大堆	c=1 d=6.21951e-61 t=79416
-yi da tuo 	一大坨	c=1 d=1 t=77826
+yi da tuo 	一大坨	c=1 d=0.000352662 t=79416
 yi da zao 	一大早	c=1 d=2.73825e-86 t=79416
 yi dai 	一代	c=1 d=8.5686e-154 t=79416
 yi dan 	一旦	c=16 d=0.0212067 t=79416
 yi dang 	一档	c=1 d=2.91429e-25 t=79416
 yi dao 	一道	c=5 d=2.42559e-71 t=79416
-yi dao 	移到	c=1 d=1 t=78414
+yi dao 	移到	c=1 d=0.0066709 t=79416
 yi de zhi guo 	以德治国	c=1 d=3.80003e-147 t=79416
 yi di 	异地	c=1 d=2.51247e-103 t=79416
 yi dian 	一点	c=63 d=0.937067 t=79416
@@ -9183,7 +9183,7 @@ yi jian 	意见	c=11 d=1.35743 t=79416
 yi jian shi 	一件事	c=6 d=6.2756e-49 t=79416
 yi jian shi qing 	一件事情	c=1 d=5.87228e-91 t=79416
 yi jiao 	移交	c=2 d=3.10443e-92 t=79416
-yi jie 	一截	c=1 d=1 t=77869
+yi jie 	一截	c=1 d=0.000437252 t=79416
 yi jie ke 	一节课	c=1 d=2.93979e-98 t=79416
 yi jing 	已经	c=106 d=0.770403 t=79416
 yi jiu 	依旧	c=1 d=5.44815e-62 t=79416
@@ -9209,11 +9209,11 @@ yi lian chuan 	一连串	c=1 d=3.42906e-115 t=79416
 yi liang 	一两	c=1 d=6.97914e-06 t=79416
 yi liang ci 	一两次	c=2 d=8.76667e-70 t=79416
 yi liang ge 	一两个	c=2 d=1.36047e-92 t=79416
-yi liang tiao 	一两条	c=1 d=1 t=77503
+yi liang tiao 	一两条	c=1 d=7.01412e-05 t=79416
 yi liang zhou 	益良州	c=1 d=4.22504e-159 t=79416
 yi liao 	医疗	c=5 d=3.28404e-19 t=79416
-yi liu 	一流	c=1 d=1 t=78107
-yi liu 	遗留	c=1 d=1 t=78108
+yi liu 	一流	c=1 d=0.00143728 t=79416
+yi liu 	遗留	c=1 d=0.00144449 t=79416
 yi lu 	一路	c=3 d=7.46259e-87 t=79416
 yi lu zou lai 	一路走来	c=1 d=1.34629e-57 t=79416
 yi lun 	议论	c=1 d=2.5134e-78 t=79416
@@ -9239,13 +9239,13 @@ yi qi 	意气	c=1 d=4.18412e-74 t=79416
 yi qian 	一千	c=2 d=5.01559e-05 t=79416
 yi qian 	以前	c=14 d=1.09585e-18 t=79416
 yi qian duo 	一千多	c=1 d=1.26535e-151 t=79416
-yi qian duo tiao 	一千多条	c=1 d=1 t=77476
+yi qian duo tiao 	一千多条	c=1 d=6.12835e-05 t=79416
 yi qian nian 	一千年	c=1 d=3.46636e-154 t=79416
 yi qian wan 	一千万	c=1 d=4.00014e-45 t=79416
 yi qian yi hou 	一前一后	c=1 d=3.95617e-62 t=79416
 yi qie 	一切	c=44 d=2.67539e-07 t=79416
 yi qing 	疫情	c=3 d=3.68056e-19 t=79416
-yi qu 	一曲	c=0 d=0.199501 t=78471
+yi qu 	一曲	c=0 d=0.00176972 t=79416
 yi qu tong gong 	异曲同工	c=1 d=2.88305e-104 t=79416
 yi qun 	一群	c=1 d=2.704e-85 t=79416
 yi qun ren 	一群人	c=2 d=6.02075e-120 t=79416
@@ -9253,7 +9253,7 @@ yi ran 	依然	c=18 d=0.00027603 t=79416
 yi ran 	怡然	c=1 d=4.4231e-51 t=79416
 yi ran zi de 	怡然自得	c=1 d=1.44455e-121 t=79416
 yi rou ke gang 	以柔克刚	c=1 d=1.08991e-101 t=79416
-yi ru 	移入	c=3 d=2.22201 t=76989
+yi ru 	移入	c=3 d=1.19284e-05 t=79416
 yi sa 	以撒	c=78 d=2.04706e-37 t=79416
 yi shan 	一扇	c=2 d=3.14876e-53 t=79416
 yi shan chu 	已删除	c=1 d=1.65524e-17 t=79416
@@ -9436,7 +9436,7 @@ ying tou 	迎头	c=1 d=2.43316e-108 t=79416
 ying wen 	英文	c=18 d=6.59421e-14 t=79416
 ying wen ban 	英文版	c=8 d=0.261846 t=79416
 ying xiang 	影响	c=36 d=0.0356146 t=79416
-ying xing 	硬性	c=1 d=1 t=77298
+ying xing 	硬性	c=1 d=2.51664e-05 t=79416
 ying xiong 	英雄	c=33 d=9.70249e-28 t=79416
 ying xiong zhi lv 	英雄之旅	c=1 d=2.51383e-80 t=79416
 ying xiong zhu yi 	英雄主义	c=1 d=4.06379e-113 t=79416
@@ -9452,7 +9452,7 @@ ying zi 	影子	c=1 d=2.04253e-108 t=79416
 yong 	勇	c=4 d=1.23256e-64 t=79416
 yong 	永	c=10 d=1.92089e-09 t=79416
 yong 	用	c=291 d=1.27843 t=79416
-yong bao 	拥抱	c=1 d=1 t=76868
+yong bao 	拥抱	c=1 d=2.93149e-06 t=79416
 yong bu yong 	用不用	c=2 d=2.2822e-31 t=79416
 yong chang 	用场	c=1 d=3.99133e-166 t=79416
 yong chu 	用处	c=1 d=1.74153e-56 t=79416
@@ -9465,7 +9465,7 @@ yong gan 	勇敢	c=4 d=5.35489e-84 t=79416
 yong guo 	用过	c=2 d=3.96695e-94 t=79416
 yong heng 	永恒	c=1 d=1.25686e-160 t=79416
 yong hu 	用户	c=36 d=1.44532 t=79416
-yong ji 	拥挤	c=1 d=1 t=78466
+yong ji 	拥挤	c=1 d=0.0086517 t=79416
 yong jin 	佣金	c=3 d=8.39991e-43 t=79416
 yong jin fei tui 	用进废退	c=1 d=3.0096e-80 t=79416
 yong jiu 	永久	c=1 d=1.79971e-119 t=79416
@@ -9606,7 +9606,7 @@ you yi zhong 	有一种	c=5 d=4.06599e-90 t=79416
 you yong 	有用	c=6 d=4.83388e-37 t=79416
 you yu 	优于	c=1 d=7.30612e-73 t=79416
 you yu 	犹豫	c=4 d=0.0305009 t=79416
-you yu 	由于	c=2 d=1.26054 t=77021
+you yu 	由于	c=2 d=7.94109e-06 t=79416
 you yue gan 	优越感	c=2 d=1.86197e-107 t=79416
 you zai 	悠哉	c=3 d=7.16487e-108 t=79416
 you zhe 	有着	c=1 d=8.08086e-141 t=79416
@@ -9881,7 +9881,7 @@ zhan bi 	占比	c=9 d=4.11929e-08 t=79416
 zhan bian 	沾边	c=1 d=5.87909e-134 t=79416
 zhan chang 	战场	c=3 d=1.28835e-45 t=79416
 zhan dao 	占到	c=2 d=9.61067e-19 t=79416
-zhan dian 	站点	c=1 d=1 t=78141
+zhan dian 	站点	c=1 d=0.00170362 t=79416
 zhan dou 	战斗	c=7 d=1.61609e-34 t=79416
 zhan dou zhong 	战斗中	c=1 d=4.63156e-34 t=79416
 zhan fang 	绽放	c=1 d=8.54121e-87 t=79416
@@ -9976,7 +9976,7 @@ zhao qi bo bo 	朝气勃勃	c=1 d=4.22977e-84 t=79416
 zhao ren 	找人	c=2 d=5.21585e-20 t=79416
 zhao sao 	找扫	c=1 d=2.43474e-145 t=79416
 zhao shang 	找上	c=1 d=6.71397e-108 t=79416
-zhao shui 	找谁	c=1 d=1 t=79173
+zhao shui 	找谁	c=1 d=0.29671 t=79416
 zhao wei 	赵薇	c=1 d=4.68228e-162 t=79416
 zhao xi xiang chu 	朝夕相处	c=1 d=8.12492e-58 t=79416
 zhao yang 	照样	c=1 d=9.16706e-66 t=79416
@@ -10082,14 +10082,14 @@ zhe yi dian 	这一点	c=8 d=0.0515605 t=79416
 zhe yi duan 	这一段	c=1 d=5.37583e-140 t=79416
 zhe yi gao 	这一稿	c=1 d=3.19105e-151 t=79416
 zhe yi ge 	这一个	c=1 d=5.01101e-78 t=79416
-zhe yi lan 	这一栏	c=1 d=1 t=78686
+zhe yi lan 	这一栏	c=1 d=0.0259911 t=79416
 zhe yi lu 	这一路	c=2 d=1.5534e-64 t=79416
 zhe yi qie 	这一切	c=2 d=3.08574e-79 t=79416
 zhe yi sheng 	这一生	c=2 d=2.19298e-89 t=79416
 zhe yi tian 	这一天	c=1 d=1.32359e-151 t=79416
 zhe yi tiao 	这一条	c=1 d=4.01912e-130 t=79416
 zhe yi xi lie 	这一系列	c=1 d=1.63343e-08 t=79416
-zhe yu 	这与	c=1 d=1 t=78020
+zhe yu 	这与	c=1 d=0.000930303 t=79416
 zhe zhong 	这种	c=152 d=0.0724398 t=79416
 zhe zhong ren 	这种人	c=2 d=2.22631e-47 t=79416
 zhe zhong shi 	这种事	c=1 d=5.51715e-63 t=79416
@@ -10156,7 +10156,7 @@ zheng liu 	蒸馏	c=1 d=1.28372e-56 t=79416
 zheng lu 	正路	c=1 d=7.33727e-123 t=79416
 zheng mian 	正面	c=12 d=5.48514e-24 t=79416
 zheng ming 	证明	c=5 d=8.92927e-86 t=79416
-zheng pian 	整片	c=1 d=1 t=78362
+zheng pian 	整片	c=1 d=0.00514361 t=79416
 zheng qi 	整齐	c=1 d=9.47783e-164 t=79416
 zheng qi 	蒸汽	c=1 d=1.35157e-103 t=79416
 zheng qian fang 	正前方	c=1 d=6.13755e-52 t=79416
@@ -10379,7 +10379,7 @@ zhong jiao ma 	中交马	c=7 d=4.028e-59 t=79416
 zhong jie 	终结	c=2 d=2.96713e-148 t=79416
 zhong jiu 	终究	c=1 d=1.81836e-152 t=79416
 zhong ju 	终局	c=1 d=3.64482e-127 t=79416
-zhong ke yuan 	中科院	c=1 d=1 t=76803
+zhong ke yuan 	中科院	c=1 d=2.11808e-06 t=79416
 zhong ken 	中肯	c=2 d=6.06737e-05 t=79416
 zhong lei 	种类	c=5 d=1.69336e-20 t=79416
 zhong li xun ta qian bai du 	众里寻她千百度	c=1 d=2.64246e-167 t=79416
@@ -10393,7 +10393,7 @@ zhong shi 	重视	c=1 d=2.25413e-150 t=79416
 zhong tu 	中途	c=1 d=2.93021e-89 t=79416
 zhong wai yun 	中外运	c=4 d=5.58322e-56 t=79416
 zhong wen 	中文	c=31 d=0.118837 t=79416
-zhong wen ban 	中文版	c=1 d=1 t=79153
+zhong wen ban 	中文版	c=1 d=0.268474 t=79416
 zhong wu 	中午	c=2 d=1.5615e-37 t=79416
 zhong xiao xing 	中小型	c=1 d=2.27785e-38 t=79416
 zhong xiao xue 	中小学	c=1 d=1.31225e-138 t=79416
@@ -10458,13 +10458,13 @@ zhu hai 	珠海	c=1 d=1.85635e-160 t=79416
 zhu ji 	主机	c=2 d=6.51353e-75 t=79416
 zhu ji ban 	主机板	c=2 d=1.11205e-36 t=79416
 zhu jian 	逐渐	c=5 d=9.45719e-109 t=79416
-zhu jie mian 	主界面	c=1 d=1 t=76814
+zhu jie mian 	主界面	c=1 d=2.23784e-06 t=79416
 zhu li 	主力	c=1 d=7.3041e-11 t=79416
 zhu li 	助理	c=1 d=2.58098e-96 t=79416
 zhu liu 	主流	c=7 d=6.61025e-09 t=79416
 zhu ming 	著名	c=1 d=5.87009e-116 t=79416
 zhu nian 	逐年	c=1 d=5.90492e-68 t=79416
-zhu ping 	主屏	c=1 d=1 t=76926
+zhu ping 	主屏	c=1 d=3.91772e-06 t=79416
 zhu quan 	主权	c=2 d=1.74004e-149 t=79416
 zhu ren 	主人	c=16 d=6.37035e-40 t=79416
 zhu ru 	诸如	c=2 d=0.657047 t=79416
@@ -10501,7 +10501,7 @@ zhuan cun 	转存	c=1 d=8.60743e-119 t=79416
 zhuan dao 	赚到	c=1 d=8.47118e-49 t=79416
 zhuan dao qian 	赚到钱	c=1 d=2.05752e-47 t=79416
 zhuan de 	赚的	c=1 d=1.73172e-19 t=79416
-zhuan fa 	转发	c=4 d=3.59276 t=77470
+zhuan fa 	转发	c=4 d=0.00021367 t=79416
 zhuan hang 	转行	c=1 d=5.75932e-39 t=79416
 zhuan hao 	转好	c=1 d=3.75044e-22 t=79416
 zhuan hua 	转化	c=3 d=6.49914e-49 t=79416
@@ -10578,13 +10578,13 @@ zi ba 	自拔	c=1 d=3.97642e-122 t=79416
 zi bao 	自保	c=1 d=3.47815e-47 t=79416
 zi bao zi qi 	自暴自弃	c=1 d=5.71251e-90 t=79416
 zi bei 	自卑	c=1 d=5.14295e-119 t=79416
-zi bei 	自备	c=1 d=1 t=77335
+zi bei 	自备	c=1 d=3.02807e-05 t=79416
 zi ben 	资本	c=9 d=2.33783e-79 t=79416
 zi bian liang 	自变量	c=1 d=2.74618e-120 t=79416
 zi chan 	资产	c=59 d=6.82803e-18 t=79416
 zi chang 	字长	c=1 d=0.209088 t=79416
 zi chuan 	紫川	c=3 d=8.94623e-132 t=79416
-zi ci 	字词	c=1 d=1 t=77088
+zi ci 	字词	c=1 d=8.80668e-06 t=79416
 zi cong 	自从	c=2 d=9.86422e-46 t=79416
 zi dai 	自带	c=4 d=7.79729e-15 t=79416
 zi ding yi 	自定义	c=10 d=0.00412784 t=79416
@@ -10729,8 +10729,8 @@ zui hou 	最后	c=25 d=0.0160829 t=79416
 zui jia 	最佳	c=1 d=4.90025e-21 t=79416
 zui jiao 	嘴角	c=1 d=2.01987e-65 t=79416
 zui jin 	最近	c=31 d=0.000235217 t=79416
-zui jiu 	最旧	c=1 d=1 t=77585
-zui jiu 	醉酒	c=1 d=1 t=77584
+zui jiu 	最旧	c=1 d=0.00010569 t=79416
+zui jiu 	醉酒	c=1 d=0.000105163 t=79416
 zui juan 	最卷	c=1 d=6.04e-40 t=79416
 zui kai shi 	最开始	c=2 d=1.08624e-32 t=79416
 zui lan 	最蓝	c=1 d=2.94008e-11 t=79416
@@ -10739,7 +10739,7 @@ zui mei 	最美	c=1 d=1.19255e-101 t=79416
 zui nan 	最难	c=1 d=1.03264e-113 t=79416
 zui pa 	最怕	c=1 d=1.9147e-83 t=79416
 zui tong 	最痛	c=1 d=7.95404e-102 t=79416
-zui xia mian 	最下面	c=1 d=1 t=78441
+zui xia mian 	最下面	c=1 d=0.00763509 t=79416
 zui xiang 	最想	c=1 d=5.97627e-121 t=79416
 zui xiao 	最小	c=4 d=5.16923e-32 t=79416
 zui xin 	最新	c=9 d=0.000118755 t=79416
@@ -10782,7 +10782,7 @@ zuo ge 	做个	c=4 d=7.84171e-23 t=79416
 zuo guo 	做过	c=4 d=2.39995e-64 t=79416
 zuo hao 	做好	c=10 d=0.00990218 t=79416
 zuo hua 	作画	c=1 d=3.75442e-152 t=79416
-zuo hua 	左划	c=2 d=1.76721 t=76993
+zuo hua 	左划	c=2 d=9.67855e-06 t=79416
 zuo le 	做了	c=5 d=3.60412e-18 t=79416
 zuo mo 	琢磨	c=1 d=5.8719e-149 t=79416
 zuo pai 	左派	c=1 d=2.1225e-148 t=79416
