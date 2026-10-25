@@ -1,116 +1,187 @@
-# myRime
+# myRimeCustom
 
-本机配置通过私有仓库在多台设备间同步。首次接入和日常同步步骤见 [多设备同步说明](./SYNC.md)。Windows 小狼毫可双击根目录的 `同步Rime.bat`。
+个人自用的 Rime（Windows 小狼毫 / Weasel）用户配置与词库，通过**私有 Git 仓库**在多台设备间同步。
 
-## 使用
+- **主力方案**：小鹤双拼
+- **运行环境**：小狼毫 0.16.3（librime 1.11.2）
+- **定位**：不是通用发行版，配置随自己的输入习惯持续调整
 
-1. 下载 [Rime](http://rime.im/) 并安装
+> 初始内容来自 [ASC8384/myRime](https://github.com/ASC8384/myRime)（MIT），现已按自己的需要大幅改造：
+> 新增笔画筛选方案、候选词管理脚本、多设备同步、自建词表与自定义皮肤。许可与致谢见文末。
 
-2. 下载 [myRime](https://github.com/ASC8384/myRime/archive/master.zip) 并解压
+---
 
-3. 打开 Rime 的`用户文件夹`，把压缩包里的东西扔进去，选择性覆盖，重新部署即可
+## 快速开始
 
-4. 由于现在的小狼毫官方并没有给出 64 位版本的 `WeaselDeployer.exe` 和 `rime.dll`，因此无法部署某些大词典（比如维基词典）。解决方案是下载 @fxliang 大佬制作的 [rimedeployerx64.zip](https://github.com/rime/weasel/issues/953#issuecomment-1702396237) 并放置到程序文件夹中，运行 `rimedeployerx64.exe` 就可以部署大词库了，并期待 [Weaseldeployer x64](https://github.com/rime/weasel/pull/1006) 能早日合并
+新设备第一次接入（完整步骤见 [多设备同步](./SYNC.md)）：
 
-5. 开始打字
+1. 安装小狼毫，**退出它**，把 Rime 用户文件夹原有内容备份后清空
+2. 在空出来的文件夹里克隆仓库：`git clone https://github.com/geomann/myRimeCustom .`
+3. 启动小狼毫 → 重新部署 → 双击 `同步Rime.bat`，把其它设备的用户词典快照合并进来
 
-## 说明
+> 仓库是私有的，克隆前先配好 GitHub 凭据。
+> **不要**复制别的设备的 `installation.yaml`，设备 ID 必须由各设备自行生成。
 
-0. 使用小鹤双拼；
-1. 开启 mysymbols.yaml 方便输入特殊符号，并更新了一波源文件（从`0.8.1`升级至`1.3`）；
-2. 候选词竖排；
-3. 提供颜文字；
-4. 提供 emoji 开关；
-5. 默认不显示生僻字；
-6. 引入维基词库、四叶草词库等一系列词库；
-7. 在小狼毫平台上，新增一种 [扶风 / Gruvbox](https://github.com/ASC8384/myRime/issues/1) 的界面风格。
+---
 
-## 按键
+## 输入方案
 
-1. `\man`：调出符号帮助
-2. `\`：自定义符号
-3. `yw`：调出所有颜文字
-4. `\``：笔画输入法反查，hspnz/一丨丿丶乙
-5. `;`：候选项的第二项
-6. `'`：候选项的第三项
+| 方案 | 名称 | 说明 |
+| --- | --- | --- |
+| `double_pinyin_flypy` | 小鶴雙拼 | 日常主力。主词典 + 自定义短语 + 英文 `easy_en` |
+| `flypy_bt` | 小鹤双拼·笔画筛选（测试） | 实验方案：出候选后按 **Tab** 进入笔画辅码，再按 `h`横 `s`竖 `p`撇 `n`点 `z`折 筛选；`Ctrl+Shift+S` 或状态栏可开关 |
+| `luna_pinyin_simp` | 朙月拼音·简化字 | 全拼备用 |
 
-## 各文件说明
+- 方案切换：**Ctrl + 反引号** 或 **Ctrl + F3**
+- 候选每页 6 个
+- 三个方案共用主词典 `luna_pinyin.extended`，所以自建词条**只需按全拼写一份**，
+  小鹤的 `speller/algebra` 会在建索引时自动把全拼音节转成双拼键位
 
-采用 UTF-8 编码的 [YAML](http://yaml.org/) 文本。
+---
 
-### dicts
+## 功能一览
 
-存放词库，详情请见 [词库](./dicts/readme.md)。
+| 功能 | 说明 | 配置位置 |
+| --- | --- | --- |
+| 简繁切换 | 默认输出简体 | `double_pinyin_flypy.custom.yaml` → `switches` |
+| 全角／半角 | 默认半角 | 同上 |
+| Emoji 建议 | 默认关闭 | 同上 + `opencc/emoji.json` |
+| 符号支持 | 默认开启（「→符」），可用符号表 | `mysymbols.yaml` + `opencc/symbol.json` |
+| 生僻字开关 | 「增廣／常用」——**本机实际未生效**，见「已知问题」 | `switches` → `gb2312` |
+| 笔画反查 | 反引号进入，`hspnz` 对应 一丨丿丶乙 | `double_pinyin_flypy.custom.yaml` → `reverse_lookup` |
+| 日期／时间 | 输入 `date` / `time` 直接出当前日期时间 | `lua/date.lua`、`lua/time.lua` |
+| 英文输入 | 直接打英文单词，走 `easy_en` | `easy_en.schema.yaml` |
+| 自定义短语 | `dicts/custom_phrase.txt`（公共）、`dicts/custom_personal.txt`（个人） | `user_dict` 配置 |
+| 自建词表 | 词库里没有的词，例如「三个点」 | `dicts/custom_user.dict.yaml` |
+| 屏蔽误词／常用词置顶 | Lua 滤镜，不改用户词典 | `lua/bad_words.lua`、`lua/preferred_words.lua` |
+| 皮肤 | 18 套配色，当前 `sogouClassic`，横向候选，字号 15 | `weasel.style.yaml` |
 
-### lua
+---
 
-存放 `lua` 脚本。可在用户文件夹根目录双击 `管理候选词.bat`，或运行 `python manage_words.py` 屏蔽误词、把常用词置顶、以及把词库里没有的词加入自建词表 `dicts/custom_user.dict.yaml`；详细用法见 [候选词脚本使用说明](./lua/README.md)。
+## 维护脚本
 
-### 用户文档夹 - UserData
+根目录两个 `.bat` 是入口，对应两个 Python 脚本（需 Python 3.10+）。
 
-从 Rime 的 [wiki](https://github.com/rime/home/wiki/UserData) 里 copy 的。
+### 管理候选词 — `管理候选词.bat` / `manage_words.py`
 
-#### 默认位置
+| 菜单 | 作用 | 写入位置 |
+| --- | --- | --- |
+| 1. 屏蔽误词 | 让某个候选彻底不出现 | `lua/bad_words.lua` |
+| 2. 将常用词置顶 | 同码时把指定词提前 | `lua/preferred_words.lua` |
+| 3. 取消屏蔽 | 撤销屏蔽 | `lua/bad_words.lua` |
+| 4. 查看规则 | 只读，列出全部屏蔽、置顶与自建词条 | — |
+| 5. 取消置顶 | 撤销置顶 | `lua/preferred_words.lua` |
+| 6. 添加词库没有的词 | 把词库里没有的词加进词库 | `dicts/custom_user.dict.yaml` |
+| 7. 删除自建词条 | 支持 `2`、`1-3`、`1,3` 选择 | 同上 |
 
-* 小狼毫： 用户文档夹的默认路径为 `%APPDATA%\Rime`。也可以通过「开始菜单＼小狼毫输入法＼用户文档夹」打开。
-* 鼠须管： 用户文档夹的路径为 `~/Library/Rime`。也可以通过「系统输入法菜单／鼠须管／用户设置…」打开。
-* ibus-rime: `~/.config/ibus/rime`
-* fcitx-rime: `~/.config/fcitx/rime`
-* fcitx5-rime: `~/.local/share/fcitx5/rime/`
+第 6 项会问你全拼读音（如 `san ge dian`），当场显示换算出的编码（小鹤 `sjgedm` / 拼音 `sangedian`），
+支持一词多音，权重默认 `999999`。详细说明见 [候选词脚本使用说明](./lua/README.md)。
 
-#### 内容
+也可以不进菜单直接用：
 
-用家下载或定制的文档：
+```bat
+python manage_words.py --add "三个点" --reading "san ge dian"
+python manage_words.py --list-custom
+python manage_words.py --redeploy
+```
 
-* `<输入方案代号>.schema.yaml` - 用户下载或自定义的 _输入方案_。
-* `<韵书代号>.dict.yaml` - 用户下载或自定义的 _韵书_。
-* `<词典名称>.txt` - 文本格式的词典，如缺省词汇表、用户 _自定义词组_。
-* `<配置代号>.custom.yaml` - 应用于配置文档 `<配置代号>.schema.yaml` 或 `<配置代号>.yaml` 的 _补丁_。
-* `opencc/*` - [OpenCC](https://github.com/BYVoid/OpenCC) 字形转换配置及字典文档。
+### 同步 — `同步Rime.bat` / `sync_rime.py`
 
-输入法程序记录的使用习惯等信息：
+依次执行：导出本机用户词典 → 提交并变基到远端 `master` → 合并其它设备快照 → 重新部署 → 推送。
+不会强制推送；遇到冲突会停下并保留本地提交。详见 [SYNC.md](./SYNC.md)。
 
-* `<输入法语言代号>.userdb/` - 输入法程序为保存用户的输入习惯而创建的 _用户词典_。
-* `installation.yaml` - 安装信息。输入法程序在首次运行及升级后写入安装、升级时间、程序版本等。
-* `user.yaml` - 用户状态信息。包括在 _方案选单_ 选取的输入方案、输入法选项状态如「中／西」「简／繁」等。
+---
 
-部署时生成的文档：
+## 部署要点
 
-* `build/*` - 缓存文档。为使输入法程序高效运行，在部署过程中将配置、韵书等编译为机读格式。
-* `trash/*` - 失效的文档。因 Rime 升级而不再使用的旧文档会自动移入这个文档夹。用家确认不再需要后可以删除。
+**推荐用 `python manage_words.py --redeploy`，或托盘菜单「重新部署」。**
 
-注：`librime` 1.3 版本之前，编译后的缓存文档（包括应用了补靪的 YAML 配置）直接存放在用户文档夹；`librime` 升级后将其移入 `trash/`。如果某个 YAML 源文档已经找不到了，无法在升级后重新编译，可以从 `trash/` 里面找回一份副本。
+两个已踩过的坑：
 
-## 致谢
+1. **本机 `WeaselDeployer.exe /deploy` 会静默失败**——日志停在 `loading weasel.custom.yaml`
+   之后，`build/*.schema.yaml` 不更新、词典不重编，但退出码仍是 0。
+   脚本因此改为直接调 librime 的 C API（`deployer_initialize → deploy → finalize`），有真实返回值。
+2. **改 `dicts/` 下的词表，托盘「重新部署」不一定重编词典**。
+   Rime 判断是否重编看的是源文件 checksum（`dict_compiler.cc` 的 `rebuild_table = ... dict_file_checksum`），
+   而修改检测只扫用户文件夹**顶层** yaml 的 mtime，子目录里的变化它看不到。
 
-感谢的大佬太多了，有很多没敲上😂，还请谅解。
+改完词表想确认是否真生效，别去 `build/*.table.bin` 里搜中文——Table 格式是长度前缀 + 变长编码，
+词条文本不是连续明文，搜不到不代表没编进去。
 
-[🍀四叶草拼音输入方案](https://github.com/fkxxyz/rime-cloverpinyin)
+---
 
-[fcitx5-pinyin-zhwiki](https://github.com/ipcjs/fcitx5-pinyin-zhwiki)
+## 已知问题
 
-[rime-aca](https://github.com/rime-aca/dictionaries)
+| 问题 | 现象 | 状态 |
+| --- | --- | --- |
+| `charset_filter@gb2312` 不生效 | 日志报 `charset parameter is unsupported by basic charset_filter`，生僻字开关形同虚设 | 未解决，生僻字过滤不能依赖它 |
+| 根目录 `custom_phrase.txt` 是历史遗留 | 与 `dicts/custom_phrase.txt` 内容相同；实际被引用的是后者（`user_dict: dicts/custom_phrase`） | 保留未删，改动请只改 `dicts/` 下那份 |
 
-[半月湾 C](http://tieba.baidu.com/p/3288634121)
+---
 
-[imy0823](http://tieba.baidu.com/p/4125987751)
+## 目录结构
 
-[Rime's wiki](https://github.com/rime/home/wiki)
+```
+<Rime 用户文件夹>/
+├── default.custom.yaml              # 方案列表、每页候选数、方案切换快捷键
+├── double_pinyin_flypy.schema.yaml  # 小鹤双拼方案
+├── double_pinyin_flypy.custom.yaml  # 小鹤双拼补丁（开关、短语、英文、反查）
+├── flypy_bt.schema.yaml             # 笔画筛选实验方案
+├── luna_pinyin_simp.custom.yaml     # 朙月拼音补丁
+├── luna_pinyin.extended.dict.yaml   # 主词典：用 import_tables 汇总所有词表
+├── easy_en.schema.yaml / .dict.yaml # 英文输入
+├── weasel.custom.yaml               # 引用下面的样式文件
+├── weasel.style.yaml                # 皮肤：布局、字体、18 套配色
+├── mysymbols.yaml                   # 符号表
+├── rime.lua                         # 注册 Lua 翻译器与滤镜
+├── lua/                             # Lua 脚本（见 lua/README.md）
+├── dicts/                           # 词库（见 dicts/readme.md）
+├── opencc/                          # emoji 与符号的分类/映射表
+├── sync/                            # 各设备导出的用户词典快照
+├── build/                           # 部署时生成的编译缓存，不要手改，不进 Git
+├── 管理候选词.bat → manage_words.py
+├── 同步Rime.bat   → sync_rime.py
+└── SYNC.md                          # 多设备同步详细说明
+```
 
-[佛振](https://github.com/lotem)、[等 Rime 全体贡献者](https://github.com/orgs/rime/people)
+### 哪些文件进 Git
 
-[OpenCC](https://github.com/BYVoid/OpenCC)
+- **同步**：方案与样式 YAML、`dicts/`、`lua/`、`opencc/`、自定义短语、维护脚本、
+  `sync/<设备 ID>/*.userdb.txt`
+- **不同步**：`build/` 编译缓存、`*.userdb/` 本机数据库、`installation.yaml`、`user.yaml`、
+  调试日志、脚本备份。规则见 `.gitignore`
 
-[深蓝词库转换器作者](https://code.google.com/p/imewlconverter/) 及全体贡献者
+`sync/` 里的用户词典快照含个人输入习惯，所以仓库必须保持私有。
 
-[just4u1314](http://tieba.baidu.com/p/2757690418)
+---
 
-[ACsediment](https://github.com/ACsediment/RimeNewbie)
+## 变更记录
 
-[Aixtuz](https://github.com/Aixtuz/Rime-Config)
+### 2026-10-25
 
-搜狗细胞词库工作人员及贡献者
+- 新增「添加词库没有的词」功能：自建词表 `dicts/custom_user.dict.yaml` +
+  菜单第 6/7 项 + 命令行 `--add / --list-custom / --redeploy`
+- `manage_words.py` 的部署改为 librime C API 驱动，修复 `WeaselDeployer` 静默失败的问题
+- 扩充 [候选词脚本使用说明](./lua/README.md)
+- 重写本 README（原内容为上游项目原文）
 
-百度输入法词库工作人员及贡献者
+### 2026-10-24
 
-QQ 输入法词库工作人员及贡献者
+- 建立本仓库，以本机 Rime 用户文件夹为配置来源，接入 `sync_rime.py` 多设备同步
+
+---
+
+## 上游与许可
+
+本项目基于 [ASC8384/myRime](https://github.com/ASC8384/myRime) 改造，沿用其 **MIT License**
+（Copyright © 2018 ASC_8384，见 [LICENSE](./LICENSE)）。
+
+词库与方案素材来自以下项目，一并致谢：
+
+- [雾凇拼音 rime-ice](https://github.com/iDvel/rime-ice)（`dicts/ice`）
+- [四叶草拼音 rime-cloverpinyin](https://github.com/fkxxyz/rime-cloverpinyin)（`dicts/clover`）
+- [rime-symbols](https://github.com/fkxxyz/rime-symbols)、[rime-emoji](https://github.com/rime/rime-emoji)
+- [fcitx5-pinyin-zhwiki](https://github.com/ipcjs/fcitx5-pinyin-zhwiki)（`dicts/other`）
+- 清华大学 thuocl 词库（`dicts/thuocl`）
+- [Rime 本体与 wiki](https://github.com/rime/home/wiki)、[OpenCC](https://github.com/BYVoid/OpenCC)
+- [深蓝词库转换](https://github.com/studyzy/imewlconverter)、搜狗细胞词库
