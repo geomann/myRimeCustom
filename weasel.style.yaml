@@ -1,6 +1,6 @@
 style:
   horizontal: true
-  color_scheme: sogouClassic
+  color_scheme: nightFlight
   # https://github.com/rime/weasel/wiki/%E5%AD%97%E9%AB%94%E8%A8%AD%E5%AE%9A#%E4%BE%8B%E5%AD%90%E8%A7%A3%E6%9E%90
   font_face: "Segoe UI Emoji:80, 霞鹜文楷, 思源黑体, Microsoft YaHei"
   font_point: 15
