@@ -6,10 +6,12 @@ from __future__ import annotations
 import argparse
 import contextlib
 import ctypes
+import getpass
 import json
 import os
 import re
 import shutil
+import struct
 import subprocess
 import sys
 import uuid
@@ -500,6 +502,98 @@ def weasel_directory() -> Path | None:
     return sorted(found, reverse=True)[0] if found else None
 
 
+# ---- 与运行中的小狼毫前端对话（复刻官方部署器的完整协议）----
+# 只调 rime->deploy() 不够：官方 Configurator::UpdateWorkspace()（weasel 0.16.3，
+# WeaselDeployer/Configurator.cpp:120-158）在部署前后还会通过命名管道让
+# WeaselServer 进入/退出维护模式：
+#   START_MAINTENANCE -> RimeWithWeaselHandler::StartMaintenance() 释放词典、清会话
+#   END_MAINTENANCE   -> RimeWithWeaselHandler::EndMaintenance() 重新 initialize、
+#                        重新打开 weasel 配置并把新样式应用到 UI
+# 少了这两步，编译好的 build/weasel.yaml 不会运行中的进程加载，表现为
+# "配色换了却没生效，要手动重新部署"。
+# 协议：客户端写 12 字节 PipeMessage{DWORD Msg, wParam, lParam}，
+# 服务端读一条、处理、回一条 4 字节 DWORD 结果。
+# 管道名 \\.\pipe\<用户名>\WeaselNamedPipe（WeaselIPC.h:8-9, 181-186）。
+WM_APP = 0x8000
+# 枚举值逐个数自 WeaselIPC.h:17-35，别手滑：
+#   ECHO=+1 START_SESSION=+2 END_SESSION=+3 PROCESS_KEY_EVENT=+4
+#   SHUTDOWN_SERVER=+5 FOCUS_IN=+6 FOCUS_OUT=+7 UPDATE_INPUT_POS=+8
+#   START_MAINTENANCE=+9 END_MAINTENANCE=+10
+WEASEL_IPC_START_MAINTENANCE = WM_APP + 9
+WEASEL_IPC_END_MAINTENANCE = WM_APP + 10
+PIPE_NAME_SUFFIX = "WeaselNamedPipe"
+PIPE_TIMEOUT_MS = 5000
+GENERIC_READ_WRITE = 0xC0000000
+OPEN_EXISTING = 3
+PIPE_READMODE_MESSAGE = 2
+
+
+def weasel_pipe_path() -> str:
+    user = os.environ.get("USERNAME") or getpass.getuser()
+    return "\\\\.\\pipe\\" + user + "\\" + PIPE_NAME_SUFFIX
+
+
+def _send_weasel_command(command: int) -> bool:
+    """向 WeaselServer 发一条 IPC 命令；服务端没跑或管道不通时返回 False。"""
+    if os.name != "nt":
+        return False
+    kernel32 = ctypes.windll.kernel32
+    invalid_handle = ctypes.c_void_p(-1).value
+    kernel32.CreateFileW.restype = ctypes.wintypes.HANDLE
+    kernel32.CreateFileW.argtypes = [
+        ctypes.wintypes.LPCWSTR, ctypes.wintypes.DWORD, ctypes.wintypes.DWORD,
+        ctypes.wintypes.LPVOID, ctypes.wintypes.DWORD, ctypes.wintypes.DWORD,
+        ctypes.wintypes.HANDLE,
+    ]
+    kernel32.WaitNamedPipeW.argtypes = [ctypes.wintypes.LPCWSTR, ctypes.wintypes.DWORD]
+    kernel32.SetNamedPipeHandleState.argtypes = [
+        ctypes.wintypes.HANDLE, ctypes.wintypes.LPDWORD,
+        ctypes.wintypes.LPDWORD, ctypes.wintypes.LPDWORD,
+    ]
+    kernel32.WriteFile.argtypes = [
+        ctypes.wintypes.HANDLE, ctypes.wintypes.LPCVOID, ctypes.wintypes.DWORD,
+        ctypes.wintypes.LPDWORD, ctypes.wintypes.LPVOID,
+    ]
+    kernel32.ReadFile.argtypes = [
+        ctypes.wintypes.HANDLE, ctypes.wintypes.LPVOID, ctypes.wintypes.DWORD,
+        ctypes.wintypes.LPDWORD, ctypes.wintypes.LPVOID,
+    ]
+    kernel32.FlushFileBuffers.argtypes = [ctypes.wintypes.HANDLE]
+    kernel32.DisconnectNamedPipe.argtypes = [ctypes.wintypes.HANDLE]
+    kernel32.CloseHandle.argtypes = [ctypes.wintypes.HANDLE]
+    name = weasel_pipe_path()
+    kernel32.WaitNamedPipeW(name, PIPE_TIMEOUT_MS)
+    handle = kernel32.CreateFileW(name, GENERIC_READ_WRITE, 0, None,
+                                  OPEN_EXISTING, 0, None)
+    if not handle or handle == invalid_handle:
+        return False
+    try:
+        mode = ctypes.c_ulong(PIPE_READMODE_MESSAGE)
+        kernel32.SetNamedPipeHandleState(handle, ctypes.byref(mode), None, None)
+        payload = struct.pack("<III", command, 0, 0)
+        written = ctypes.wintypes.DWORD()
+        if not kernel32.WriteFile(handle, payload, len(payload),
+                                  ctypes.byref(written), None):
+            return False
+        kernel32.FlushFileBuffers(handle)
+        # 服务端回一条 DWORD（4 字节）结果；读不到也不影响部署结果
+        reply = ctypes.create_string_buffer(4)
+        read = ctypes.wintypes.DWORD()
+        kernel32.ReadFile(handle, reply, 4, ctypes.byref(read), None)
+        return True
+    except (OSError, ValueError):
+        return False
+    finally:
+        kernel32.DisconnectNamedPipe(handle)
+        kernel32.CloseHandle(handle)
+
+
+def weasel_maintenance(enter: bool) -> bool:
+    """enter=True 让 WeaselServer 进入维护模式；False 恢复服务并重载配置。"""
+    command = WEASEL_IPC_START_MAINTENANCE if enter else WEASEL_IPC_END_MAINTENANCE
+    return _send_weasel_command(command)
+
+
 def deploy_via_api() -> bool:
     """Rebuild dictionaries by driving librime directly.
 
@@ -541,6 +635,10 @@ def deploy_via_api() -> bool:
         deploy_workspace = ctypes.CFUNCTYPE(ctypes.c_bool)(head.deploy)
         finalize = ctypes.CFUNCTYPE(None)(head.finalize)
         initialize(ctypes.byref(traits))
+        # 与官方部署器保持一致：先让运行中的小狼毫进入维护模式（释放词典），
+        # 部署完成、本进程 finalize 之后再恢复服务，服务端才会重新加载
+        # build/weasel.yaml 并刷新外观。
+        engaged = weasel_maintenance(True)
         try:
             workspace_ok = bool(deploy_workspace())
             # 外观配置（weasel.style.yaml 等）不在 workspace_update 里，
@@ -555,6 +653,8 @@ def deploy_via_api() -> bool:
             return workspace_ok and config_ok
         finally:
             finalize()
+            if engaged:
+                weasel_maintenance(False)
     except (OSError, AttributeError, TypeError, ValueError):
         return False
 

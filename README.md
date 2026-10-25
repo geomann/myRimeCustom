@@ -128,7 +128,7 @@ python manage_words.py --redeploy
 
 **推荐用 `python manage_words.py --redeploy`，或托盘菜单「重新部署」。**
 
-两个已踩过的坑：
+几个已踩过的坑：
 
 1. **本机 `WeaselDeployer.exe /deploy` 会静默失败**——日志停在 `loading weasel.custom.yaml`
    之后，`build/*.schema.yaml` 不更新、词典不重编，但退出码仍是 0。
@@ -140,6 +140,12 @@ python manage_words.py --redeploy
    它们由 `config_file_update` 编译成 `build/weasel.yaml`。只调 `deploy()` 的话，
    改配色／字体／布局都不会生效——脚本因此额外调了
    `deploy_config_file("weasel.yaml", "config_version")`。
+4. **编译完还要通知运行中的前端**。官方 `WeaselDeployer /deploy` 在部署前后会通过命名管道
+   `\\.\pipe\<用户名>\WeaselNamedPipe` 让 WeaselServer 进入／退出维护模式
+   （`Configurator::UpdateWorkspace()`）；退出维护时服务端才会重新 initialize、
+   重新加载 `build/weasel.yaml` 并刷新候选栏外观。少了这两步 IPC，
+   文件编译对了但界面不换色，只能去托盘手动「重新部署」——脚本现在按同样顺序补齐了
+   `START_MAINTENANCE → 部署 → END_MAINTENANCE`。
 
 改完词表想确认是否真生效，别去 `build/*.table.bin` 里搜中文——Table 格式是长度前缀 + 变长编码，
 词条文本不是连续明文，搜不到不代表没编进去。
@@ -199,6 +205,9 @@ python manage_words.py --redeploy
 - 新增 `切换配色.bat` / `switch_theme.py`：按编号切换 18 套配色并自动部署，列表带颜色预览
 - 修复部署遗漏：`deploy()` 之前没有调用 `config_file_update`，导致改 `weasel.style.yaml`
   （配色、字体、布局）后 `build/weasel.yaml` 不更新、改动不生效
+- 修复「切了配色但不换色」：部署前后通过命名管道向 WeaselServer 发
+  `START/END_MAINTENANCE`，让运行中的前端重新加载 `build/weasel.yaml`（与官方
+  `WeaselDeployer /deploy` 协议一致）；此前只编译文件、不通知前端，必须手动重新部署
 - 新增「添加词库没有的词」功能：自建词表 `dicts/custom_user.dict.yaml` +
   菜单第 6/7 项 + 命令行 `--add / --list-custom / --redeploy`
 - `manage_words.py` 的部署改为 librime C API 驱动，修复 `WeaselDeployer` 静默失败的问题
