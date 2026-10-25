@@ -2,7 +2,7 @@
 
 个人自用的 Rime（Windows 小狼毫 / Weasel）用户配置与词库，通过**私有 Git 仓库**在多台设备间同步。
 
-- **主力方案**：小鹤双拼
+- **日常在用**：小鹤双拼 + 笔画辅码筛选（`flypy_bt`）
 - **运行环境**：小狼毫 0.16.3（librime 1.11.2）
 - **定位**：不是通用发行版，配置随自己的输入习惯持续调整
 
@@ -26,16 +26,27 @@
 
 ## 输入方案
 
-| 方案 | 名称 | 说明 |
+| 方案 | 名称 | 用途 |
 | --- | --- | --- |
-| `double_pinyin_flypy` | 小鶴雙拼 | 日常主力。主词典 + 自定义短语 + 英文 `easy_en` |
-| `flypy_bt` | 小鹤双拼·笔画筛选（测试） | 实验方案：出候选后按 **Tab** 进入笔画辅码，再按 `h`横 `s`竖 `p`撇 `n`点 `z`折 筛选；`Ctrl+Shift+S` 或状态栏可开关 |
-| `luna_pinyin_simp` | 朙月拼音·简化字 | 全拼备用 |
+| `flypy_bt` | 小鹤双拼·笔画筛选(测试) | **日常主力**。小鹤双拼 + 笔画辅码筛选；候选出来后可按 Tab 追加笔画来缩小范围 |
+| `double_pinyin_flypy` | 小鶴雙拼 | 纯小鹤双拼，不带笔画筛选；留作对照和备用 |
+| `luna_pinyin_simp` | 朙月拼音·简化字 | 全拼方案，基本不用 |
+
+日常打字的流程（`flypy_bt`）：
+
+1. 正常输入双拼，例如 `sjge` 出「三个」
+2. 候选出来后按 **Tab**，输入框尾部进入笔画辅码状态
+3. 再按笔画键筛选：`h`横 `s`竖 `p`撇 `n`点 `z`折
+
+笔画筛选默认**开启**；`Ctrl+Shift+S` 或状态栏「笔画筛·开／关」可以整体关掉它。
+
+其他要点：
 
 - 方案切换：**Ctrl + 反引号** 或 **Ctrl + F3**
 - 候选每页 6 个
 - 三个方案共用主词典 `luna_pinyin.extended`，所以自建词条**只需按全拼写一份**，
   小鹤的 `speller/algebra` 会在建索引时自动把全拼音节转成双拼键位
+- 名称里的「(测试)」只是当初建方案时留下的显示名，不影响使用
 
 ---
 
@@ -43,18 +54,24 @@
 
 | 功能 | 说明 | 配置位置 |
 | --- | --- | --- |
-| 简繁切换 | 默认输出简体 | `double_pinyin_flypy.custom.yaml` → `switches` |
-| 全角／半角 | 默认半角 | 同上 |
+| 笔画筛选 | 候选出来后按 Tab 追加 `hspnz` 笔画缩小范围，**默认开启** | `flypy_bt.schema.yaml` → `switches` → `stroke_filter` |
+| 单字优先 | 「词优先／单字优先」切换，默认词优先 | 同上 → `search_single_char` |
+| 简繁切换 | 默认输出简体 | 同上 → `zh_simp` |
+| 全角／半角 | 默认半角 | 同上 → `full_shape` |
 | Emoji 建议 | 默认关闭 | 同上 + `opencc/emoji.json` |
 | 符号支持 | 默认开启（「→符」），可用符号表 | `mysymbols.yaml` + `opencc/symbol.json` |
-| 生僻字开关 | 「增廣／常用」——**本机实际未生效**，见「已知问题」 | `switches` → `gb2312` |
-| 笔画反查 | 反引号进入，`hspnz` 对应 一丨丿丶乙 | `double_pinyin_flypy.custom.yaml` → `reverse_lookup` |
+| 生僻字开关 | 「增廣／常用」——**本机实际未生效**，见「已知问题」 | 同上 → `gb2312` |
+| 笔画反查 | 反引号进入，`hspnz` 对应 一丨丿丶乙 | 两套小鹤方案均有 `reverse_lookup` |
 | 日期／时间 | 输入 `date` / `time` 直接出当前日期时间 | `lua/date.lua`、`lua/time.lua` |
 | 英文输入 | 直接打英文单词，走 `easy_en` | `easy_en.schema.yaml` |
 | 自定义短语 | `dicts/custom_phrase.txt`（公共）、`dicts/custom_personal.txt`（个人） | `user_dict` 配置 |
 | 自建词表 | 词库里没有的词，例如「三个点」 | `dicts/custom_user.dict.yaml` |
 | 屏蔽误词／常用词置顶 | Lua 滤镜，不改用户词典 | `lua/bad_words.lua`、`lua/preferred_words.lua` |
 | 皮肤 | 18 套配色，当前 `sogouClassic`，横向候选，字号 15 | `weasel.style.yaml` |
+
+> 开关和滤镜在**两套小鹤方案里各有一份**：`flypy_bt` 写在 `flypy_bt.schema.yaml`，
+> `double_pinyin_flypy` 写在 `double_pinyin_flypy.custom.yaml`。改开关时两边最好对齐，
+> 否则切到备用方案会表现不一致。
 
 ---
 
@@ -124,10 +141,10 @@ python manage_words.py --redeploy
 ```
 <Rime 用户文件夹>/
 ├── default.custom.yaml              # 方案列表、每页候选数、方案切换快捷键
-├── double_pinyin_flypy.schema.yaml  # 小鹤双拼方案
+├── flypy_bt.schema.yaml             # 小鹤双拼 + 笔画筛选（日常主力，完整方案）
+├── double_pinyin_flypy.schema.yaml  # 纯小鹤双拼方案（备用对照）
 ├── double_pinyin_flypy.custom.yaml  # 小鹤双拼补丁（开关、短语、英文、反查）
-├── flypy_bt.schema.yaml             # 笔画筛选实验方案
-├── luna_pinyin_simp.custom.yaml     # 朙月拼音补丁
+├── luna_pinyin_simp.custom.yaml     # 朙月拼音补丁（全拼，基本不用）
 ├── luna_pinyin.extended.dict.yaml   # 主词典：用 import_tables 汇总所有词表
 ├── easy_en.schema.yaml / .dict.yaml # 英文输入
 ├── weasel.custom.yaml               # 引用下面的样式文件
