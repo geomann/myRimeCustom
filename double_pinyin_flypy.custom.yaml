@@ -44,6 +44,7 @@ patch:
     #   - echo_translator # 沒有其他候選字時，回顯輸入碼〔輸入碼可以Shift+Enter上屛〕
     filters:
       - charset_filter@gb2312
+      - lua_filter@no_english_filter # 中文状态不混出英文候选
       # - lua_filter@charset_comment_filter # 为候选项加上其所属字符集的注释
       - simplifier@emoji_suggestion
       - simplifier@symbol_support
@@ -185,11 +186,13 @@ patch:
   reverse_lookup/+: # 笔画输入法反查
     tips: 〔筆畫↔hspnz/一丨丿丶乙〕
 
-  # 加載 easy_en 依賴
-  "schema/dependencies/@next": easy_en
-  "engine/translators/@next": table_translator@english # 載入翻譯英文的碼表翻譯器，取名爲 english
-  english: # english 翻譯器的設定項
-    dictionary: easy_en
-    enable_completion: false # 是否启用英文输入联想补全
-    enable_sentence: false
-    initial_quality: -3
+  # ── 已停用：easy_en 英文码表 ────────────────────────────────
+  # 它会把整本英文词典（chrome / clean / github …）塞进中文候选，
+  # 现改为中文状态只出中文。如需中英混输，取消下面几行的注释并重新部署：
+  # "schema/dependencies/@next": easy_en
+  # "engine/translators/@next": table_translator@english # 載入翻譯英文的碼表翻譯器，取名爲 english
+  # english: # english 翻譯器的設定項
+  #   dictionary: easy_en
+  #   enable_completion: false # 是否启用英文输入联想补全
+  #   enable_sentence: false
+  #   initial_quality: -3

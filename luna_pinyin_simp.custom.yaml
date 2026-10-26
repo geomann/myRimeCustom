@@ -1,4 +1,5 @@
 patch:
   "engine/filters/+":
+    - lua_filter@no_english_filter # 中文状态不混出英文候选
     - lua_filter@bad_words_filter
     - lua_filter@preferred_words_filter

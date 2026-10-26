@@ -19,6 +19,7 @@ emoji_suggestion:
 engine:
   filters:
     - "charset_filter@gb2312"
+    - "lua_filter@no_english_filter"   # 中文状态不混出英文候选
     - "simplifier@emoji_suggestion"
     - "simplifier@symbol_support"
     - simplifier
@@ -49,12 +50,6 @@ engine:
     - "table_translator@custom_personal"
     - "lua_translator@date_translator"
     - "lua_translator@time_translator"
-    - "table_translator@english"
-english:
-  dictionary: easy_en
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: "-3"
 key_binder:
   bindings:
     - {accept: Tab, send: "`", when: has_menu}   # 笔画辅码入口(有候选时才抢Tab)
@@ -395,7 +390,6 @@ schema:
     - "Rime schema by 佛振 <chen.sst@gmail.com>"
   dependencies:
     - stroke
-    - easy_en
   description: |
     朙月拼音＋小鶴雙拼方案。
 

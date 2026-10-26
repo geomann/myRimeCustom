@@ -1,0 +1,195 @@
+# https://github.com/ASC8384/myRime
+# mailto:ASC_8384@foxmail.com
+# 有参考
+#
+# 部署位置：
+# ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+#
+# 重新部署即可
+#
+
+patch:
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [中文, 洋文]
+    - name: full_shape
+      reset: 0
+      states: [半角, 全角]
+    - name: zh_simp
+      reset: 1
+      states: [漢字, 汉字]
+    - name: ascii_punct
+      states: [。，, ．，]
+    - name: emoji_suggestion
+      reset: 0
+      states: ["🈚️️\uFE0E", "🈶️️\uFE0F"]
+    - name: symbol_support
+      reset: 1
+      states: ["无符", "→符"]
+    - name: gb2312 #生僻字开关
+      reset: 0
+      states: [增廣, 常用] # []
+
+  engine/+:
+    #processors:
+      #- lua_processor@smart_caps_shift
+    translators/+:
+      - table_translator@custom_phrase # 自定义词库
+      - table_translator@custom_personal # 自定义个人词库
+      - lua_translator@date_translator # 自定义 lua 脚本
+      - lua_translator@time_translator
+    #   - echo_translator # 沒有其他候選字時，回顯輸入碼〔輸入碼可以Shift+Enter上屛〕
+    filters:
+      - charset_filter@gb2312
+      # - lua_filter@charset_comment_filter # 为候选项加上其所属字符集的注释
+      - simplifier@emoji_suggestion
+      - simplifier@symbol_support
+      - simplifier # 简体
+      - lua_filter@bad_words_filter # 屏蔽误词，列表见 lua/bad_words.lua
+      - lua_filter@preferred_words_filter # 常用词置顶，规则见 lua/preferred_words.lua
+      - uniquifier # 去重
+
+  speller:
+    alphabet: zyxwvutsrqponmlkjihgfedcba
+    delimiter: " '"
+    algebra:
+      - erase/^xx$/
+      - derive/^([jqxy])u$/$1v/
+      - derive/^([aoe])([ioun])$/$1$1$2/
+      # 模糊音，简拼会破坏双拼的美感
+      # - abbrev/^([az]).+$/$1/ #简拼（首字母）
+      # - abbrev/^([zcs]h).+$/$1/ #简拼（zh, ch, sh）
+      # - derive/^([zcs])h/$1/ # zh, ch, sh => z, c, s
+      # - derive/^([zcs])([^h])/$1h$2/ # z, c, s => zh, ch, sh
+      # - derive/^r/l/  # r => l
+      # - derive/^l/r/  # l => r
+      # - derive/^n/l/  # n => l
+      # - derive/^l/n/  # l => n
+      # - derive/([aei])n$/$1ng/ # en => eng, in => ing
+      # - derive/([aei])ng$/$1n/ # eng => en, ing => in
+      # - derive/([iu])an$/$lang/ # ian => iang, uan => uang
+      # - derive/([iu])ang$/$lan/ # iang => ian, uang => uan
+      - xform/^([aoe])(ng)?$/$1$1$2/
+      - xform/iu$/Q/
+      - xform/(.)ei$/$1W/
+      - xform/uan$/R/
+      - xform/[uv]e$/T/
+      - xform/un$/Y/
+      - xform/^sh/U/
+      - xform/^ch/I/
+      - xform/^zh/V/
+      - xform/uo$/O/
+      - xform/ie$/P/
+      - xform/i?ong$/S/
+      - xform/ing$|uai$/K/
+      - xform/(.)ai$/$1D/
+      - xform/(.)en$/$1F/
+      - xform/(.)eng$/$1G/
+      - xform/[iu]ang$/L/
+      - xform/(.)ang$/$1H/
+      - xform/ian$/M/
+      - xform/(.)an$/$1J/
+      - xform/(.)ou$/$1Z/
+      - xform/[iu]a$/X/
+      - xform/iao$/N/
+      - xform/(.)ao$/$1C/
+      - xform/ui$/V/
+      - xform/in$/B/
+      - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
+      #- abbrev/^(.).+$/$1/
+
+  "recognizer/patterns/punct": "^/([a-z]+|[0-9])$" # / 键
+  # "recognizer/patterns/punct": "^\\\\([A-Z|a-z]*|[0-9]|10)$" # \ 键
+  # "recognizer/patterns/punct": "^i([A-Z|a-z]*|[0-9]|10)$" # i 键
+
+  # 主翻译器
+  translator/dictionary: luna_pinyin.extended # 載入朙月拼音擴充詞庫
+  translator/initial_quality: 1 # 主翻译器的优先级设为1
+  translator/enable_completion: true # 开启逐鍵提示
+  translator/preedit_format: {} # 输入双拼码的时候不转化为全拼码
+
+  punctuator:
+    import_preset: mysymbols # mysymbols
+    half_shape:
+      "[": "【"
+      "]": "】"
+      "{": "「"
+      "}": "」"
+      "`": "`"
+      # "`": ["`", "·"]
+      "~": "~"
+      "@": "@"
+      "#": "#"
+      "$": "￥"
+      "%": "%"
+      # "&": "&"
+      # "*": "×"
+      # "{": "｛"
+      # "}": "｝"
+      # "|": "｜"
+      '\': "、"
+      "/": "/"
+      # "\\": "、"
+      # "/": "、"
+      "<": "《"
+      ">": "》"
+      "=": "="
+
+  # 分号上屏二候选词；引号上屏三候选词
+  # minus/减号，equal/等号，comma/逗号，period/句号，exclam/感叹号，numbersign/井号，percent/百分号，semicolon/分号，apostrophe/单引号，brcketleft/左中括号，bracketright/右中括号
+  "key_binder/bindings":
+    - { when: has_menu, accept: semicolon, send: 2 }
+    - { when: has_menu, accept: apostrophe, send: 3 }
+    - { when: paging, accept: minus, send: Page_Up } # "-" 上一页
+    - { when: has_menu, accept: equal, send: Page_Down } # "=" 下一页
+    - { when: paging, accept: comma, send: Page_Up } # "," 上一页
+    - { when: has_menu, accept: period, send: Page_Down } # "." 下一页
+    - { when: paging, accept: bracketleft, send: Page_Up } # "[" 上一页
+    - { when: has_menu, accept: bracketright, send: Page_Down } # "]" 下一页
+
+  custom_phrase:
+    dictionary: ""
+    user_dict: dicts/custom_phrase
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+
+  custom_personal:
+    dictionary: ""
+    user_dict: dicts/custom_personal
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+
+  simplifier:
+    option_name: zh_simp
+    # tags: [ abc ] # abc 對應abc_segmentor
+
+  # https://github.com/rime/rime-emoji/blob/master/emoji_suggestion.yaml
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: all
+
+  # https://github.com/fkxxyz/rime-symbols
+  symbol_support:
+    opencc_config: symbol.json
+    option_name: symbol_support
+    tips: all
+
+  reverse_lookup/+: # 笔画输入法反查
+    tips: 〔筆畫↔hspnz/一丨丿丶乙〕
+
+  # 加載 easy_en 依賴
+  "schema/dependencies/@next": easy_en
+  "engine/translators/@next": table_translator@english # 載入翻譯英文的碼表翻譯器，取名爲 english
+  english: # english 翻譯器的設定項
+    dictionary: easy_en
+    enable_completion: false # 是否启用英文输入联想补全
+    enable_sentence: false
+    initial_quality: -3

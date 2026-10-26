@@ -89,6 +89,9 @@ reverse_lookup_filter = require("reverse")
 -- 屏蔽误词，列表在 lua/bad_words.lua
 bad_words_filter = require("bad_words")
 
+-- 中文输入时滤除纯英文候选（Chrome / CleanShot X 之类），详见 lua/no_english.lua
+no_english_filter = require("no_english")
+
 -- 按编码置顶常用词，规则在 lua/preferred_words.lua
 preferred_words_filter = require("preferred_words_filter")
 

@@ -3,7 +3,8 @@
 # 格式：文字<TAB>全拼码（音节用空格分隔）<TAB>权重，权重越大候选越靠前。
 ---
 name: custom_user
-version: "2026.10.25"
+version: "2026.10.26"
 sort: by_weight
 ...
 三个点	san ge dian	999999
+授标函	shou biao han	50

@@ -41,18 +41,16 @@ patch:
   # 改寫拼寫運算，使得含西文的詞彙（位於 luna_pinyin.cn_en.dict.yaml 中）不影響簡拼功能
   "speller/algebra/@before 0": xform/^([b-df-np-z])$/$1_/
   # end
-  # 加載 easy_en 依賴，英文聯想輸入
-  "schema/dependencies/@next": easy_en
-  # 載入翻譯英文的碼表翻譯器，取名爲 english
-  "engine/translators/@next": table_translator@english
-  # english 翻譯器的設定項
-  english:
-    dictionary: easy_en
-    spelling_hints: 9
-    enable_completion: true
-    enable_sentence: false
-    initial_quality: -1
-  # end
+  # ── 已停用：easy_en 英文码表（中文状态不混出英文）──────────────
+  # 如需恢复中英混输，取消下面几行的注释并重新部署：
+  # "schema/dependencies/@next": easy_en
+  # "engine/translators/@next": table_translator@english
+  # english:
+  #   dictionary: easy_en
+  #   spelling_hints: 9
+  #   enable_completion: true
+  #   enable_sentence: false
+  #   initial_quality: -1
   #模糊音
   #'speller/algebra':
     #- derive/^([zcs])h/$1/             # zh, ch, sh => z, c, s

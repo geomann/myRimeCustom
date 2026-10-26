@@ -14,6 +14,12 @@
 #
 # 雖然文本碼表編輯較爲方便，但不適合導入大量條目
 #
+#
+# 注意：本方案已启用 no_english 过滤器（lua/no_english.lua），
+# 下表中「纯英文」的条目（Chrome、CleanShot X、GitHub…）不会再出现在中文候选里，
+# 因为 ch / cs / gh 这类短码会和双拼编码撞车，导致打中文时蹦出英文。
+# 条目本身保留未删；如需恢复中英混输，注释掉方案里的 lua_filter@no_english_filter 再重新部署。
+#
 # no comment
 
 中州韻輸入法引擎	rime	3
