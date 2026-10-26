@@ -2487,7 +2487,7 @@ gai cheng 	改成	c=17 d=0.15259 t=79441
 gai dao 	改到	c=1 d=3.8827e-18 t=79441
 gai diao 	改掉	c=1 d=4.67985e-09 t=79441
 gai dong 	改动	c=12 d=0.789656 t=79441
-gai hui 	改回	c=1 d=1 t=79437
+gai hui 	改回	c=1 d=0.980199 t=79441
 gai hui lai 	改回来	c=1 d=4.86575e-173 t=79441
 gai jin 	改进	c=4 d=0.499074 t=79441
 gai kuang 	概况	c=1 d=1.95638e-101 t=79441
@@ -5785,7 +5785,7 @@ pan 	盘	c=12 d=2.39758e-17 t=79441
 pan ding 	判定	c=3 d=1.54631e-33 t=79441
 pan duan 	判断	c=15 d=0.13466 t=79441
 pan duan li 	判断力	c=1 d=1.6101e-74 t=79441
-pan fu 	盘符	c=1 d=1 t=79429
+pan fu 	盘符	c=1 d=0.941765 t=79441
 pan suan 	盘算	c=1 d=5.44113e-135 t=79441
 pan tui 	盘腿	c=1 d=5.30172e-65 t=79441
 pan xuan 	盘旋	c=2 d=7.14614e-136 t=79441
@@ -5799,7 +5799,7 @@ pang ren 	旁人	c=1 d=5.41861e-145 t=79441
 pang xie 	螃蟹	c=1 d=7.64166e-160 t=79441
 pao 	跑	c=12 d=0.0772582 t=79441
 pao bu 	跑步	c=1 d=8.26571e-113 t=79441
-pao dao 	跑到	c=1 d=1 t=79422
+pao dao 	跑到	c=1 d=0.909373 t=79441
 pao guang 	跑光	c=1 d=1.20934e-89 t=79441
 pao hui 	炮灰	c=2 d=2.91357e-133 t=79441
 pao kai 	抛开	c=2 d=5.17187e-38 t=79441
@@ -6215,7 +6215,7 @@ qu de 	取得	c=9 d=6.12984e-96 t=79441
 qu diao 	去掉	c=12 d=0.0028892 t=79441
 qu dong 	驱动	c=4 d=2.02964e-63 t=79441
 qu dong li 	驱动力	c=1 d=5.54633e-125 t=79441
-qu dong qi 	驱动器	c=1 d=1 t=79421
+qu dong qi 	驱动器	c=1 d=0.904837 t=79441
 qu fen 	区分	c=2 d=2.00507e-08 t=79441
 qu fen du 	区分度	c=1 d=2.66956e-140 t=79441
 qu fu 	屈服	c=1 d=3.25804e-72 t=79441
