@@ -84,7 +84,7 @@
 | 菜单 | 作用 | 写入位置 |
 | --- | --- | --- |
 | 1. 屏蔽误词 | 让某个候选彻底不出现 | `lua/bad_words.lua` |
-| 2. 将常用词置顶 | 同码时把指定词提前 | `lua/preferred_words.lua` |
+| 2. 将常用词置顶 | 同码时把指定词提前，也支持只打首字母（如 `l` → 「了」） | `lua/preferred_words.lua` |
 | 3. 取消屏蔽 | 撤销屏蔽 | `lua/bad_words.lua` |
 | 4. 查看规则 | 只读，列出全部屏蔽、置顶与自建词条 | — |
 | 5. 取消置顶 | 撤销置顶 | `lua/preferred_words.lua` |

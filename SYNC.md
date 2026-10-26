@@ -22,6 +22,35 @@
 
 如果该设备原来有要保留的个人词条，先备份原用户文件夹，并通过小狼毫的“用户词典管理”导出词典快照，再按 Rime 的导入或同步功能合并。不要直接复制运行中的 `.userdb` 数据库。
 
+## 整盘复制后仓库丢失（`.git` 不见了）
+
+把整个 Rime 文件夹从旧电脑拷到新位置（换盘符、换机器）时，隐藏的 `.git` 常常没跟过来，`同步Rime.bat` 会报
+`git rev-parse ... returned non-zero exit status 128`。在本目录执行下面四行即可把仓库接回远端，**工作区文件不会被动**：
+
+```bat
+git init -b master
+git remote add origin https://github.com/geomann/myRimeCustom
+git fetch origin
+git reset --mixed origin/master
+```
+
+`git reset --mixed` 只把索引对齐到远端提交，磁盘上的文件保持原样，随后的 `git status` 会列出本机与远端的差异，下一次同步正常提交即可。
+
+如果 git 报 `detected dubious ownership`（目录所有者仍是旧电脑的用户 SID），执行一次：
+
+```bat
+icacls "%CD%" /setowner "%USERNAME%"
+```
+
+## 第一次推送要登录
+
+仓库是 HTTPS 地址，`git push` 需要 GitHub 凭据。Git for Windows 自带 Git Credential Manager（`credential.helper=manager`），
+第一次推送时会弹窗登录，之后凭据由 Windows 凭据管理器保存。脚本让 `git pull` / `git push` 直接接在控制台上运行，
+就是为了让这个登录窗口能弹出来。
+
+> 注意：当前远端仓库是**公开**的，而 `sync/*/*.userdb.txt` 含个人输入习惯。要真正私有，需在 GitHub 仓库设置里改成 Private；
+> 改成私有后拉取也需要登录。
+
 ## 哪些文件进入 Git
 
 - 同步：方案和样式 YAML、`dicts/`、`lua/`、`opencc/`、自定义短语、管理脚本，以及 `sync/<设备 ID>/*.userdb.txt`。

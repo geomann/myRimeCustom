@@ -160,20 +160,30 @@ def imported_dictionaries() -> list[Path]:
     return paths
 
 
+_PRONUNCIATION_CACHE: dict[str, set[str]] = {}
+
+
 def lookup_pronunciations(words: set[str]) -> dict[str, set[str]]:
-    """Scan only active imported tables; unannotated words cannot be inferred."""
-    found = {word: set() for word in words}
-    for path in imported_dictionaries():
-        with path.open("r", encoding="utf-8-sig") as dictionary:
-            for line in dictionary:
-                if not line or line.startswith("#"):
-                    continue
-                fields = line.rstrip("\r\n").split("\t", 2)
-                if len(fields) >= 2 and fields[0] in found:
-                    pronunciation = fields[1].strip().lower()
-                    if re.fullmatch(r"[a-z]+(?: [a-z]+)*", pronunciation):
-                        found[fields[0]].add(pronunciation)
-    return found
+    """Scan only active imported tables; unannotated words cannot be inferred.
+
+    One scan costs a couple of seconds, and the interactive flow asks about the
+    same words more than once, so results are cached per word for this run.
+    """
+    missing = {word for word in words if word not in _PRONUNCIATION_CACHE}
+    if missing:
+        for word in missing:
+            _PRONUNCIATION_CACHE[word] = set()
+        for path in imported_dictionaries():
+            with path.open("r", encoding="utf-8-sig") as dictionary:
+                for line in dictionary:
+                    if not line or line.startswith("#"):
+                        continue
+                    fields = line.rstrip("\r\n").split("\t", 2)
+                    if len(fields) >= 2 and fields[0] in missing:
+                        pronunciation = fields[1].strip().lower()
+                        if re.fullmatch(r"[a-z]+(?: [a-z]+)*", pronunciation):
+                            _PRONUNCIATION_CACHE[fields[0]].add(pronunciation)
+    return {word: set(_PRONUNCIATION_CACHE[word]) for word in words}
 
 
 _SYLLABLES: set[str] | None = None
@@ -253,6 +263,63 @@ def normalize_reading(value: str) -> str:
 def describe_codes(pronunciation: str) -> tuple[str, str]:
     """Return (flypy code, pinyin code) for one full pinyin reading."""
     return flypy_code(pronunciation), pronunciation.replace(" ", "")
+
+
+def scheme_codes(flypy: str, pinyin: str) -> dict[str, str]:
+    """Same rule for the two Flypy schemas plus the pinyin schema."""
+    return {"flypy_bt": flypy, "double_pinyin_flypy": flypy, "luna_pinyin_simp": pinyin}
+
+
+def describe_scheme_codes(codes: dict[str, str]) -> str:
+    return "，".join(f"{schema} = {codes[schema]}" for schema in SCHEMAS if schema in codes)
+
+
+def normalize_code(value: str) -> str:
+    """Accept whatever keys the candidate bar really uses, prefixes included."""
+    code = value.strip().lower()
+    if code and not re.fullmatch(r"[a-z]+", code):
+        raise ValueError("编码只能包含英文字母；请重新运行")
+    return code
+
+
+def first_keys(readings: set[str]) -> tuple[set[str], set[str]]:
+    """First key of every single-syllable reading: (flypy keys, pinyin keys).
+
+    Multi-syllable readings return empty sets: a one-letter rule would then also
+    match unrelated prefixes, so we refuse to guess.
+    """
+    flypy_keys: set[str] = set()
+    pinyin_keys: set[str] = set()
+    for reading in readings:
+        if len(reading.split()) != 1:
+            return set(), set()
+        pinyin_keys.add(reading[0])
+        try:
+            flypy_keys.add(flypy_code(reading)[0])
+        except ValueError:
+            return set(), set()
+    return flypy_keys, pinyin_keys
+
+
+def initial_code_suggestion(word: str, reference: str = "") -> dict[str, str] | None:
+    """One-key rule that still reaches the word (and the reference, if given).
+
+    Typing a single letter makes the translator emit every candidate whose code
+    starts with it, so `l` reaches both 「了」(le/liao) and 「来」(lai) even though
+    they share no complete reading.
+    """
+    words = {word, reference} if reference else {word}
+    found = lookup_pronunciations(words)
+    flypy_keys, pinyin_keys = first_keys(found[word])
+    if not flypy_keys or not pinyin_keys:
+        return None
+    if reference:
+        ref_flypy, ref_pinyin = first_keys(found[reference])
+        flypy_keys &= ref_flypy
+        pinyin_keys &= ref_pinyin
+    if len(flypy_keys) != 1 or len(pinyin_keys) != 1:
+        return None
+    return scheme_codes(flypy_keys.pop(), pinyin_keys.pop())
 
 
 def confirm(message: str, default: bool = False) -> bool:
@@ -396,14 +463,17 @@ def choose_pronunciation(word: str, reference: str) -> str | None:
     return None
 
 
-def choose_manual_codes() -> dict[str, str]:
+def choose_manual_codes(suggestion: dict[str, str] | None = None) -> dict[str, str]:
     print("请输入输入法候选栏中实际使用的编码；留空的方案不会修改。")
-    flypy = input("小鹤双拼编码（两个双拼方案共用）：").strip().lower()
-    pinyin = input("朙月拼音编码：").strip().lower()
-    for code in (flypy, pinyin):
-        if code and not re.fullmatch(r"[a-z]+", code):
-            raise ValueError("编码只能包含英文字母；请重新运行")
-    result = {}
+    print("  可以填完整编码（如 le），也可以只填你实际打出的前缀（如单字母 l）。")
+    if suggestion:
+        print(f"  参考：{describe_scheme_codes(suggestion)}")
+    shared = normalize_code(input("三个方案共用的编码（直接回车则按方案分别填写）："))
+    if shared:
+        return scheme_codes(shared, shared)
+    flypy = normalize_code(input("小鹤双拼编码（两个双拼方案共用）："))
+    pinyin = normalize_code(input("朙月拼音编码："))
+    result: dict[str, str] = {}
     if flypy:
         result.update({"flypy_bt": flypy, "double_pinyin_flypy": flypy})
     if pinyin:
@@ -887,14 +957,28 @@ def main() -> int:
         pronunciation = choose_pronunciation(word, reference)
         if pronunciation:
             try:
-                flypy = flypy_code(pronunciation)
-                codes = {"flypy_bt": flypy, "double_pinyin_flypy": flypy,
-                         "luna_pinyin_simp": pronunciation.replace(" ", "")}
+                codes = scheme_codes(flypy_code(pronunciation), pronunciation.replace(" ", ""))
             except ValueError as exc:
                 print(exc)
                 codes = choose_manual_codes()
+            else:
+                print(f"完整编码：{describe_scheme_codes(codes)}")
+                initial = initial_code_suggestion(word)
+                if initial and initial != codes:
+                    print(f"只按首字母：{describe_scheme_codes(initial)}"
+                          f"（打一个字母时也会把「{word}」提前）")
+                    if confirm("改用首字母置顶？", default=False):
+                        codes = initial
         else:
-            codes = choose_manual_codes()
+            suggestion = initial_code_suggestion(word, reference)
+            if suggestion:
+                print(f"两者读音不同，但都能用同一个首字母打出来：{describe_scheme_codes(suggestion)}")
+                if confirm("按首字母置顶？", default=True):
+                    codes = suggestion
+                else:
+                    codes = choose_manual_codes(suggestion)
+            else:
+                codes = choose_manual_codes()
         if not codes:
             print("没有选定编码，已取消。")
             return 0
