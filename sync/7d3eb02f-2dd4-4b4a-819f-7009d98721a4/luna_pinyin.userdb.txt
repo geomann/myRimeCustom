@@ -7,7 +7,7 @@
 a 	啊	c=93 d=0.0483156 t=80157
 a 	阿	c=6 d=3.19299e-70 t=80157
 a lan 	阿兰	c=1 d=2.04351e-143 t=80157
-a li 	阿里	c=1 d=1 t=80126
+a li 	阿里	c=1 d=0.856415 t=80157
 a ma 	阿嬷	c=1 d=1.07965e-78 t=80157
 a mao a gou 	阿猫阿狗	c=1 d=3.48882e-83 t=80157
 a mo 	阿莫	c=1 d=1.20758e-160 t=80157
@@ -1673,7 +1673,7 @@ deng lu 	登录	c=13 d=1.12232 t=80157
 deng ren 	等人	c=1 d=3.12583e-114 t=80157
 deng shang 	登上	c=1 d=3.70621e-147 t=80157
 deng tian 	登天	c=1 d=7.78725e-88 t=80157
-deng wo 	等我	c=1 d=1 t=80097
+deng wo 	等我	c=1 d=0.740818 t=80157
 deng xia 	等下	c=2 d=5.94039e-109 t=80157
 deng yu 	等于	c=8 d=6.57647e-22 t=80157
 deng zhe 	等着	c=3 d=1.01184e-101 t=80157
@@ -1745,7 +1745,7 @@ di shang 	地上	c=13 d=5.85998e-52 t=80157
 di si 	第四	c=2 d=2.79279e-24 t=80157
 di si bu 	第四步	c=3 d=9.64603e-55 t=80157
 di si bu fen 	第四部分	c=1 d=3.56972e-88 t=80157
-di si ge 	第四个	c=2 d=1.90032 t=79934
+di si ge 	第四个	c=2 d=0.623144 t=80157
 di tou 	低头	c=1 d=8.40287e-42 t=80157
 di tu 	地图	c=13 d=9.7314e-31 t=80157
 di wei 	地位	c=3 d=5.53991e-82 t=80157
@@ -2881,8 +2881,8 @@ gua da er 	瓜达尔	c=1 d=3.56415e-99 t=80157
 gua dan 	挂单	c=13 d=3.98491e-24 t=80157
 gua gou 	挂钩	c=3 d=2.90924e-34 t=80157
 gua kao 	挂靠	c=2 d=1.58756e-62 t=80157
-gua zai 	挂在	c=1 d=1 t=80091
-gua zai 	挂载	c=2 d=1.92774 t=80108
+gua zai 	挂在	c=1 d=0.718924 t=80157
+gua zai 	挂载	c=2 d=1.50885 t=80157
 guai 	乖	c=2 d=8.28282e-39 t=80157
 guai 	怪	c=2 d=9.38265e-125 t=80157
 guai guai 	乖乖	c=1 d=9.29422e-81 t=80157
@@ -9170,7 +9170,7 @@ yi bu xiao xin 	一不小心	c=1 d=7.88588e-89 t=80157
 yi bu yi bu 	一步一步	c=2 d=5.16739e-84 t=80157
 yi ce 	一侧	c=1 d=3.67031e-62 t=80157
 yi ceng 	一层	c=6 d=0.385819 t=80157
-yi ceng ceng 	一层层	c=1 d=1 t=79941
+yi ceng ceng 	一层层	c=1 d=0.339596 t=80157
 yi cha 	一插	c=1 d=2.40125e-41 t=80157
 yi chan 	遗产	c=6 d=3.76137e-107 t=80157
 yi chang 	一场	c=2 d=1.45337e-75 t=80157
@@ -9482,7 +9482,7 @@ yin xiang 	印象	c=3 d=1.15998e-40 t=80157
 yin xiang shen ke 	印象深刻	c=1 d=1.89436e-75 t=80157
 yin xiao 	音效	c=1 d=5.463e-94 t=80157
 yin yan 	引言	c=1 d=1.71807e-161 t=80157
-yin ying 	阴影	c=1 d=1 t=79878
+yin ying 	阴影	c=1 d=0.247833 t=80157
 yin yong 	引用	c=17 d=1.78588e-07 t=80157
 yin you 	隐忧	c=1 d=2.81283e-108 t=80157
 yin yue 	隐约	c=1 d=2.46531e-86 t=80157
@@ -9499,7 +9499,7 @@ ying dui 	应对	c=7 d=0.0569831 t=80157
 ying er 	婴儿	c=1 d=2.72311e-109 t=80157
 ying gai 	应该	c=144 d=1.38805 t=80157
 ying ge 	莺歌	c=1 d=5.88748e-92 t=80157
-ying gong 	硬弓	c=1 d=1 t=79946
+ying gong 	硬弓	c=1 d=0.348192 t=80157
 ying he 	迎合	c=2 d=1.0823e-48 t=80157
 ying ji xing 	应激性	c=1 d=1.87055e-132 t=80157
 ying jian 	硬件	c=10 d=2.0016e-17 t=80157
@@ -10663,7 +10663,7 @@ zhuo you 	桌游	c=23 d=8.64112e-18 t=80157
 zhuo zhuang 	着装	c=1 d=5.49804e-81 t=80157
 zhuo zi 	桌子	c=1 d=3.697e-59 t=80157
 zhuo zi shang 	桌子上	c=1 d=6.28415e-65 t=80157
-zi 	咨	c=2 d=1.99005 t=79874
+zi 	咨	c=2 d=0.483434 t=80157
 zi 	姿	c=1 d=3.84591e-53 t=80157
 zi 	子	c=13 d=0.108067 t=80157
 zi 	字	c=24 d=0.900325 t=80157
@@ -10689,7 +10689,7 @@ zi dong yi 	自动一	c=1 d=4.12069e-12 t=80157
 zi duan 	字段	c=1 d=5.45407e-16 t=80157
 zi fa 	自发	c=1 d=1.00817e-125 t=80157
 zi fu 	字符	c=4 d=8.30113e-16 t=80157
-zi gong 	咨工	c=1 d=1 t=79876
+zi gong 	咨工	c=1 d=0.245367 t=80157
 zi hai 	自嗨	c=1 d=5.82394e-82 t=80157
 zi hao 	自豪	c=4 d=5.24631e-84 t=80157
 zi ji 	自己	c=450 d=0.103683 t=80157
