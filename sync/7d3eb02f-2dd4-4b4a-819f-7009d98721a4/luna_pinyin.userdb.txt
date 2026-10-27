@@ -16,7 +16,7 @@ ai 	爱	c=16 d=7.24979e-34 t=79867
 ai 	癌	c=1 d=9.78968e-45 t=79867
 ai chi 	爱吃	c=1 d=5.79508e-53 t=79867
 ai hao 	爱好	c=5 d=5.43271e-48 t=79867
-ai jun 	爱军	c=1 d=1 t=79629
+ai jun 	爱军	c=1 d=0.304221 t=79867
 ai qing 	爱情	c=2 d=1.43868e-94 t=79867
 ai ren 	爱人	c=1 d=1.17888e-83 t=79867
 ai shang 	爱上	c=1 d=1.93388e-112 t=79867
@@ -51,7 +51,7 @@ an ni shuo 	按你说	c=1 d=1.13508e-20 t=79867
 an ning 	安宁	c=1 d=3.03748e-159 t=79867
 an niu 	按钮	c=22 d=0.285298 t=79867
 an pai 	安排	c=7 d=0.0314298 t=79867
-an quan 	安全	c=9 d=2.41796e-05 t=79867
+an quan 	安全	c=9 d=0.348192 t=79867
 an shi 	按时	c=1 d=4.39822e-161 t=79867
 an shuo 	按说	c=1 d=4.68752e-87 t=79867
 an tu suo ji 	按图索骥	c=1 d=1.04334e-146 t=79867
@@ -62,7 +62,7 @@ an yi 	安逸	c=1 d=1.03852e-121 t=79867
 an yue 	按月	c=1 d=1.06727e-60 t=79867
 an zhao 	按照	c=20 d=0.0187793 t=79867
 an zhu 	按住	c=2 d=8.89822e-10 t=79867
-an zhuang 	安装	c=57 d=0.0450492 t=79867
+an zhuang 	安装	c=57 d=1.6022 t=79867
 an zhuo 	安卓	c=77 d=1.40679 t=79867
 an zhuo ban 	安卓版	c=3 d=8.55513e-18 t=79867
 an zhuo duan 	安卓端	c=1 d=2.5358e-06 t=79867
@@ -85,7 +85,7 @@ ao zhou 	澳洲	c=2 d=3.62321e-76 t=79867
 ao zhu 	熬煮	c=1 d=9.5049e-80 t=79867
 ba 	吧	c=200 d=3.66201 t=79867
 ba 	巴	c=2 d=1.27104e-108 t=79867
-ba 	把	c=241 d=1.52081 t=79867
+ba 	把	c=242 d=2.30772 t=79867
 ba 	爸	c=3 d=6.76092e-43 t=79867
 ba ba 	巴巴	c=3 d=1.5163e-103 t=79867
 ba ba 	爸爸	c=3 d=6.55384e-42 t=79867
@@ -150,7 +150,7 @@ ban ben 	版本	c=58 d=0.715367 t=79867
 ban ben hao 	版本号	c=1 d=1.93611e-08 t=79867
 ban ben long yi 	坂本龙一	c=3 d=3.51297e-134 t=79867
 ban cheng pin 	半成品	c=1 d=3.82335e-72 t=79867
-ban fa 	办法	c=26 d=0.4714 t=79867
+ban fa 	办法	c=27 d=1.3484 t=79867
 ban ge yue 	半个月	c=2 d=1.58096e-65 t=79867
 ban gong 	办公	c=3 d=4.35333e-31 t=79867
 ban gong lou 	办公楼	c=2 d=6.28349e-05 t=79867
@@ -194,10 +194,10 @@ bao 	爆	c=1 d=4.49883e-133 t=79867
 bao bao 	宝宝	c=2 d=4.72765e-40 t=79867
 bao bei 	宝贝	c=1 d=2.66811e-163 t=79867
 bao ben 	保本	c=1 d=5.6472e-43 t=79867
-bao chi 	保持	c=27 d=0.0925205 t=79867
+bao chi 	保持	c=27 d=0.66034 t=79867
 bao chou 	报酬	c=1 d=3.18399e-125 t=79867
 bao cun 	保存	c=30 d=0.0224829 t=79867
-bao cuo 	报错	c=23 d=0.00377264 t=79867
+bao cuo 	报错	c=23 d=1.45045 t=79867
 bao dan 	保单	c=2 d=1.7013e-42 t=79867
 bao die 	暴跌	c=1 d=3.20071e-69 t=79867
 bao e 	保额	c=3 d=4.29687e-42 t=79867
@@ -288,6 +288,7 @@ ben duo 	本多	c=1 d=5.6937e-110 t=79867
 ben fen 	本分	c=2 d=1.68426e-45 t=79867
 ben gai 	本该	c=2 d=9.88325e-124 t=79867
 ben hang 	本行	c=2 d=0.00211584 t=79867
+ben ji 	本机	c=1 d=9.74955e-173 t=79867
 ben jin 	本金	c=8 d=7.32799e-20 t=79867
 ben ke 	本科	c=2 d=2.42873e-76 t=79867
 ben ke sheng 	本科生	c=1 d=6.28675e-158 t=79867
@@ -337,7 +338,7 @@ bi ji ka 	笔记卡	c=1 d=3.29348e-111 t=79867
 bi ji ka pian 	笔记卡片	c=1 d=3.12082e-07 t=79867
 bi ji ni 	比基尼	c=2 d=6.42114e-54 t=79867
 bi jiang 	必将	c=1 d=1.18745e-80 t=79867
-bi jiao 	比较	c=63 d=0.634114 t=79867
+bi jiao 	比较	c=63 d=0.852144 t=79867
 bi jing 	毕竟	c=8 d=0.0420036 t=79867
 bi li 	比例	c=10 d=1.18044e-19 t=79867
 bi lu lan lv 	筚路蓝缕	c=1 d=4.87037e-96 t=79867
@@ -345,7 +346,7 @@ bi mian 	避免	c=8 d=1.00105e-60 t=79867
 bi nan suo 	避难所	c=1 d=3.06793e-114 t=79867
 bi qi 	比奇	c=3 d=2.75387e-37 t=79867
 bi ran 	必然	c=2 d=7.78235e-85 t=79867
-bi ru 	比如	c=96 d=0.25033 t=79867
+bi ru 	比如	c=96 d=0.932394 t=79867
 bi ru shuo 	比如说	c=2 d=1.54355e-48 t=79867
 bi sai 	比赛	c=1 d=1.10364e-160 t=79867
 bi se 	闭塞	c=1 d=1.06636e-50 t=79867
@@ -423,7 +424,7 @@ biao da 	表达	c=12 d=0.0611149 t=79867
 biao di 	标的	c=20 d=1.28077e-18 t=79867
 biao dian fu hao 	标点符号	c=1 d=9.6765e-114 t=79867
 biao ge 	表格	c=9 d=0.0466538 t=79867
-biao ji 	标记	c=1 d=1 t=79593
+biao ji 	标记	c=1 d=0.254107 t=79867
 biao jie 	表姐	c=1 d=2.11975e-74 t=79867
 biao lu 	表露	c=2 d=1.36524e-45 t=79867
 biao ming 	表明	c=1 d=9.81304e-73 t=79867
@@ -453,7 +454,7 @@ bie shu 	别墅	c=1 d=8.24043e-77 t=79867
 bie wang 	别忘	c=1 d=9.38892e-112 t=79867
 bie you yong xin 	别有用心	c=1 d=8.49572e-83 t=79867
 bie zhe 	憋着	c=1 d=3.23201e-154 t=79867
-bing 	并	c=92 d=0.94018 t=79867
+bing 	并	c=92 d=0.983411 t=79867
 bing 	病	c=1 d=5.93395e-155 t=79867
 bing bu 	并不	c=6 d=1.45638e-70 t=79867
 bing bu gao 	并不高	c=1 d=6.26306e-143 t=79867
@@ -504,7 +505,7 @@ bo nong 	拨弄	c=1 d=1.02368e-40 t=79867
 bo shi 	博士	c=7 d=2.40951e-52 t=79867
 bo zhong 	播种	c=2 d=7.72866e-58 t=79867
 bo zhu 	博主	c=1 d=4.03141e-19 t=79867
-bu 	不	c=503 d=0.517609 t=79867
+bu 	不	c=503 d=0.918859 t=79867
 bu 	步	c=3 d=8.12122e-55 t=79867
 bu 	补	c=2 d=6.22838e-19 t=79867
 bu 	部	c=7 d=0.00032882 t=79867
@@ -544,7 +545,7 @@ bu dong de 	不懂得	c=1 d=1.03785e-84 t=79867
 bu dong shou 	不动手	c=1 d=1.58193e-131 t=79867
 bu duan 	不断	c=30 d=1.93796e-78 t=79867
 bu duan xing dong 	不断行动	c=1 d=6.21911e-119 t=79867
-bu dui 	不对	c=7 d=5.57121e-30 t=79867
+bu dui 	不对	c=7 d=0.310367 t=79867
 bu dui 	部队	c=1 d=6.26199e-141 t=79867
 bu dui cheng 	不对称	c=2 d=2.17852e-52 t=79867
 bu dui deng 	不对等	c=1 d=5.56768e-82 t=79867
@@ -573,7 +574,7 @@ bu gou 	不够	c=14 d=4.45071e-36 t=79867
 bu gou hao 	不够好	c=1 d=1.01415e-77 t=79867
 bu gou yong 	不够用	c=1 d=8.52434e-05 t=79867
 bu gu 	不顾	c=1 d=8.26035e-76 t=79867
-bu guan 	不管	c=9 d=4.70556e-44 t=79867
+bu guan 	不管	c=9 d=0.355226 t=79867
 bu guan bu gu 	不管不顾	c=3 d=1.22724e-56 t=79867
 bu guo 	不过	c=29 d=0.0600882 t=79867
 bu guo ru ci 	不过如此	c=1 d=1.53195e-165 t=79867
@@ -628,7 +629,7 @@ bu ming lang 	不明朗	c=1 d=7.1651e-79 t=79867
 bu ming xian 	不明显	c=0 d=1.18281e-35 t=79867
 bu mu 	不睦	c=0 d=6.13461e-18 t=79867
 bu nan 	不难	c=2 d=7.63306e-88 t=79867
-bu neng 	不能	c=95 d=0.00912069 t=79867
+bu neng 	不能	c=95 d=1.36346 t=79867
 bu neng yong 	不能用	c=1 d=1.19222e-39 t=79867
 bu pa 	不怕	c=3 d=2.2039e-49 t=79867
 bu qi dai 	不期待	c=1 d=1.66456e-83 t=79867
@@ -639,7 +640,7 @@ bu qing 	不清	c=1 d=5.06584e-59 t=79867
 bu qing bu yuan 	不情不愿	c=1 d=8.71672e-91 t=79867
 bu qing yuan 	不情愿	c=1 d=1.25352e-70 t=79867
 bu qu 	不去	c=1 d=3.05145e-66 t=79867
-bu quan 	补全	c=3 d=1.33048e-09 t=79867
+bu quan 	补全	c=3 d=0.386741 t=79867
 bu que ding 	不确定	c=9 d=0.29523 t=79867
 bu que ding xing 	不确定性	c=7 d=1.12777e-87 t=79867
 bu ran 	不然	c=15 d=0.00856561 t=79867
@@ -699,9 +700,9 @@ bu xie 	不懈	c=1 d=2.41945e-71 t=79867
 bu xie yu 	不屑于	c=1 d=3.0943e-83 t=79867
 bu xing 	不行	c=20 d=1.18712e-18 t=79867
 bu xu yao 	不需要	c=31 d=0.966753 t=79867
-bu yao 	不要	c=94 d=0.341971 t=79867
+bu yao 	不要	c=94 d=0.873716 t=79867
 bu yi 	不已	c=1 d=3.05197e-68 t=79867
-bu yi 	补遗	c=1 d=1 t=79622
+bu yi 	补遗	c=1 d=0.293758 t=79867
 bu yi ding 	不一定	c=10 d=7.19168e-05 t=79867
 bu yi yang 	不一样	c=12 d=9.18326e-28 t=79867
 bu ying gai 	不应该	c=3 d=5.30285e-38 t=79867
@@ -762,7 +763,7 @@ cai 	踩	c=6 d=6.2581e-68 t=79867
 cai bao 	财报	c=3 d=7.07165e-101 t=79867
 cai bu hui 	才不会	c=1 d=3.79615e-135 t=79867
 cai dan 	彩蛋	c=1 d=3.47212e-56 t=79867
-cai dan 	菜单	c=32 d=0.00691098 t=79867
+cai dan 	菜单	c=33 d=0.981406 t=79867
 cai dian 	踩点	c=1 d=1.78587e-87 t=79867
 cai dui 	才对	c=1 d=1.07569e-123 t=79867
 cai fang 	采访	c=3 d=1.89469e-104 t=79867
@@ -847,7 +848,7 @@ ce ju 	测距	c=1 d=4.2295e-142 t=79867
 ce lan 	侧栏	c=1 d=0.000380129 t=79867
 ce li 	侧立	c=1 d=7.23981e-54 t=79867
 ce liang 	测量	c=2 d=2.13421e-07 t=79867
-ce lve 	策略	c=37 d=2.51195e-12 t=79867
+ce lve 	策略	c=37 d=0.349938 t=79867
 ce lve xing 	策略性	c=2 d=1.41632e-36 t=79867
 ce mian 	侧面	c=4 d=5.10798e-53 t=79867
 ce shen 	侧身	c=3 d=4.045e-52 t=79867
@@ -1042,7 +1043,7 @@ cheng meng 	承蒙	c=1 d=5.93332e-95 t=79867
 cheng ming zai wang 	成名在望	c=1 d=9.91809e-110 t=79867
 cheng nuo 	承诺	c=1 d=1.49498e-113 t=79867
 cheng qing 	澄清	c=5 d=0.471711 t=79867
-cheng qing li 	澄清里	c=1 d=1 t=79570
+cheng qing li 	澄清里	c=1 d=0.226502 t=79867
 cheng ran 	诚然	c=1 d=6.64921e-141 t=79867
 cheng ren 	成人	c=1 d=2.22215e-129 t=79867
 cheng ren 	承认	c=4 d=0.0569831 t=79867
@@ -1058,7 +1059,7 @@ cheng wei le 	成为了	c=1 d=5.1288e-116 t=79867
 cheng xian 	呈现	c=1 d=8.38723e-167 t=79867
 cheng xiao 	成效	c=1 d=3.59373e-108 t=79867
 cheng xin 	诚信	c=1 d=1.04909e-05 t=79867
-cheng xu 	程序	c=16 d=0.190139 t=79867
+cheng xu 	程序	c=16 d=1.63765 t=79867
 cheng xu yuan 	程序员	c=2 d=3.26359e-92 t=79867
 cheng ya 	承压	c=1 d=8.74701e-73 t=79867
 cheng yi 	诚意	c=1 d=2.06095e-96 t=79867
@@ -1139,7 +1140,7 @@ chong zhi 	充值	c=1 d=5.19514e-32 t=79867
 chong zhi 	重置	c=3 d=4.75138e-11 t=79867
 chong zhi ka 	充值卡	c=1 d=4.72769e-11 t=79867
 chong zhuang 	冲撞	c=1 d=4.10057e-72 t=79867
-chong zhuang 	重装	c=2 d=1.16369 t=79867
+chong zhuang 	重装	c=5 d=2.53675 t=79867
 chong zi 	虫子	c=4 d=2.52513e-49 t=79867
 chong zu 	充足	c=1 d=2.54445e-46 t=79867
 chong zu 	重组	c=1 d=2.53176e-46 t=79867
@@ -1193,7 +1194,7 @@ chu jing 	处境	c=6 d=1.89773e-66 t=79867
 chu kou 	出口	c=2 d=8.77284e-126 t=79867
 chu lai 	出来	c=47 d=0.264914 t=79867
 chu le 	除了	c=20 d=0.00467746 t=79867
-chu li 	处理	c=33 d=0.0217096 t=79867
+chu li 	处理	c=33 d=1.20134 t=79867
 chu lu 	出炉	c=1 d=2.46683e-152 t=79867
 chu lu 	出路	c=3 d=8.96052e-92 t=79867
 chu mai 	出卖	c=8 d=3.91862e-45 t=79867
@@ -1206,7 +1207,7 @@ chu qi 	初期	c=2 d=1.02528e-29 t=79867
 chu qu 	出去	c=12 d=0.470011 t=79867
 chu shi 	初始	c=11 d=4.19201e-20 t=79867
 chu shi 	处事	c=1 d=2.06594e-95 t=79867
-chu shi hua 	初始化	c=10 d=0.436123 t=79867
+chu shi hua 	初始化	c=10 d=0.585669 t=79867
 chu shi jian 	褚时健	c=2 d=1.27202e-153 t=79867
 chu shou 	出售	c=1 d=9.36051e-47 t=79867
 chu su du 	初速度	c=1 d=2.46196e-70 t=79867
@@ -1256,7 +1257,7 @@ chuang 	闯	c=7 d=3.79499e-96 t=79867
 chuang chong 	床虫	c=1 d=1.54099e-146 t=79867
 chuang hu 	窗户	c=2 d=1.94491e-158 t=79867
 chuang jian 	创建	c=15 d=0.0761538 t=79867
-chuang kou 	窗口	c=22 d=0.034837 t=79867
+chuang kou 	窗口	c=22 d=0.251579 t=79867
 chuang shang 	床上	c=7 d=5.13732e-18 t=79867
 chuang shi ren 	创始人	c=6 d=4.68215e-65 t=79867
 chuang yi 	创意	c=5 d=5.41931e-29 t=79867
@@ -1403,6 +1404,7 @@ da fa 	打发	c=6 d=2.62149e-44 t=79867
 da fa shi jian 	打发时间	c=1 d=3.99282e-141 t=79867
 da fan dian 	大饭店	c=1 d=2.73443e-99 t=79867
 da fei ji 	打飞机	c=2 d=1.55958e-40 t=79867
+da gai 	大改	c=1 d=1.26445e-172 t=79867
 da gai 	大概	c=24 d=0.706744 t=79867
 da gai nv 	大概女	c=1 d=1.07932e-45 t=79867
 da gao 	大搞	c=1 d=6.15782e-32 t=79867
@@ -1424,7 +1426,7 @@ da jian 	搭建	c=2 d=3.14619e-14 t=79867
 da jiang 	大江	c=1 d=1.59848e-77 t=79867
 da jiang da he 	大江大河	c=1 d=1.61454e-77 t=79867
 da jiang dong qu 	大江东去	c=1 d=1.62264e-77 t=79867
-da kai 	打开	c=57 d=0.160623 t=79867
+da kai 	打开	c=57 d=0.358796 t=79867
 da kai ju mian 	打开局面	c=1 d=3.80403e-130 t=79867
 da kuai 	大块	c=1 d=6.82146e-89 t=79867
 da kuang jia 	搭框架	c=1 d=4.32155e-160 t=79867
@@ -1465,7 +1467,7 @@ da shi qing 	大事情	c=1 d=2.80279e-66 t=79867
 da shou bi 	大手笔	c=1 d=1.17531e-18 t=79867
 da shou da jiao 	大手大脚	c=1 d=7.5107e-45 t=79867
 da shu 	大数	c=1 d=6.86499e-105 t=79867
-da suan 	打算	c=10 d=0.171435 t=79867
+da suan 	打算	c=10 d=0.615697 t=79867
 da ti shang 	大体上	c=3 d=4.18056e-64 t=79867
 da tu dou 	大土豆	c=1 d=4.96907e-38 t=79867
 da tu sha 	大屠杀	c=1 d=3.03716e-99 t=79867
@@ -1497,7 +1499,7 @@ da zhan jiang shi 	大战僵尸	c=1 d=4.28539e-120 t=79867
 da zhi 	大致	c=6 d=1.09001e-14 t=79867
 da zhong xiao 	大中小	c=1 d=2.43637e-06 t=79867
 da zi 	大字	c=1 d=2.87454e-128 t=79867
-da zi 	打字	c=15 d=0.434321 t=79867
+da zi 	打字	c=15 d=0.755784 t=79867
 da zi ti 	大字体	c=1 d=2.44952e-128 t=79867
 da zong 	大宗	c=1 d=5.54727e-127 t=79867
 da zu zhi 	大组织	c=1 d=2.07687e-157 t=79867
@@ -1523,7 +1525,7 @@ dai hui jia 	带回家	c=1 d=1.0704e-65 t=79867
 dai kuan 	带宽	c=1 d=2.04991e-121 t=79867
 dai lai 	带来	c=31 d=9.73454e-08 t=79867
 dai li 	代理	c=3 d=0.00398587 t=79867
-dai ma 	代码	c=61 d=0.113042 t=79867
+dai ma 	代码	c=61 d=0.477114 t=79867
 dai ma kuai 	代码块	c=1 d=1.26936e-100 t=79867
 dai ren jie wu 	待人接物	c=1 d=1.15664e-153 t=79867
 dai ru 	带入	c=1 d=4.26298e-29 t=79867
@@ -1534,8 +1536,8 @@ dai wo fei 	带我飞	c=1 d=9.95658e-38 t=79867
 dai yi dian 	带一点	c=1 d=1.44715e-54 t=79867
 dai zhe 	带着	c=16 d=1.83462e-51 t=79867
 dai zhe 	待着	c=1 d=2.53211e-77 t=79867
-dan 	但	c=218 d=0.119448 t=79867
-dan 	单	c=11 d=1.39207e-25 t=79867
+dan 	但	c=218 d=0.882497 t=79867
+dan 	单	c=11 d=0.895834 t=79867
 dan 	淡	c=2 d=8.19567e-13 t=79867
 dan ban 	单板	c=1 d=6.24689e-142 t=79867
 dan cheng 	单程	c=1 d=1.32692e-63 t=79867
@@ -1635,7 +1637,7 @@ dao xia 	到下	c=1 d=2.16117e-37 t=79867
 dao xiang 	导向	c=4 d=5.19215e-84 t=79867
 dao zei 	盗贼	c=8 d=1.2583e-103 t=79867
 dao zhi 	导致	c=10 d=0.221619 t=79867
-de 	地	c=98 d=0.101774 t=79867
+de 	地	c=98 d=0.447088 t=79867
 de 	得	c=104 d=0.923116 t=79867
 de 	德	c=1 d=4.04614e-150 t=79867
 de 	的	c=5149 d=12.4214 t=79867
@@ -1666,7 +1668,7 @@ deng hao 	等号	c=4 d=5.53276e-32 t=79867
 deng ji 	等级	c=10 d=0.798516 t=79867
 deng jia jiao huan 	等价交换	c=1 d=7.80716e-118 t=79867
 deng liang 	等量	c=1 d=2.31174e-94 t=79867
-deng lu 	登录	c=11 d=0.142655 t=79867
+deng lu 	登录	c=11 d=0.286505 t=79867
 deng ren 	等人	c=1 d=3.12583e-114 t=79867
 deng shang 	登上	c=1 d=3.70621e-147 t=79867
 deng tian 	登天	c=1 d=7.78725e-88 t=79867
@@ -1783,7 +1785,7 @@ di zuo 	底座	c=2 d=8.37475e-120 t=79867
 dian 	典	c=1 d=2.96328e-74 t=79867
 dian 	点	c=70 d=0.349954 t=79867
 dian 	电	c=2 d=5.56975e-57 t=79867
-dian chang 	电厂	c=1 d=1 t=79506
+dian chang 	电厂	c=1 d=0.164474 t=79867
 dian chi 	电池	c=9 d=1.92142e-36 t=79867
 dian feng 	巅峰	c=2 d=1.78453e-28 t=79867
 dian feng sai 	巅峰赛	c=2 d=3.479e-121 t=79867
@@ -1793,12 +1795,12 @@ dian hua 	电话	c=1 d=6.04823e-56 t=79867
 dian ji 	惦记	c=2 d=5.72827e-93 t=79867
 dian ji 	点击	c=42 d=0.527314 t=79867
 dian ji 	电机	c=2 d=3.9147e-165 t=79867
-dian jia 	电价	c=1 d=1 t=79673
+dian jia 	电价	c=1 d=0.379083 t=79867
 dian jian 	电建	c=4 d=5.15714e-100 t=79867
 dian kai 	点开	c=1 d=0.0232837 t=79867
 dian li 	电力	c=2 d=5.85252e-22 t=79867
 dian liang 	点亮	c=1 d=2.70455e-58 t=79867
-dian nao 	电脑	c=57 d=0.755784 t=79867
+dian nao 	电脑	c=57 d=2.13187 t=79867
 dian nao shang 	电脑上	c=2 d=0.00744658 t=79867
 dian pei liu li 	颠沛流离	c=2 d=1.58478e-64 t=79867
 dian pu 	店铺	c=1 d=7.91757e-48 t=79867
@@ -1813,7 +1815,7 @@ dian xing 	典型	c=1 d=2.43034e-65 t=79867
 dian xuan 	点选	c=1 d=2.20033e-13 t=79867
 dian xue 	点穴	c=1 d=6.48084e-104 t=79867
 dian ying 	电影	c=10 d=0.0417941 t=79867
-dian yuan 	电源	c=1 d=0.00283702 t=79867
+dian yuan 	电源	c=2 d=1.2947 t=79867
 dian yuan xian 	电源线	c=1 d=7.95378e-131 t=79867
 dian zan 	点赞	c=1 d=9.64691e-78 t=79867
 dian zhui 	点缀	c=1 d=9.67156e-108 t=79867
@@ -1821,7 +1823,7 @@ dian zi 	垫子	c=1 d=2.29239e-54 t=79867
 dian zi 	电子	c=13 d=0.0404542 t=79867
 dian zi ban 	电子版	c=2 d=0.394554 t=79867
 dian zi hua 	电子化	c=1 d=4.25487e-36 t=79867
-dian zi qian 	电子签	c=1 d=1 t=79687
+dian zi qian 	电子签	c=1 d=0.40657 t=79867
 dian zi shu 	电子书	c=11 d=1.64217e-12 t=79867
 dian zu 	电阻	c=1 d=4.49104e-142 t=79867
 diao 	掉	c=24 d=0.00192083 t=79867
@@ -1849,7 +1851,7 @@ din 	𨈖	c=0 d=1.09006e-133 t=79867
 din mi guan 	𨈖蜜罐	c=1 d=1.09552e-132 t=79867
 ding 	定	c=9 d=0.301194 t=79867
 ding 	顶	c=6 d=0.000323925 t=79867
-ding bu 	顶部	c=2 d=1.3232e-05 t=79867
+ding bu 	顶部	c=2 d=0.254107 t=79867
 ding dian 	定点	c=1 d=3.10727e-44 t=79867
 ding duan 	顶端	c=3 d=0.843665 t=79867
 ding feng 	顶峰	c=1 d=9.06996e-29 t=79867
@@ -1924,7 +1926,7 @@ dou hui 	都会	c=3 d=2.45317e-28 t=79867
 dou kao 	都靠	c=1 d=1.80485e-35 t=79867
 dou mei you 	都没有	c=1 d=0.275271 t=79867
 dou neng 	都能	c=2 d=6.73593e-117 t=79867
-dou shi 	都是	c=78 d=0.253324 t=79867
+dou shi 	都是	c=78 d=0.360595 t=79867
 dou shi zai 	都是在	c=1 d=1.55003e-156 t=79867
 dou shuo 	都说	c=2 d=1.31484e-73 t=79867
 dou xiang 	都像	c=1 d=7.8021e-81 t=79867
@@ -2029,7 +2031,7 @@ dui wo 	对我	c=6 d=3.78156e-31 t=79867
 dui wu 	队伍	c=1 d=1.09578e-76 t=79867
 dui xian 	兑现	c=1 d=5.50629e-128 t=79867
 dui xiang 	对象	c=7 d=3.01211e-05 t=79867
-dui ying 	对应	c=14 d=0.020141 t=79867
+dui ying 	对应	c=14 d=0.937067 t=79867
 dui yu 	对于	c=91 d=0.252666 t=79867
 dui zhao 	对照	c=3 d=1.38328e-23 t=79867
 dui zhe 	对着	c=6 d=1.50155e-52 t=79867
@@ -2113,6 +2115,7 @@ er bu 	而不	c=3 d=5.27562e-07 t=79867
 er bu hui 	而不会	c=1 d=5.71695e-11 t=79867
 er bu shi 	而不是	c=18 d=0.000907334 t=79867
 er ci 	二次	c=2 d=1.6453e-05 t=79867
+er guo 	而过	c=1 d=7.47991e-173 t=79867
 er hang 	二航	c=2 d=0.404542 t=79867
 er hao 	二号	c=1 d=3.73948e-17 t=79867
 er hou 	耳后	c=1 d=3.18203e-59 t=79867
@@ -2439,7 +2442,7 @@ fu kan 	俯瞰	c=2 d=0.113042 t=79867
 fu ke 	复刻	c=3 d=8.25667e-12 t=79867
 fu kuan 	付款	c=2 d=1.05435e-05 t=79867
 fu li 	复利	c=2 d=8.36239e-44 t=79867
-fu li 	富力	c=1 d=1 t=79849
+fu li 	富力	c=1 d=0.913931 t=79867
 fu man 	服满	c=1 d=1.14977e-83 t=79867
 fu mian 	负面	c=5 d=3.63824e-47 t=79867
 fu mo 	抚摸	c=1 d=9.01982e-52 t=79867
@@ -2483,7 +2486,7 @@ fu zhu 	辅助	c=7 d=0.273898 t=79867
 fu zhuang 	服装	c=1 d=2.16015e-149 t=79867
 fu zong 	副总	c=2 d=6.31565e-65 t=79867
 fu zu 	富足	c=1 d=2.82194e-146 t=79867
-gai 	改	c=27 d=0.00153495 t=79867
+gai 	改	c=27 d=1.54593 t=79867
 gai 	该	c=30 d=0.079659 t=79867
 gai ban 	改版	c=5 d=3.64323e-05 t=79867
 gai bian 	改变	c=30 d=0.00172074 t=79867
@@ -2492,6 +2495,8 @@ gai cheng 	改成	c=17 d=0.15259 t=79867
 gai dao 	改到	c=1 d=3.8827e-18 t=79867
 gai diao 	改掉	c=1 d=4.67985e-09 t=79867
 gai dong 	改动	c=12 d=0.789656 t=79867
+gai hui 	改回	c=1 d=0.980199 t=79867
+gai hui lai 	改回来	c=1 d=4.86575e-173 t=79867
 gai jin 	改进	c=4 d=0.499074 t=79867
 gai kuang 	概况	c=1 d=1.95638e-101 t=79867
 gai kuo 	概括	c=1 d=1.14039e-163 t=79867
@@ -2554,7 +2559,7 @@ gan yu 	干预	c=1 d=4.9364e-78 t=79867
 gan yu 	敢于	c=1 d=3.0349e-149 t=79867
 gan zhi 	感知	c=2 d=5.44369e-23 t=79867
 gan zu 	干租	c=1 d=1.2397e-116 t=79867
-gang 	刚	c=14 d=0.063609 t=79867
+gang 	刚	c=14 d=0.71177 t=79867
 gang 	岗	c=4 d=1.15656e-64 t=79867
 gang 	港	c=7 d=1.08046e-28 t=79867
 gang 	钢	c=5 d=1.1915e-120 t=79867
@@ -2631,7 +2636,7 @@ gao zhi 	告知	c=1 d=3.84631e-113 t=79867
 gao zhi liang 	高质量	c=8 d=7.9906e-09 t=79867
 gao zhong 	高中	c=1 d=1.41406e-76 t=79867
 gao zi 	稿子	c=2 d=3.9621e-109 t=79867
-ge 	个	c=121 d=0.744054 t=79867
+ge 	个	c=121 d=0.909373 t=79867
 ge 	各	c=7 d=0.00339653 t=79867
 ge 	咯	c=28 d=1.58964e-38 t=79867
 ge 	哥	c=5 d=5.15939e-39 t=79867
@@ -2835,7 +2840,7 @@ gu dian 	古典	c=2 d=5.53148e-74 t=79867
 gu ding 	固定	c=9 d=1.25758e-11 t=79867
 gu du 	孤独	c=2 d=3.85102e-98 t=79867
 gu er 	孤儿	c=9 d=0.000182557 t=79867
-gu fen 	股份	c=2 d=1.97531 t=79760
+gu fen 	股份	c=2 d=1.15688 t=79867
 gu ge 	谷歌	c=5 d=0.83527 t=79867
 gu huo zai 	古惑仔	c=1 d=2.99622e-57 t=79867
 gu ji 	估计	c=6 d=3.02273e-43 t=79867
@@ -2881,7 +2886,7 @@ guai wu 	怪物	c=30 d=9.84512e-31 t=79867
 guan 	关	c=6 d=6.35529e-21 t=79867
 guan 	管	c=12 d=3.44717e-30 t=79867
 guan 	观	c=3 d=1.49763e-75 t=79867
-guan bi 	关闭	c=16 d=1.92659e-08 t=79867
+guan bi 	关闭	c=16 d=0.747232 t=79867
 guan bu diao 	关不掉	c=1 d=2.33274e-24 t=79867
 guan cha 	观察	c=6 d=7.66634e-51 t=79867
 guan cha dao 	观察到	c=1 d=1.11978e-125 t=79867
@@ -2899,6 +2904,7 @@ guan kong 	管控	c=5 d=1.8594e-73 t=79867
 guan lan gao shou 	灌篮高手	c=1 d=1.0739e-74 t=79867
 guan li 	管理	c=26 d=0.490561 t=79867
 guan li fei 	管理费	c=5 d=0.399795 t=79867
+guan li yuan 	管理员	c=2 d=1.00119e-172 t=79867
 guan lian 	关联	c=7 d=5.11883e-05 t=79867
 guan liao 	官僚	c=2 d=5.99723e-74 t=79867
 guan men 	关门	c=2 d=2.20153e-129 t=79867
@@ -3004,11 +3010,12 @@ guo fang bu 	国防部	c=2 d=1.62391e-108 t=79867
 guo fen 	过分	c=4 d=1.59932e-46 t=79867
 guo gao 	过高	c=4 d=8.97207e-19 t=79867
 guo hao 	过好	c=2 d=1.19706e-116 t=79867
+guo he 	果核	c=1 d=4.91465e-173 t=79867
 guo hou 	过后	c=1 d=1.45001e-136 t=79867
 guo ji 	国际	c=9 d=5.46623e-63 t=79867
 guo ji bu 	国际部	c=2 d=4.85712e-64 t=79867
 guo ji nian 	过几年	c=2 d=1.45713e-76 t=79867
-guo ji tian 	过几天	c=1 d=1 t=79803
+guo ji tian 	过几天	c=1 d=0.726149 t=79867
 guo jia 	国家	c=10 d=2.65506e-76 t=79867
 guo jiang 	果酱	c=1 d=5.46801e-46 t=79867
 guo ke 	过客	c=1 d=4.18697e-82 t=79867
@@ -3180,7 +3187,7 @@ hao yong 	好用	c=5 d=2.2064e-16 t=79867
 hao yun lai 	好运来	c=1 d=2.381e-59 t=79867
 hao zi chan 	好资产	c=1 d=2.12573e-19 t=79867
 he 	何	c=5 d=1.87845e-64 t=79867
-he 	和	c=682 d=1.65289 t=79867
+he 	和	c=683 d=2.40515 t=79867
 he 	喝	c=2 d=5.00674e-119 t=79867
 he 	核	c=4 d=1.33322e-148 t=79867
 he 	盒	c=1 d=2.8466e-72 t=79867
@@ -3331,7 +3338,7 @@ hou tai 	后台	c=10 d=0.005241 t=79867
 hou tian 	后天	c=1 d=2.13509e-100 t=79867
 hou xu 	后续	c=12 d=0.225157 t=79867
 hou xuan 	候选	c=6 d=5.80237e-09 t=79867
-hou xuan ci 	候选词	c=2 d=0.178173 t=79867
+hou xuan ci 	候选词	c=2 d=0.918512 t=79867
 hou xuan kuang 	候选框	c=1 d=1.25472e-140 t=79867
 hou xuan zi 	候选字	c=2 d=2.55957e-141 t=79867
 hou yi nian 	后一年	c=1 d=6.02421e-68 t=79867
@@ -3372,7 +3379,7 @@ hua 	华	c=2 d=7.85055e-95 t=79867
 hua 	滑	c=3 d=1.22361e-80 t=79867
 hua 	画	c=4 d=6.11152e-56 t=79867
 hua 	花	c=15 d=7.72128e-45 t=79867
-hua 	话	c=53 d=0.499074 t=79867
+hua 	话	c=53 d=0.501576 t=79867
 hua ban 	滑板	c=2 d=3.57334e-118 t=79867
 hua ban 	画板	c=1 d=5.86948e-56 t=79867
 hua bao 	华宝	c=3 d=5.23897e-24 t=79867
@@ -3424,7 +3431,7 @@ huan hang 	换行	c=3 d=5.2337e-16 t=79867
 huan he 	缓和	c=1 d=7.51046e-74 t=79867
 huan jie 	环节	c=2 d=9.01898e-160 t=79867
 huan jie 	缓解	c=1 d=4.46469e-161 t=79867
-huan jing 	环境	c=69 d=0.55856 t=79867
+huan jing 	环境	c=69 d=0.779306 t=79867
 huan jue 	幻觉	c=3 d=7.652e-29 t=79867
 huan kuan 	还款	c=1 d=7.92996e-37 t=79867
 huan kuan ri 	还款日	c=1 d=7.61903e-37 t=79867
@@ -3549,7 +3556,7 @@ huo li 	活力	c=3 d=3.38582e-54 t=79867
 huo qi 	活期	c=1 d=5.87828e-103 t=79867
 huo qu 	获取	c=26 d=0.035262 t=79867
 huo re 	火热	c=1 d=1.59815e-104 t=79867
-huo rong 	火绒	c=4 d=2.17644e-61 t=79867
+huo rong 	火绒	c=5 d=1.21542 t=79867
 huo shang 	火上	c=1 d=9.45749e-80 t=79867
 huo xu 	或许	c=10 d=1.41094e-50 t=79867
 huo yan 	火焰	c=1 d=6.61246e-164 t=79867
@@ -3813,7 +3820,7 @@ jian cang 	减仓	c=5 d=3.0171e-19 t=79867
 jian cang 	建仓	c=12 d=1.71089e-18 t=79867
 jian ce 	检测	c=5 d=0.000312783 t=79867
 jian ce 	监测	c=1 d=1.79219e-11 t=79867
-jian cha 	检查	c=64 d=0.252918 t=79867
+jian cha 	检查	c=64 d=1.99441 t=79867
 jian cheng 	简称	c=1 d=1.83607e-119 t=79867
 jian chi 	坚持	c=13 d=0.767206 t=79867
 jian dai 	肩带	c=4 d=3.2439e-55 t=79867
@@ -3879,6 +3886,7 @@ jian yi 	建议	c=41 d=0.126818 t=79867
 jian zhi 	兼职	c=1 d=7.60663e-106 t=79867
 jian zhi 	简直	c=3 d=1.16516e-63 t=79867
 jian zhu 	建筑	c=40 d=2.51664e-05 t=79867
+jian zhuang 	健壮	c=1 d=1.23323e-172 t=79867
 jiang 	将	c=19 d=9.14242e-05 t=79867
 jiang 	江	c=2 d=1.73609e-129 t=79867
 jiang 	蒋	c=1 d=3.80959e-59 t=79867
@@ -3907,7 +3915,7 @@ jiang tao 	姜涛	c=1 d=4.55455e-72 t=79867
 jiang yao 	将要	c=1 d=2.17207e-08 t=79867
 jiang ying 	僵硬	c=1 d=8.4476e-75 t=79867
 jiao 	交	c=7 d=1.8845e-36 t=79867
-jiao 	叫	c=18 d=0.0773047 t=79867
+jiao 	叫	c=18 d=1.37465 t=79867
 jiao 	教	c=5 d=1.70356e-32 t=79867
 jiao 	脚	c=16 d=5.29211e-40 t=79867
 jiao ao 	骄傲	c=5 d=2.88422e-50 t=79867
@@ -3990,7 +3998,7 @@ jie fang 	解放	c=1 d=7.62372e-103 t=79867
 jie fu 	姐夫	c=9 d=4.64987e-51 t=79867
 jie gou 	结构	c=18 d=0.683861 t=79867
 jie gou hua 	结构化	c=1 d=2.15156e-14 t=79867
-jie guan 	接管	c=1 d=4.28785e-68 t=79867
+jie guan 	接管	c=2 d=0.895834 t=79867
 jie guo 	结果	c=32 d=0.0300896 t=79867
 jie he 	结合	c=78 d=4.24546e-10 t=79867
 jie he dian 	结合点	c=1 d=3.19669e-113 t=79867
@@ -4004,7 +4012,7 @@ jie jin 	接近	c=8 d=5.17027e-05 t=79867
 jie jing 	捷径	c=1 d=3.92882e-98 t=79867
 jie jing 	结晶	c=1 d=2.26982e-114 t=79867
 jie ju 	结局	c=2 d=3.8106e-139 t=79867
-jie jue 	解决	c=50 d=0.332093 t=79867
+jie jue 	解决	c=50 d=0.463013 t=79867
 jie kai 	解开	c=1 d=4.3054e-116 t=79867
 jie kou 	借口	c=1 d=2.7547e-127 t=79867
 jie kou 	接口	c=12 d=1.49e-15 t=79867
@@ -4079,6 +4087,7 @@ jin ke neng 	尽可能	c=3 d=0.000164928 t=79867
 jin kuai 	尽快	c=5 d=4.18924e-59 t=79867
 jin kui hua 	金葵花	c=1 d=3.5472e-43 t=79867
 jin lai 	近来	c=1 d=8.62943e-149 t=79867
+jin lai 	进来	c=1 d=1.04043e-172 t=79867
 jin liang 	尽量	c=8 d=0.0585761 t=79867
 jin nian 	近年	c=4 d=1.18341e-40 t=79867
 jin pao 	浸泡	c=3 d=1.11598e-85 t=79867
@@ -4120,11 +4129,11 @@ jing 	惊	c=1 d=9.86926e-52 t=79867
 jing 	精	c=4 d=1.02263e-129 t=79867
 jing 	经	c=1 d=9.42956e-104 t=79867
 jing 	静	c=2 d=2.64263e-160 t=79867
-jing ban 	经办	c=1 d=1 t=79855
+jing ban 	经办	c=1 d=0.941765 t=79867
 jing cai 	精彩	c=3 d=2.53909e-80 t=79867
 jing chang 	经常	c=10 d=0.316637 t=79867
 jing dai 	惊呆	c=1 d=4.44876e-119 t=79867
-jing dian 	经典	c=20 d=0.00878245 t=79867
+jing dian 	经典	c=21 d=0.992865 t=79867
 jing dian ban 	经典版	c=1 d=4.68896e-120 t=79867
 jing guo 	经过	c=5 d=6.02851e-47 t=79867
 jing hua 	精华	c=2 d=2.21152e-102 t=79867
@@ -4334,14 +4343,14 @@ kai men jian shan 	开门见山	c=1 d=2.30263e-77 t=79867
 kai mo 	楷模	c=1 d=5.52901e-147 t=79867
 kai mu shi 	开幕式	c=1 d=2.26064e-37 t=79867
 kai ping 	开平	c=1 d=6.30752e-138 t=79867
-kai qi 	开启	c=6 d=6.88415e-79 t=79867
+kai qi 	开启	c=6 d=0.985612 t=79867
 kai qiao 	开窍	c=2 d=2.66111e-44 t=79867
 kai se lin 	凯瑟琳	c=2 d=1.1792e-108 t=79867
 kai shi 	开始	c=67 d=0.714417 t=79867
 kai tong 	开通	c=4 d=0.000539429 t=79867
 kai tou 	开头	c=2 d=1.51907e-07 t=79867
 kai tuo 	开拓	c=1 d=8.52641e-96 t=79867
-kai wan hui 	开完会	c=1 d=1 t=79607
+kai wan hui 	开完会	c=1 d=0.272532 t=79867
 kai wen 	凯文	c=1 d=4.04558e-119 t=79867
 kai xiao 	开销	c=3 d=1.62468e-33 t=79867
 kai xin 	开心	c=11 d=7.68627e-40 t=79867
@@ -4612,12 +4621,12 @@ la du zi 	拉肚子	c=1 d=8.75325e-52 t=79867
 la ji 	垃圾	c=13 d=1.46747e-71 t=79867
 la jiao 	辣椒	c=2 d=1.06506e-65 t=79867
 la qi 	拉起	c=1 d=0.00697795 t=79867
-la qu 	拉取	c=9 d=0.297092 t=79867
+la qu 	拉取	c=9 d=0.453845 t=79867
 la shen 	拉伸	c=1 d=1.40941e-96 t=79867
 la wei 	辣味	c=1 d=1.41363e-43 t=79867
 la yuan 	拉远	c=1 d=2.99001e-62 t=79867
 la zhu wo 	拉住我	c=1 d=1.72087e-92 t=79867
-lai 	来	c=253 d=1.75157 t=79867
+lai 	来	c=253 d=4.97192 t=79867
 lai bu ji 	来不及	c=2 d=1.92967e-57 t=79867
 lai dao 	来到	c=1 d=2.94208e-19 t=79867
 lai de 	来得	c=1 d=5.36013e-135 t=79867
@@ -4893,7 +4902,7 @@ liao liao 	聊聊	c=4 d=1.77768e-33 t=79867
 liao liao tian 	聊聊天	c=1 d=7.11096e-78 t=79867
 liao tian 	聊天	c=5 d=0.114186 t=79867
 lie 	列	c=4 d=0.479505 t=79867
-lie biao 	列表	c=7 d=0.0303719 t=79867
+lie biao 	列表	c=7 d=0.275271 t=79867
 lie chu 	列出	c=2 d=0.000209665 t=79867
 lie chu lai 	列出来	c=2 d=5.74648e-16 t=79867
 lie he 	列和	c=1 d=1.4444e-61 t=79867
@@ -4923,7 +4932,7 @@ ling ren jing pei 	令人敬佩	c=1 d=6.60143e-115 t=79867
 ling san 	零散	c=1 d=1.81145e-166 t=79867
 ling shi 	零食	c=2 d=1.42071e-43 t=79867
 ling sui 	零碎	c=2 d=1.96545e-126 t=79867
-ling wai 	另外	c=53 d=0.535261 t=79867
+ling wai 	另外	c=53 d=1.35761 t=79867
 ling wai yi ge 	另外一个	c=1 d=4.52369e-139 t=79867
 ling xian yu 	领先于	c=1 d=1.23528e-74 t=79867
 ling yi bian 	另一边	c=1 d=3.25295e-83 t=79867
@@ -4989,7 +4998,7 @@ long tou 	龙头	c=2 d=2.98635e-77 t=79867
 lou 	楼	c=2 d=1.58595e-159 t=79867
 lou dong 	漏洞	c=1 d=3.21641e-09 t=79867
 lou kong 	镂空	c=1 d=2.0102e-38 t=79867
-lou xia 	楼下	c=1 d=1 t=79656
+lou xia 	楼下	c=1 d=0.348192 t=79867
 lou yu 	楼宇	c=3 d=6.38523e-135 t=79867
 lu 	录	c=8 d=3.91918e-10 t=79867
 lu 	炉	c=1 d=8.31138e-119 t=79867
@@ -5049,7 +5058,7 @@ luo cha 	落差	c=1 d=1.29946e-111 t=79867
 luo di 	落地	c=3 d=0.164474 t=79867
 luo he 	漯河	c=3 d=6.59162e-151 t=79867
 luo hou 	落后	c=1 d=6.73615e-88 t=79867
-luo ji 	逻辑	c=47 d=0.00433828 t=79867
+luo ji 	逻辑	c=47 d=0.847894 t=79867
 luo ji shang 	逻辑上	c=1 d=6.41547e-73 t=79867
 luo jiao 	落脚	c=1 d=1.96065e-156 t=79867
 luo ke fei le 	洛克菲勒	c=1 d=3.05915e-125 t=79867
@@ -5241,7 +5250,7 @@ mei yi zhang 	每一张	c=1 d=5.53367e-10 t=79867
 mei yi zhang 	每一章	c=1 d=1.91523e-145 t=79867
 mei yi zhong 	每一种	c=1 d=2.1096e-47 t=79867
 mei ying 	魅影	c=6 d=8.17829e-159 t=79867
-mei yong 	没用	c=8 d=0.00161245 t=79867
+mei yong 	没用	c=8 d=0.353455 t=79867
 mei you 	没有	c=269 d=1.17189 t=79867
 mei you duo shao ren 	没有多少人	c=1 d=5.74738e-44 t=79867
 mei yuan 	美元	c=8 d=4.31329e-20 t=79867
@@ -5346,7 +5355,7 @@ ming 	明	c=5 d=1.55371e-37 t=79867
 ming bai 	明白	c=19 d=0.143704 t=79867
 ming bao 	明报	c=1 d=0.000139144 t=79867
 ming chao 	明朝	c=2 d=2.16367e-80 t=79867
-ming cheng 	名称	c=8 d=0.0140941 t=79867
+ming cheng 	名称	c=8 d=0.263158 t=79867
 ming chui qing shi 	名垂青史	c=1 d=1.34601e-84 t=79867
 ming dan 	名单	c=1 d=1.88357e-96 t=79867
 ming e 	名额	c=1 d=3.60572e-59 t=79867
@@ -5410,11 +5419,11 @@ mo ni qi ban 	模拟器版	c=1 d=3.59935e-97 t=79867
 mo qi 	末期	c=2 d=9.4736e-100 t=79867
 mo qi 	默契	c=1 d=9.52109e-100 t=79867
 mo ran 	漠然	c=1 d=9.30213e-91 t=79867
-mo ren 	默认	c=32 d=0.0689256 t=79867
+mo ren 	默认	c=32 d=1.65071 t=79867
 mo ren shu ru fa 	默认输入法	c=1 d=2.69584e-167 t=79867
 mo ri 	末日	c=12 d=1.97272e-19 t=79867
 mo shao 	末梢	c=1 d=4.26502e-64 t=79867
-mo shi 	模式	c=32 d=0.000293102 t=79867
+mo shi 	模式	c=32 d=0.364219 t=79867
 mo sun 	磨损	c=1 d=6.67999e-19 t=79867
 mo suo 	摸索	c=2 d=1.07613e-69 t=79867
 mo ta 	魔塔	c=1 d=6.44235e-34 t=79867
@@ -5453,12 +5462,12 @@ mu di 	目的	c=20 d=3.73565e-45 t=79867
 mu di xing 	目的性	c=2 d=1.06136e-95 t=79867
 mu du 	目睹	c=1 d=1.69703e-75 t=79867
 mu gong 	木工	c=1 d=8.24718e-116 t=79867
-mu gong si 	母公司	c=3 d=2.1 t=79788
+mu gong si 	母公司	c=3 d=1.41473 t=79867
 mu gou 	母狗	c=1 d=4.94597e-42 t=79867
 mu guang 	目光	c=1 d=4.44862e-148 t=79867
 mu ke 	慕课	c=1 d=1.47143e-132 t=79867
 mu lu 	目录	c=20 d=0.485504 t=79867
-mu qian 	目前	c=191 d=2.00959 t=79867
+mu qian 	目前	c=191 d=3.99387 t=79867
 mu qin 	母亲	c=1 d=5.10251e-85 t=79867
 mu ti 	母题	c=1 d=4.89046e-115 t=79867
 mu tou 	木头	c=1 d=2.24509e-44 t=79867
@@ -5525,7 +5534,7 @@ na yi ge 	哪一个	c=1 d=3.76923e-22 t=79867
 na yi hang 	哪一行	c=1 d=4.75867e-29 t=79867
 na yi jie 	那一截	c=1 d=1.53345e-59 t=79867
 na yi ke 	那一刻	c=1 d=4.83012e-116 t=79867
-na yi lan 	那一栏	c=1 d=1 t=79452
+na yi lan 	那一栏	c=1 d=0.125556 t=79867
 na yi tian 	哪一天	c=1 d=3.5859e-53 t=79867
 na yi tian 	那一天	c=1 d=5.76366e-136 t=79867
 na yi tiao 	那一条	c=1 d=2.68248e-138 t=79867
@@ -5617,7 +5626,7 @@ neng fou 	能否	c=19 d=0.559898 t=79867
 neng gan 	能干	c=1 d=9.04904e-90 t=79867
 neng gou 	能够	c=15 d=3.17338e-48 t=79867
 neng hao 	能耗	c=8 d=6.46543e-160 t=79867
-neng jian 	能建	c=2 d=1.25538 t=79777
+neng jian 	能建	c=2 d=0.800466 t=79867
 neng li 	能力	c=37 d=1.00005e-45 t=79867
 neng liang 	能量	c=9 d=1.74064e-50 t=79867
 neng ren 	能人	c=1 d=5.59808e-146 t=79867
@@ -5637,7 +5646,7 @@ ni gang cai 	你刚才	c=1 d=2.50358e-32 t=79867
 ni gu 	尼姑	c=3 d=8.26693e-49 t=79867
 ni ha o 	你哈哦	c=1 d=1.78855e-134 t=79867
 ni hai you 	你还有	c=2 d=5.30838e-21 t=79867
-ni hao 	你好	c=1 d=1 t=79443
+ni hao 	你好	c=1 d=0.120032 t=79867
 ni hao 	拟好	c=1 d=1.95657e-14 t=79867
 ni hui 	你会	c=1 d=1.63304e-64 t=79867
 ni ke 	尼克	c=1 d=7.11632e-75 t=79867
@@ -5785,7 +5794,7 @@ pai ma pi 	拍马屁	c=1 d=2.70308e-81 t=79867
 pai ming 	排名	c=2 d=3.70197e-36 t=79867
 pai qiu 	拍球	c=1 d=2.17903e-75 t=79867
 pai shang 	派上	c=1 d=3.97143e-166 t=79867
-pai shui 	排水	c=0 d=0.1 t=79507
+pai shui 	排水	c=0 d=0.0165299 t=79867
 pai shui gou 	排水沟	c=1 d=9.32273e-117 t=79867
 pai xu 	排序	c=1 d=7.06707e-64 t=79867
 pai zai 	排在	c=1 d=3.37133e-33 t=79867
@@ -5795,6 +5804,7 @@ pan 	盘	c=12 d=2.39758e-17 t=79867
 pan ding 	判定	c=3 d=1.54631e-33 t=79867
 pan duan 	判断	c=15 d=0.13466 t=79867
 pan duan li 	判断力	c=1 d=1.6101e-74 t=79867
+pan fu 	盘符	c=1 d=0.941765 t=79867
 pan suan 	盘算	c=1 d=5.44113e-135 t=79867
 pan tui 	盘腿	c=1 d=5.30172e-65 t=79867
 pan xuan 	盘旋	c=2 d=7.14614e-136 t=79867
@@ -5808,6 +5818,7 @@ pang ren 	旁人	c=1 d=5.41861e-145 t=79867
 pang xie 	螃蟹	c=1 d=7.64166e-160 t=79867
 pao 	跑	c=12 d=0.0772582 t=79867
 pao bu 	跑步	c=1 d=8.26571e-113 t=79867
+pao dao 	跑到	c=1 d=0.909373 t=79867
 pao guang 	跑光	c=1 d=1.20934e-89 t=79867
 pao hui 	炮灰	c=2 d=2.91357e-133 t=79867
 pao kai 	抛开	c=2 d=5.17187e-38 t=79867
@@ -5902,7 +5913,7 @@ pin ming 	拼命	c=3 d=7.5e-87 t=79867
 pin qiong 	贫穷	c=1 d=2.98149e-146 t=79867
 pin wei 	品味	c=1 d=1.19564e-102 t=79867
 pin xing 	品行	c=2 d=1.39434e-146 t=79867
-pin yin 	拼音	c=4 d=7.28129e-33 t=79867
+pin yin 	拼音	c=4 d=0.904837 t=79867
 pin zhi 	品质	c=6 d=7.0414e-80 t=79867
 pin zhong 	品种	c=11 d=3.0101e-22 t=79867
 ping 	凭	c=2 d=4.14249e-74 t=79867
@@ -5922,7 +5933,7 @@ ping fang 	平放	c=2 d=1.06042e-52 t=79867
 ping gu 	评估	c=3 d=3.5953e-25 t=79867
 ping guo 	苹果	c=2 d=6.9486e-22 t=79867
 ping heng 	平衡	c=7 d=8.50899e-23 t=79867
-ping ji 	评级	c=1 d=1 t=79821
+ping ji 	评级	c=1 d=0.794534 t=79867
 ping jia 	评价	c=28 d=3.20091e-11 t=79867
 ping jie 	凭借	c=6 d=2.40739e-71 t=79867
 ping jing 	平静	c=1 d=8.48877e-44 t=79867
@@ -6015,7 +6026,7 @@ qi shi 	骑士	c=8 d=1.77822e-28 t=79867
 qi shi dian 	起始点	c=1 d=1.66495e-27 t=79867
 qi shi duo 	七十多	c=1 d=4.12929e-154 t=79867
 qi shi lu 	启示录	c=2 d=1.32615e-19 t=79867
-qi ta 	其他	c=58 d=0.657532 t=79867
+qi ta 	其他	c=58 d=1.19435 t=79867
 qi ta ren 	其他人	c=5 d=5.56235e-12 t=79867
 qi tan 	奇谈	c=3 d=2.33521e-28 t=79867
 qi tu 	企图	c=4 d=1.05045e-79 t=79867
@@ -6050,7 +6061,7 @@ qian ji tian 	前几天	c=1 d=2.92653e-133 t=79867
 qian jing 	前景	c=5 d=1.08332e-75 t=79867
 qian li 	潜力	c=3 d=7.76715e-87 t=79867
 qian lu 	前路	c=1 d=1.10165e-80 t=79867
-qian mian 	前面	c=7 d=0.103036 t=79867
+qian mian 	前面	c=8 d=1.00486 t=79867
 qian ming 	签名	c=2 d=2.7954e-38 t=79867
 qian nian 	前年	c=1 d=2.13436e-96 t=79867
 qian qi 	前期	c=3 d=0.00128115 t=79867
@@ -6070,7 +6081,7 @@ qian ti 	前提	c=5 d=3.8149e-46 t=79867
 qian tou 	牵头	c=1 d=7.3223e-99 t=79867
 qian tou wan xu 	千头万绪	c=1 d=6.58972e-06 t=79867
 qian tu 	前途	c=2 d=2.18989e-104 t=79867
-qian wa shi 	千瓦时	c=0 d=0.1 t=79666
+qian wa shi 	千瓦时	c=0 d=0.0366045 t=79867
 qian wan 	千万	c=4 d=5.44356e-68 t=79867
 qian wan ren 	千万人	c=1 d=1.49346e-101 t=79867
 qian wang zhi wang 	千王之王	c=2 d=5.77148e-144 t=79867
@@ -6157,7 +6168,7 @@ qing jie 	清洁	c=1 d=7.53094e-106 t=79867
 qing ju wang dong 	轻举妄动	c=1 d=2.26264e-18 t=79867
 qing kong 	清空	c=2 d=1.56619 t=79867
 qing ku 	清苦	c=1 d=1.10435e-50 t=79867
-qing kuang 	情况	c=46 d=0.357164 t=79867
+qing kuang 	情况	c=46 d=1.80227 t=79867
 qing kuang xia 	情况下	c=1 d=7.51765e-144 t=79867
 qing li 	清理	c=13 d=0.00856304 t=79867
 qing liang 	轻量	c=8 d=0.131017 t=79867
@@ -6225,6 +6236,7 @@ qu de 	取得	c=9 d=6.12984e-96 t=79867
 qu diao 	去掉	c=12 d=0.0028892 t=79867
 qu dong 	驱动	c=4 d=2.02964e-63 t=79867
 qu dong li 	驱动力	c=1 d=5.54633e-125 t=79867
+qu dong qi 	驱动器	c=1 d=0.904837 t=79867
 qu fen 	区分	c=2 d=2.00507e-08 t=79867
 qu fen du 	区分度	c=1 d=2.66956e-140 t=79867
 qu fu 	屈服	c=1 d=3.25804e-72 t=79867
@@ -6238,7 +6250,7 @@ qu jue 	取决	c=1 d=6.99488e-149 t=79867
 qu jue yu 	取决于	c=3 d=1.21404e-46 t=79867
 qu mei 	祛魅	c=1 d=6.28161e-119 t=79867
 qu nian 	去年	c=9 d=1.1257e-40 t=79867
-qu pai shui 	去排水	c=1 d=1 t=79508
+qu pai shui 	去排水	c=1 d=0.166127 t=79867
 qu she 	取舍	c=2 d=1.20593e-144 t=79867
 qu shi 	去世	c=1 d=3.70771e-93 t=79867
 qu shi 	趋势	c=4 d=1.76184e-16 t=79867
@@ -6326,7 +6338,7 @@ ran 	然	c=3 d=1.09265e-13 t=79867
 ran er 	然而	c=3 d=4.48049e-85 t=79867
 ran hou 	然后	c=138 d=1.07889 t=79867
 ran liao 	燃料	c=1 d=3.06342e-112 t=79867
-rang 	让	c=333 d=2.09757 t=79867
+rang 	让	c=334 d=2.74247 t=79867
 rang du 	让渡	c=1 d=4.28088e-137 t=79867
 rang er 	瓤儿	c=1 d=1.12326e-132 t=79867
 rang li 	让利	c=1 d=5.82116e-47 t=79867
@@ -6360,7 +6372,7 @@ ren dao 	人道	c=1 d=1.75976e-149 t=79867
 ren duo 	人多	c=1 d=1.96832e-55 t=79867
 ren ge 	人格	c=10 d=7.32807e-44 t=79867
 ren hai mang mang 	人海茫茫	c=1 d=1.79379e-139 t=79867
-ren he 	任何	c=41 d=0.140339 t=79867
+ren he 	任何	c=41 d=0.423162 t=79867
 ren he ren 	人和人	c=1 d=2.44037e-84 t=79867
 ren he ren 	任何人	c=1 d=6.58572e-87 t=79867
 ren he shi 	任何事	c=1 d=5.7164e-98 t=79867
@@ -6461,7 +6473,7 @@ ru 	辱	c=2 d=1.43039e-84 t=79867
 ru chang 	入场	c=1 d=1.79409e-141 t=79867
 ru ci 	如此	c=7 d=0.0461896 t=79867
 ru guo 	如果	c=185 d=1.62692 t=79867
-ru he 	如何	c=352 d=0.902917 t=79867
+ru he 	如何	c=353 d=6.55543 t=79867
 ru he xie 	如何写	c=1 d=1.2375e-07 t=79867
 ru jia 	儒家	c=3 d=1.5033e-73 t=79867
 ru jiao 	乳交	c=2 d=1.71947e-41 t=79867
@@ -6552,7 +6564,7 @@ san zhong 	三种	c=2 d=6.86683e-20 t=79867
 sang 	丧	c=0 d=1.80652e-135 t=79867
 sang chong 	桑虫	c=1 d=1.80652e-134 t=79867
 sang shi 	丧失	c=2 d=1.74931e-79 t=79867
-sao 	扫	c=1 d=1 t=79722
+sao 	扫	c=1 d=0.484325 t=79867
 sao 	骚	c=1 d=2.43754e-41 t=79867
 sao bi 	骚逼	c=1 d=1.56203e-41 t=79867
 sao miao 	扫描	c=4 d=0.400529 t=79867
@@ -6595,7 +6607,7 @@ shan chang 	擅长	c=8 d=1.85206e-74 t=79867
 shan chu 	删除	c=33 d=0.907028 t=79867
 shan ci 	删词	c=1 d=8.71905e-06 t=79867
 shan dian 	闪电	c=7 d=1.33934e-50 t=79867
-shan diao 	删掉	c=17 d=0.252885 t=79867
+shan diao 	删掉	c=17 d=0.765845 t=79867
 shan dong 	山东	c=1 d=5.53672e-134 t=79867
 shan jian 	删减	c=1 d=1.05837e-131 t=79867
 shan jian ban 	删减版	c=1 d=9.73991e-132 t=79867
@@ -6650,7 +6662,7 @@ shang wan 	上完	c=1 d=1.09202e-65 t=79867
 shang wang 	上网	c=1 d=3.66356e-11 t=79867
 shang wu 	上午	c=5 d=5.02003e-11 t=79867
 shang wu 	商务	c=2 d=6.92854e-37 t=79867
-shang wu hao 	上午好	c=1 d=1 t=79780
+shang wu hao 	上午好	c=1 d=0.647265 t=79867
 shang xia 	上下	c=5 d=7.93292e-12 t=79867
 shang xia wen 	上下文	c=2 d=1.52715e-40 t=79867
 shang xia xing 	上下行	c=1 d=8.27241e-05 t=79867
@@ -6861,7 +6873,7 @@ shi bai 	失败	c=16 d=0.484329 t=79867
 shi bei 	十倍	c=1 d=3.57409e-73 t=79867
 shi ben di 	是本地	c=1 d=1.85875e-87 t=79867
 shi bi 	势必	c=1 d=3.40362e-145 t=79867
-shi bie 	识别	c=21 d=8.14925e-05 t=79867
+shi bie 	识别	c=21 d=0.818731 t=79867
 shi bie hao 	识别号	c=1 d=5.49564e-164 t=79867
 shi bu 	是不	c=3 d=0.000367055 t=79867
 shi bu shi 	时不时	c=5 d=8.50585e-135 t=79867
@@ -7052,7 +7064,7 @@ shou ji 	手机	c=61 d=0.241387 t=79867
 shou ji 	收集	c=9 d=0.569774 t=79867
 shou ji ban 	手机版	c=1 d=3.80015e-118 t=79867
 shou ji duan 	手机端	c=2 d=1.46075e-17 t=79867
-shou ji shang 	手机上	c=1 d=1 t=79828
+shou ji shang 	手机上	c=1 d=0.822835 t=79867
 shou ji shang 	手机商	c=-1 d=0.23731 t=79867
 shou jiao 	受教	c=1 d=1.16251e-95 t=79867
 shou jiao 	手脚	c=1 d=1.64588e-156 t=79867
@@ -7103,7 +7115,7 @@ shu 	树	c=3 d=6.17947e-132 t=79867
 shu 	熟	c=1 d=1.55335e-93 t=79867
 shu 	述	c=1 d=9.2718e-82 t=79867
 shu bao 	书包	c=1 d=4.31522e-84 t=79867
-shu biao 	鼠标	c=8 d=1.31034e-11 t=79867
+shu biao 	鼠标	c=9 d=1.74889 t=79867
 shu bu zhi 	殊不知	c=1 d=4.61115e-129 t=79867
 shu chu 	输出	c=12 d=8.24236e-21 t=79867
 shu dai zi 	书呆子	c=3 d=8.79503e-147 t=79867
@@ -7233,7 +7245,7 @@ shun shi 	瞬时	c=1 d=7.21282e-157 t=79867
 shun sui 	顺遂	c=3 d=2.39495e-132 t=79867
 shun xi 	吮吸	c=1 d=1.99569e-41 t=79867
 shun xin 	顺心	c=1 d=5.67224e-95 t=79867
-shun xu 	顺序	c=17 d=0.0175097 t=79867
+shun xu 	顺序	c=18 d=1.64196 t=79867
 shun yan 	顺延	c=1 d=9.65254e-173 t=79867
 shun yan 	顺眼	c=1 d=9.6044e-173 t=79867
 shun zhe 	顺着	c=2 d=1.8056e-128 t=79867
@@ -7370,7 +7382,7 @@ sui yue 	岁月	c=3 d=1.36042e-121 t=79867
 sui zhe 	随着	c=2 d=0.918512 t=79867
 sun 	孙	c=2 d=4.66734e-51 t=79867
 sun hai 	损害	c=3 d=5.30091e-45 t=79867
-sun huai 	损坏	c=1 d=1.60775e-145 t=79867
+sun huai 	损坏	c=1 d=0.481909 t=79867
 sun nv 	孙女	c=1 d=4.87285e-102 t=79867
 sun shi 	损失	c=2 d=5.96852e-47 t=79867
 sun wu kong 	孙悟空	c=2 d=1.85284e-109 t=79867
@@ -7396,7 +7408,7 @@ suo xiao 	缩小	c=2 d=4.5036e-161 t=79867
 suo xu 	所需	c=1 d=9.24374e-17 t=79867
 suo yi 	所以	c=61 d=0.152618 t=79867
 suo yong 	所用	c=2 d=6.7605e-147 t=79867
-suo you 	所有	c=51 d=0.634771 t=79867
+suo you 	所有	c=52 d=1.46051 t=79867
 suo you lie 	所有列	c=1 d=2.18786e-05 t=79867
 suo you ren 	所有人	c=2 d=2.30099e-98 t=79867
 suo zai 	所在	c=14 d=1.41194e-29 t=79867
@@ -7404,7 +7416,7 @@ suo zhi 	所指	c=1 d=8.5024e-151 t=79867
 ta 	他	c=207 d=0.685857 t=79867
 ta 	塔	c=6 d=7.75715e-123 t=79867
 ta 	她	c=13 d=0.337902 t=79867
-ta 	它	c=149 d=0.953682 t=79867
+ta 	它	c=149 d=1.06544 t=79867
 ta 	踏	c=2 d=3.50989e-95 t=79867
 ta fang 	塔防	c=13 d=7.29369e-104 t=79867
 ta luo pai 	塔罗牌	c=1 d=1.19934e-109 t=79867
@@ -7578,7 +7590,7 @@ ti qian 	提前	c=5 d=0.25924 t=79867
 ti qu 	提取	c=7 d=2.56967e-15 t=79867
 ti qu ma 	提取码	c=3 d=6.71043e-34 t=79867
 ti sheng 	提升	c=21 d=0.278037 t=79867
-ti shi 	提示	c=23 d=0.019575 t=79867
+ti shi 	提示	c=23 d=0.384812 t=79867
 ti shi ci 	提示词	c=4 d=8.37717e-06 t=79867
 ti ta wu 	踢踏舞	c=1 d=1.46339e-97 t=79867
 ti wen 	提问	c=4 d=2.91082e-11 t=79867
@@ -7605,7 +7617,7 @@ tian di bu ren 	天地不仁	c=1 d=1.76012e-122 t=79867
 tian hang 	天航	c=1 d=8.01187e-99 t=79867
 tian hao 	填好	c=1 d=4.19951e-29 t=79867
 tian ji 	天玑	c=1 d=5.13437e-70 t=79867
-tian jia 	添加	c=73 d=0.0198689 t=79867
+tian jia 	添加	c=73 d=0.375311 t=79867
 tian keng 	填坑	c=1 d=2.1145e-133 t=79867
 tian man 	填满	c=5 d=1.09492e-08 t=79867
 tian mi 	甜蜜	c=1 d=7.13908e-95 t=79867
@@ -7669,7 +7681,7 @@ tiao xuan 	挑选	c=2 d=9.59941e-20 t=79867
 tiao yi xia 	调一下	c=1 d=0.000397625 t=79867
 tiao zhan 	挑战	c=8 d=1.78541e-34 t=79867
 tiao zhe 	跳着	c=2 d=1.26926e-11 t=79867
-tiao zheng 	调整	c=87 d=1.55856 t=79867
+tiao zheng 	调整	c=87 d=2.3125 t=79867
 tiao zhuan 	跳转	c=7 d=0.0104193 t=79867
 tie 	贴	c=5 d=1.07153e-48 t=79867
 tie 	铁	c=1 d=2.43738e-99 t=79867
@@ -7857,7 +7869,7 @@ tu ya 	涂鸦	c=1 d=3.54709e-72 t=79867
 tu zhong 	图中	c=1 d=3.00611e-37 t=79867
 tu zhong 	途中	c=1 d=2.99112e-37 t=79867
 tu zi 	兔子	c=1 d=4.07388e-54 t=79867
-tu zi dong 	兔子洞	c=1 d=1 t=79434
+tu zi dong 	兔子洞	c=1 d=0.11475 t=79867
 tuan 	团	c=1 d=1.4542e-23 t=79867
 tuan dui 	团队	c=2 d=0.357007 t=79867
 tuan zhang 	团长	c=1 d=4.08042e-161 t=79867
@@ -7915,6 +7927,7 @@ tuo yan 	拖延	c=14 d=2.17195e-66 t=79867
 tuo yan zheng 	拖延症	c=4 d=2.43663e-66 t=79867
 tuo yi 	脱衣	c=5 d=1.38517e-61 t=79867
 tuo zhan 	拓展	c=8 d=9.68103e-31 t=79867
+tuo zhan ming 	拓展名	c=1 d=5.73863e-173 t=79867
 tuo zhuai 	拖拽	c=1 d=7.11171e-138 t=79867
 wa 	哇	c=1 d=6.40851e-119 t=79867
 wa 	挖	c=3 d=8.35252e-71 t=79867
@@ -8086,7 +8099,7 @@ wei jie 	慰藉	c=3 d=3.57186e-48 t=79867
 wei jie 	未解	c=2 d=1.01243e-114 t=79867
 wei ju 	畏惧	c=14 d=1.66105e-83 t=79867
 wei kou 	胃口	c=1 d=9.12318e-39 t=79867
-wei lai 	未来	c=62 d=8.35555e-05 t=79867
+wei lai 	未来	c=62 d=0.609571 t=79867
 wei lan 	蔚蓝	c=2 d=6.92057e-104 t=79867
 wei le 	为了	c=36 d=3.65371e-06 t=79867
 wei li 	为例	c=3 d=0.0015648 t=79867
@@ -8160,7 +8173,7 @@ wen ping 	纹枰	c=2 d=1.35364e-121 t=79867
 wen qu xing 	文曲星	c=1 d=3.17783e-161 t=79867
 wen re 	温热	c=1 d=8.48795e-131 t=79867
 wen rou 	温柔	c=1 d=1.22087e-83 t=79867
-wen ti 	问题	c=198 d=0.813784 t=79867
+wen ti 	问题	c=198 d=1.25664 t=79867
 wen wen 	问问	c=8 d=0.000177774 t=79867
 wen wo 	问我	c=2 d=0.000575656 t=79867
 wen xia 	问下	c=1 d=8.86598e-173 t=79867
@@ -8196,7 +8209,7 @@ wo yi jing 	我已经	c=1 d=7.22604e-61 t=79867
 wo zai 	我在	c=1 d=1.5116e-96 t=79867
 wo zhe ge ren 	我这个人	c=1 d=7.72841e-87 t=79867
 wu 	五	c=3 d=9.60595e-28 t=79867
-wu 	无	c=23 d=0.0176043 t=79867
+wu 	无	c=23 d=0.264477 t=79867
 wu 	物	c=2 d=3.96008e-103 t=79867
 wu 	舞	c=1 d=3.72086e-164 t=79867
 wu bi 	无比	c=1 d=1.53779e-151 t=79867
@@ -8270,7 +8283,7 @@ wu ti 	物体	c=2 d=7.06587e-62 t=79867
 wu tian 	五天	c=1 d=2.95312e-63 t=79867
 wu tiao jian 	无条件	c=2 d=1.69628e-11 t=79867
 wu tong shu 	梧桐树	c=1 d=4.90828e-99 t=79867
-wu tou 	无头	c=2 d=3.9292e-11 t=79867
+wu tou 	无头	c=2 d=0.618783 t=79867
 wu wei 	无畏	c=1 d=0.00151855 t=79867
 wu xian 	无线	c=1 d=4.22042e-58 t=79867
 wu xian 	无限	c=8 d=0.000109455 t=79867
@@ -8393,7 +8406,7 @@ xia si ren 	吓死人	c=1 d=9.01829e-50 t=79867
 xia tian 	夏天	c=4 d=1.83501e-53 t=79867
 xia wen 	下文	c=1 d=8.20265e-23 t=79867
 xia wu 	下午	c=6 d=1.5851e-37 t=79867
-xia wu hao 	下午好	c=1 d=1 t=79850
+xia wu hao 	下午好	c=1 d=0.918512 t=79867
 xia xia xia 	下下下	c=1 d=1.35194e-165 t=79867
 xia xian 	下限	c=1 d=4.72738e-69 t=79867
 xia xiang de 	下乡的	c=1 d=2.38587e-83 t=79867
@@ -8437,13 +8450,13 @@ xian cun 	显存	c=1 d=2.8764e-165 t=79867
 xian cun 	现存	c=1 d=2.89082e-165 t=79867
 xian dai 	现代	c=4 d=3.50153e-67 t=79867
 xian dai ren 	现代人	c=1 d=1.87877e-66 t=79867
-xian dao 	先导	c=2 d=1.93707 t=79540
+xian dao 	先导	c=2 d=0.377636 t=79867
 xian de 	显得	c=4 d=0.0303487 t=79867
 xian e 	限额	c=1 d=8.31387e-05 t=79867
 xian fan 	掀翻	c=1 d=5.46562e-129 t=79867
 xian gei 	献给	c=1 d=1.44578e-131 t=79867
 xian gei wo 	先给我	c=1 d=1.81237e-172 t=79867
-xian hou 	先后	c=2 d=2.89532e-07 t=79867
+xian hou 	先后	c=2 d=0.778801 t=79867
 xian huo 	鲜活	c=2 d=1.6116e-57 t=79867
 xian jia 	现价	c=2 d=2.71521e-25 t=79867
 xian jie 	衔接	c=1 d=3.6365e-12 t=79867
@@ -8492,12 +8505,13 @@ xian zhuang 	现状	c=19 d=0.992234 t=79867
 xiang 	乡	c=1 d=5.81682e-97 t=79867
 xiang 	像	c=46 d=0.00101791 t=79867
 xiang 	向	c=25 d=3.91772e-06 t=79867
-xiang 	想	c=162 d=0.826067 t=79867
+xiang 	想	c=162 d=0.957521 t=79867
 xiang 	湘	c=1 d=3.67132e-124 t=79867
 xiang 	相	c=5 d=0.0668703 t=79867
 xiang 	箱	c=3 d=1.54376e-79 t=79867
 xiang 	项	c=3 d=8.24075e-47 t=79867
 xiang 	香	c=1 d=1.19519e-127 t=79867
+xiang ba 	想把	c=1 d=1.13841e-172 t=79867
 xiang ban fa 	想办法	c=7 d=1.44473e-05 t=79867
 xiang bi 	相比	c=2 d=6.34582e-121 t=79867
 xiang bu kai 	想不开	c=1 d=1.41305e-97 t=79867
@@ -8590,7 +8604,7 @@ xiao fei xing 	消费性	c=2 d=3.08457e-115 t=79867
 xiao fei yang 	小肥羊	c=3 d=6.17779e-149 t=79867
 xiao fei zhe 	消费者	c=2 d=1.08876e-115 t=79867
 xiao gou 	小狗	c=2 d=4.99095e-82 t=79867
-xiao guo 	效果	c=47 d=0.0116203 t=79867
+xiao guo 	效果	c=47 d=0.416862 t=79867
 xiao guo tu 	效果图	c=1 d=1.97886e-59 t=79867
 xiao hai 	小孩	c=7 d=8.3926e-57 t=79867
 xiao hai zi 	小孩子	c=1 d=5.98072e-71 t=79867
@@ -8685,7 +8699,7 @@ xie xu 	些许	c=0 d=4.06392e-85 t=79867
 xie yi 	协议	c=2 d=7.33921e-172 t=79867
 xie yi bian 	写一遍	c=1 d=0.000118571 t=79867
 xie yi ge 	写一个	c=1 d=4.83356e-95 t=79867
-xie zai 	卸载	c=11 d=1.69519e-17 t=79867
+xie zai 	卸载	c=11 d=0.658065 t=79867
 xie zhe 	写着	c=1 d=1.23776e-127 t=79867
 xie zhu 	协助	c=4 d=3.50078e-05 t=79867
 xie zi 	鞋子	c=3 d=2.42e-129 t=79867
@@ -8834,8 +8848,8 @@ xiu 	修	c=2 d=1.03274e-26 t=79867
 xiu chang 	修长	c=3 d=1.58727e-63 t=79867
 xiu ci 	修辞	c=1 d=3.75646e-129 t=79867
 xiu fu 	修复	c=22 d=0.56477 t=79867
-xiu gai 	修改	c=51 d=0.25342 t=79867
-xiu hao 	修好	c=1 d=1.99575e-12 t=79867
+xiu gai 	修改	c=51 d=1.25924 t=79867
+xiu hao 	修好	c=1 d=0.532592 t=79867
 xiu jia 	休假	c=2 d=1.70815e-93 t=79867
 xiu jue 	嗅觉	c=2 d=9.16092e-149 t=79867
 xiu lian 	修炼	c=1 d=5.74994e-108 t=79867
@@ -8874,7 +8888,7 @@ xu yuan 	许愿	c=16 d=3.43738e-73 t=79867
 xu zhang sheng shi 	虚张声势	c=1 d=1.96184e-75 t=79867
 xuan 	悬	c=1 d=3.6132e-54 t=79867
 xuan 	玄	c=1 d=1.38574e-132 t=79867
-xuan 	璇	c=1 d=1 t=79442
+xuan 	璇	c=1 d=0.119433 t=79867
 xuan 	选	c=15 d=0.000246044 t=79867
 xuan ba 	选拔	c=1 d=1.16767e-147 t=79867
 xuan chuan 	宣传	c=5 d=5.18773e-74 t=79867
@@ -9119,7 +9133,7 @@ yi 	亿	c=2 d=1.22931e-37 t=79867
 yi 	以	c=36 d=0.013534 t=79867
 yi 	仪	c=1 d=2.93261e-128 t=79867
 yi 	咦	c=1 d=9.84649e-113 t=79867
-yi 	已	c=28 d=0.000633836 t=79867
+yi 	已	c=28 d=0.479505 t=79867
 yi 	异	c=6 d=8.29302e-93 t=79867
 yi 	怡	c=1 d=2.03609e-159 t=79867
 yi 	意	c=1 d=1.92752e-132 t=79867
@@ -9190,7 +9204,7 @@ yi dong 	易懂	c=1 d=2.36188e-23 t=79867
 yi dong 	移动	c=7 d=1.47207e-49 t=79867
 yi dong dao 	移动到	c=1 d=3.30503e-64 t=79867
 yi du 	一度	c=1 d=1.29562e-135 t=79867
-yi du dian 	一度电	c=1 d=1 t=79664
+yi du dian 	一度电	c=1 d=0.362402 t=79867
 yi duan 	一段	c=15 d=0.212248 t=79867
 yi duan hua 	一段话	c=1 d=1.59539e-113 t=79867
 yi duan rang 	一段让	c=1 d=1.20532e-138 t=79867
@@ -9270,7 +9284,7 @@ yi liang ge 	一两个	c=2 d=1.36047e-92 t=79867
 yi liang tiao 	一两条	c=1 d=7.01412e-05 t=79867
 yi liang zhou 	益良州	c=1 d=4.22504e-159 t=79867
 yi liao 	医疗	c=5 d=3.28404e-19 t=79867
-yi lie 	一列	c=1 d=1 t=79546
+yi lie 	一列	c=1 d=0.20089 t=79867
 yi liu 	一流	c=1 d=0.00143728 t=79867
 yi liu 	遗留	c=1 d=0.00144449 t=79867
 yi lu 	一路	c=3 d=7.46259e-87 t=79867
@@ -9300,7 +9314,7 @@ yi qian 	以前	c=14 d=1.09585e-18 t=79867
 yi qian duo 	一千多	c=1 d=1.26535e-151 t=79867
 yi qian duo tiao 	一千多条	c=1 d=6.12835e-05 t=79867
 yi qian nian 	一千年	c=1 d=3.46636e-154 t=79867
-yi qian wa shi 	一千瓦时	c=1 d=1 t=79667
+yi qian wa shi 	一千瓦时	c=1 d=0.367879 t=79867
 yi qian wan 	一千万	c=1 d=4.00014e-45 t=79867
 yi qian yi hou 	一前一后	c=1 d=3.95617e-62 t=79867
 yi qie 	一切	c=44 d=2.67539e-07 t=79867
@@ -9316,6 +9330,7 @@ yi rou ke gang 	以柔克刚	c=1 d=1.08991e-101 t=79867
 yi ru 	移入	c=3 d=1.19284e-05 t=79867
 yi sa 	以撒	c=78 d=2.04706e-37 t=79867
 yi shan 	一扇	c=2 d=3.14876e-53 t=79867
+yi shan 	一闪	c=1 d=7.44261e-173 t=79867
 yi shan chu 	已删除	c=1 d=1.65524e-17 t=79867
 yi shan er guo 	一闪而过	c=4 d=4.61174e-13 t=79867
 yi shang 	以上	c=26 d=0.502821 t=79867
@@ -9337,7 +9352,7 @@ yi si 	一丝	c=3 d=1.71613e-89 t=79867
 yi si 	意思	c=33 d=1.07029e-05 t=79867
 yi si 	疑似	c=1 d=1.51278e-17 t=79867
 yi su 	伊苏	c=5 d=2.36279e-122 t=79867
-yi tai 	一台	c=7 d=0.537944 t=79867
+yi tai 	一台	c=7 d=0.690734 t=79867
 yi tao 	一套	c=3 d=2.08868e-18 t=79867
 yi ti 	议题	c=1 d=2.2317e-150 t=79867
 yi tian 	一天	c=19 d=1.78416e-17 t=79867
@@ -9370,7 +9385,7 @@ yi wu 	遗物	c=3 d=1.05791e-96 t=79867
 yi wu shi chu 	一无是处	c=1 d=1.27026e-79 t=79867
 yi xi lie 	一系列	c=1 d=1.12265e-155 t=79867
 yi xia 	一下	c=159 d=1.26753 t=79867
-yi xia 	以下	c=48 d=0.0103399 t=79867
+yi xia 	以下	c=48 d=0.951229 t=79867
 yi xia zi 	一下子	c=4 d=3.8806e-41 t=79867
 yi xiao bu fen 	一小部分	c=1 d=5.23329e-118 t=79867
 yi xie 	一些	c=152 d=2.00597 t=79867
@@ -9526,6 +9541,7 @@ yong gan 	勇敢	c=4 d=5.35489e-84 t=79867
 yong guo 	用过	c=2 d=3.96695e-94 t=79867
 yong heng 	永恒	c=1 d=1.25686e-160 t=79867
 yong hu 	用户	c=36 d=1.46665 t=79867
+yong hu ming 	用户名	c=1 d=4.1671e-173 t=79867
 yong ji 	拥挤	c=1 d=0.0086517 t=79867
 yong jin 	佣金	c=3 d=8.39991e-43 t=79867
 yong jin fei tui 	用进废退	c=1 d=3.0096e-80 t=79867
@@ -9597,7 +9613,7 @@ you hui quan 	优惠券	c=1 d=4.93993e-57 t=79867
 you ji ge 	有几个	c=1 d=5.30748e-19 t=79867
 you ji lu 	有记录	c=1 d=5.99907e-107 t=79867
 you jia zhi 	有价值	c=1 d=5.3292e-67 t=79867
-you jian 	右键	c=10 d=1.28828e-07 t=79867
+you jian 	右键	c=11 d=0.970446 t=79867
 you jian 	邮件	c=8 d=0.0208737 t=79867
 you ju hua 	有句话	c=2 d=1.42964e-156 t=79867
 you ke neng 	有可能	c=2 d=5.90712e-43 t=79867
@@ -9706,7 +9722,7 @@ yu liang 	余量	c=1 d=4.47469e-11 t=79867
 yu liu 	预留	c=1 d=2.62328e-52 t=79867
 yu pan 	预判	c=1 d=7.21743e-47 t=79867
 yu qi 	与其	c=6 d=2.01939e-121 t=79867
-yu qi 	预期	c=16 d=0.0871314 t=79867
+yu qi 	预期	c=16 d=0.412714 t=79867
 yu qian 	于谦	c=1 d=2.19712e-84 t=79867
 yu ren 	御人	c=1 d=7.29795e-148 t=79867
 yu ren 	愚人	c=1 d=4.10087e-161 t=79867
@@ -9750,7 +9766,7 @@ yuan gu 	缘故	c=1 d=1.25339e-10 t=79867
 yuan hen 	怨恨	c=1 d=8.1893e-92 t=79867
 yuan hu 	圆弧	c=1 d=1.38927e-15 t=79867
 yuan hua 	圆滑	c=1 d=3.85324e-46 t=79867
-yuan jian 	原件	c=3 d=2.92644 t=79704
+yuan jian 	原件	c=3 d=1.29536 t=79867
 yuan jing 	愿景	c=3 d=9.82369e-88 t=79867
 yuan lai 	原来	c=15 d=0.683861 t=79867
 yuan li 	原理	c=2 d=3.8162e-50 t=79867
@@ -9823,7 +9839,7 @@ yun qi hao 	运气好	c=1 d=5.38424e-129 t=79867
 yun shi 	陨石	c=1 d=3.18745e-79 t=79867
 yun shi keng 	陨石坑	c=3 d=1.55933e-78 t=79867
 yun tou zhuan xiang 	晕头转向	c=1 d=5.05518e-93 t=79867
-yun xing 	运行	c=62 d=0.154124 t=79867
+yun xing 	运行	c=62 d=5.55627 t=79867
 yun xu 	允许	c=10 d=3.19428e-16 t=79867
 yun ying 	运营	c=9 d=1.71498e-43 t=79867
 yun yong 	运用	c=6 d=1.06237e-144 t=79867
@@ -10042,14 +10058,14 @@ zhao shang 	找上	c=1 d=6.71397e-108 t=79867
 zhao shui 	找谁	c=1 d=0.29671 t=79867
 zhao wei 	赵薇	c=1 d=4.68228e-162 t=79867
 zhao xi xiang chu 	朝夕相处	c=1 d=8.12492e-58 t=79867
-zhao xia 	找下	c=1 d=1 t=79525
+zhao xia 	找下	c=1 d=0.180866 t=79867
 zhao yang 	照样	c=1 d=9.16706e-66 t=79867
 zhao yi xia 	找一下	c=1 d=3.88072e-12 t=79867
 zhao ze 	沼泽	c=1 d=9.64105e-159 t=79867
 zhao zhao 	找找	c=3 d=5.22562e-42 t=79867
 zhe 	着	c=47 d=3.65473e-12 t=79867
 zhe 	者	c=31 d=6.51381e-34 t=79867
-zhe 	这	c=152 d=0.131336 t=79867
+zhe 	这	c=152 d=1.49651 t=79867
 zhe bang 	这帮	c=1 d=2.84488e-153 t=79867
 zhe bei zi 	这辈子	c=6 d=1.35151e-44 t=79867
 zhe bi 	遮蔽	c=3 d=1.76495e-153 t=79867
@@ -10100,7 +10116,7 @@ zhe ju hua 	这句话	c=6 d=2.34675e-65 t=79867
 zhe kuan 	这款	c=1 d=4.2781e-100 t=79867
 zhe lei 	这类	c=5 d=2.79859e-19 t=79867
 zhe li 	这里	c=42 d=0.644036 t=79867
-zhe li mian 	这里面	c=1 d=4.24677e-43 t=79867
+zhe li mian 	这里面	c=1 d=0.373439 t=79867
 zhe lia 	这俩	c=1 d=5.76268e-134 t=79867
 zhe liang ge 	这两个	c=1 d=4.83141e-31 t=79867
 zhe liang tian 	这两天	c=1 d=8.51626e-82 t=79867
@@ -10234,7 +10250,7 @@ zheng shi 	正式	c=1 d=2.39619e-75 t=79867
 zheng shi 	正是	c=5 d=4.16917e-72 t=79867
 zheng shi 	正视	c=3 d=2.32206e-117 t=79867
 zheng shi ban 	正式版	c=1 d=9.95424e-94 t=79867
-zheng shu 	证书	c=1 d=1 t=79823
+zheng shu 	证书	c=1 d=0.802519 t=79867
 zheng ti 	整体	c=16 d=1.22223e-08 t=79867
 zheng wen 	正文	c=9 d=0.0061514 t=79867
 zheng xiang 	争相	c=1 d=1.93276e-17 t=79867
@@ -10295,7 +10311,7 @@ zhi di 	之地	c=1 d=1.78927e-80 t=79867
 zhi dian 	支点	c=1 d=1.95911e-88 t=79867
 zhi ding 	制定	c=4 d=3.54732e-14 t=79867
 zhi ding 	指定	c=10 d=0.53143 t=79867
-zhi ding 	置顶	c=6 d=0.0357931 t=79867
+zhi ding 	置顶	c=6 d=2.67275 t=79867
 zhi du 	制度	c=11 d=5.6198e-74 t=79867
 zhi dui 	只对	c=1 d=1.63044e-104 t=79867
 zhi fa 	执法	c=1 d=1.79935e-146 t=79867
@@ -10346,7 +10362,7 @@ zhi neng 	只能	c=29 d=0.802864 t=79867
 zhi neng 	智能	c=4 d=0.0029528 t=79867
 zhi nian 	执念	c=3 d=1.62792e-135 t=79867
 zhi pa 	只怕	c=1 d=1.50847e-101 t=79867
-zhi pai 	指派	c=1 d=1 t=79854
+zhi pai 	指派	c=1 d=0.937067 t=79867
 zhi pei 	支配	c=8 d=1.53724e-18 t=79867
 zhi qian 	之前	c=72 d=1.63061 t=79867
 zhi ren 	之人	c=1 d=5.32886e-125 t=79867
@@ -10439,7 +10455,7 @@ zhong guo ren 	中国人	c=3 d=2.05617e-76 t=79867
 zhong hang 	中行	c=2 d=6.16223e-24 t=79867
 zhong hua 	中华	c=1 d=1.59267e-93 t=79867
 zhong ji 	终极	c=3 d=1.61545e-73 t=79867
-zhong jian 	中建	c=1 d=1 t=79531
+zhong jian 	中建	c=1 d=0.186374 t=79867
 zhong jian 	中间	c=4 d=1.10592e-08 t=79867
 zhong jiang 	中奖	c=1 d=1.72052e-119 t=79867
 zhong jiao 	中交	c=28 d=5.91939e-38 t=79867
@@ -10531,7 +10547,7 @@ zhu jie mian 	主界面	c=1 d=2.23784e-06 t=79867
 zhu li 	主力	c=1 d=7.3041e-11 t=79867
 zhu li 	助理	c=1 d=2.58098e-96 t=79867
 zhu liu 	主流	c=7 d=6.61025e-09 t=79867
-zhu lou 	主楼	c=1 d=1 t=79535
+zhu lou 	主楼	c=1 d=0.190139 t=79867
 zhu ming 	著名	c=1 d=5.87009e-116 t=79867
 zhu nian 	逐年	c=1 d=5.90492e-68 t=79867
 zhu ping 	主屏	c=1 d=3.91772e-06 t=79867
@@ -10641,7 +10657,7 @@ zhuo zi 	桌子	c=1 d=3.697e-59 t=79867
 zhuo zi shang 	桌子上	c=1 d=6.28415e-65 t=79867
 zi 	姿	c=1 d=3.84591e-53 t=79867
 zi 	子	c=13 d=0.108067 t=79867
-zi 	字	c=24 d=1.57404e-05 t=79867
+zi 	字	c=24 d=0.900325 t=79867
 zi 	紫	c=1 d=5.58969e-99 t=79867
 zi 	自	c=9 d=0.597501 t=79867
 zi 	资	c=1 d=6.1005e-69 t=79867
@@ -10789,6 +10805,7 @@ zui ai 	最爱	c=1 d=7.87489e-102 t=79867
 zui bu yuan 	最不愿	c=1 d=1.98223e-79 t=79867
 zui chu 	最初	c=3 d=1.61933e-53 t=79867
 zui da 	最大	c=11 d=0.289384 t=79867
+zui da cheng du 	最大程度	c=1 d=6.601e-173 t=79867
 zui da hua 	最大化	c=1 d=5.06153e-49 t=79867
 zui da hui 	最大会	c=1 d=2.52189e-147 t=79867
 zui di 	最低	c=1 d=9.33982e-21 t=79867
